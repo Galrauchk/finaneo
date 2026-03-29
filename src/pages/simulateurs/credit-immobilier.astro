@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SimulateurCredit from '../../components/SimulateurCredit.astro';
+import LeadGenForm from '../../components/LeadGenForm.astro';
+---
+
+<BaseLayout
+  title="Simulateur de crédit immobilier"
+  description="Calculez votre mensualité de crédit immobilier en quelques secondes. Montant, durée, taux : obtenez votre simulation gratuite."
+>
+  <section class="section-padding">
+    <div class="container-narrow">
+      <Breadcrumb items={[{ label: 'Simulateurs', href: '/simulateurs/' }, { label: 'Crédit immobilier' }]} />
+
+      <h1 class="text-3xl md:text-4xl font-extrabold text-navy mb-4">
+        Simulateur de crédit immobilier
+      </h1>
+      <p class="text-lg text-gray-600 mb-10 max-w-2xl">
+        Renseignez le montant, la durée et le taux pour obtenir instantanément vos mensualités, le coût total du crédit et le montant des intérêts.
+      </p>
+
+      <SimulateurCredit />
+
+      <div class="mt-16">
+        <LeadGenForm
+          formTitle="Obtenez votre offre personnalisée"
+          submitLabel="Recevoir ma simulation détaillée"
+          source="credit-immobilier"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

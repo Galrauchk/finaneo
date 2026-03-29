@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SimulateurEpargne from '../../components/SimulateurEpargne.astro';
+import CTAAffiliation from '../../components/CTAAffiliation.astro';
+---
+
+<BaseLayout
+  title="Simulateur d'épargne"
+  description="Simulez la croissance de votre épargne : capital initial, versements mensuels, taux et durée. Résultat instantané."
+>
+  <section class="section-padding">
+    <div class="container-narrow">
+      <Breadcrumb items={[{ label: 'Simulateurs', href: '/simulateurs/' }, { label: 'Épargne' }]} />
+
+      <h1 class="text-3xl md:text-4xl font-extrabold text-navy mb-4">
+        Simulateur d'épargne
+      </h1>
+      <p class="text-lg text-gray-600 mb-10 max-w-2xl">
+        Définissez votre capital de départ, vos versements mensuels, le taux de rendement espéré et la durée de placement. Découvrez la valeur future de votre épargne.
+      </p>
+
+      <SimulateurEpargne />
+
+      <div class="mt-16">
+        <CTAAffiliation
+          title="Ouvrez le meilleur compte épargne"
+          description="Comparez les livrets et assurances-vie parmi nos partenaires sélectionnés pour leurs rendements compétitifs."
+          buttonLabel="Comparer les offres d'épargne"
+          buttonHref="#"
+          partner="Partenaire épargne"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

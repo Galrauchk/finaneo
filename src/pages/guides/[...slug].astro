@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const formattedDate = new Date(entry.data.date).toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+const categoryLinks: Record<string, string> = {
+  'Crédit immobilier': '/simulateurs/credit-immobilier/',
+  'Investissement': '/simulateurs/epargne/',
+  'Rachat de crédit': '/simulateurs/credit-immobilier/',
+};
+
+const ctaLink = categoryLinks[entry.data.category] || '/simulateurs/credit-immobilier/';
+const ctaLabel: Record<string, string> = {
+  'Crédit immobilier': 'Simuler mon crédit immobilier',
+  'Investissement': 'Simuler mon épargne',
+  'Rachat de crédit': 'Simuler mon rachat de crédit',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: entry.data.title,
+  description: entry.data.description,
+  datePublished: entry.data.date,
+  dateModified: entry.data.updatedDate || entry.data.date,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Finaneo',
+    url: 'https://finaneo.fr',
+  },
+};
+---
+
+<BaseLayout
+  title={`${entry.data.title} | Finaneo`}
+  description={entry.data.description}
+  jsonLd={jsonLd}
+>
+  <article class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <Breadcrumb
+        items={[
+          { label: 'Guides', href: '/guides/' },
+          { label: entry.data.title },
+        ]}
+      />
+
+      <!-- Header -->
+      <header class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1 rounded-full">
+            {entry.data.category}
+          </span>
+          <time datetime={entry.data.date} class="text-sm text-gray-400">
+            {formattedDate}
+          </time>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-navy leading-tight">
+          {entry.data.title}
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          {entry.data.description}
+        </p>
+      </header>
+
+      <!-- Article content -->
+      <div class="prose prose-lg prose-navy max-w-none
+        prose-headings:font-bold prose-headings:text-navy
+        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-gray-700 prose-p:leading-relaxed
+        prose-a:text-gold prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-navy
+        prose-li:text-gray-700
+        prose-table:text-sm
+        prose-th:bg-navy prose-th:text-white prose-th:font-semibold prose-th:px-4 prose-th:py-2
+        prose-td:px-4 prose-td:py-2 prose-td:border-b prose-td:border-gray-200
+      ">
+        <Content />
+      </div>
+
+      <!-- CTA Section -->
+      <div class="mt-14 p-8 bg-gradient-to-br from-navy to-navy/90 rounded-2xl text-center">
+        <h2 class="text-2xl font-bold text-white mb-3">
+          Passez à l'action
+        </h2>
+        <p class="text-gray-300 mb-6 max-w-md mx-auto">
+          Utilisez nos simulateurs gratuits pour concrétiser votre projet financier en quelques minutes.
+        </p>
+        <a
+          href={ctaLink}
+          class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-8 py-3 rounded-lg transition-colors"
+        >
+          {ctaLabel[entry.data.category] || 'Lancer la simulation'}
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

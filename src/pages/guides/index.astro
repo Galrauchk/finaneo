@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const guides = await getCollection('guides');
+const sortedGuides = guides.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const title = "Guides finances personnelles | Finaneo";
+const description = "Retrouvez tous nos guides pratiques sur le crédit immobilier, l'investissement, le rachat de crédit et l'épargne. Conseils d'experts pour mieux gérer vos finances.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="py-12 md:py-16 bg-gradient-to-b from-navy/5 to-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <Breadcrumb items={[{ label: 'Guides' }]} />
+
+      <div class="mb-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-navy mb-4">
+          Guides finances personnelles
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl">
+          Crédit immobilier, épargne, investissement, rachat de crédit : nos guides
+          détaillés vous accompagnent dans toutes vos décisions financières.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {sortedGuides.map((guide) => (
+          <ArticleCard
+            title={guide.data.title}
+            description={guide.data.description}
+            slug={guide.id}
+            category={guide.data.category}
+            date={guide.data.date}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,84 @@
+---
+interface Props {
+  formTitle?: string;
+  submitLabel?: string;
+  source?: string;
+}
+
+const {
+  formTitle = 'Demandez votre simulation gratuite',
+  submitLabel = 'Envoyer ma demande',
+  source = 'general',
+} = Astro.props;
+---
+
+<div class="bg-light rounded-2xl p-8 border border-gray-200">
+  <h3 class="text-xl font-bold text-navy mb-2">{formTitle}</h3>
+  <p class="text-sm text-gray-600 mb-6">Un conseiller vous recontacte sous 24h. Sans engagement.</p>
+
+  <form
+    name={`lead-${source}`}
+    method="POST"
+    action="/contact-merci/"
+    data-netlify="true"
+    class="space-y-4"
+  >
+    <input type="hidden" name="form-name" value={`lead-${source}`} />
+    <input type="hidden" name="source" value={source} />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label for={`nom-${source}`} class="block text-sm font-medium text-dark mb-1">Nom complet</label>
+        <input
+          type="text"
+          id={`nom-${source}`}
+          name="nom"
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
+          placeholder="Jean Dupont"
+        />
+      </div>
+      <div>
+        <label for={`email-${source}`} class="block text-sm font-medium text-dark mb-1">Email</label>
+        <input
+          type="email"
+          id={`email-${source}`}
+          name="email"
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
+          placeholder="jean@email.com"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label for={`tel-${source}`} class="block text-sm font-medium text-dark mb-1">Téléphone</label>
+      <input
+        type="tel"
+        id={`tel-${source}`}
+        name="telephone"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
+        placeholder="06 12 34 56 78"
+      />
+    </div>
+
+    <div>
+      <label for={`msg-${source}`} class="block text-sm font-medium text-dark mb-1">Votre projet</label>
+      <textarea
+        id={`msg-${source}`}
+        name="message"
+        rows="3"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none transition resize-none"
+        placeholder="Décrivez brièvement votre projet..."
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary w-full">
+      {submitLabel}
+    </button>
+
+    <p class="text-xs text-gray-400 text-center">
+      En soumettant ce formulaire, vous acceptez notre <a href="/politique-confidentialite/" class="underline hover:text-gold">politique de confidentialité</a>.
+    </p>
+  </form>
+</div>

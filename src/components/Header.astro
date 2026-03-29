@@ -1,0 +1,79 @@
+---
+const navItems = [
+  { label: 'Crédit immobilier', href: '/credit-immobilier/' },
+  { label: 'Assurance', href: '/assurance-emprunteur/' },
+  { label: 'Épargne', href: '/epargne/' },
+  { label: 'Investissement', href: '/investissement/' },
+  { label: 'Simulateurs', href: '/simulateurs/' },
+  { label: 'Guides', href: '/guides/' },
+];
+---
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+  <div class="container-wide flex items-center justify-between h-16">
+    <a href="/" class="flex items-center gap-2">
+      <span class="w-8 h-8 bg-navy rounded-md flex items-center justify-center">
+        <span class="text-gold font-bold text-lg">F</span>
+      </span>
+      <span class="text-navy font-bold text-xl">Finaneo</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-6">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="text-sm font-medium text-dark hover:text-gold transition-colors"
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/contact/" class="btn-primary text-sm !py-2 !px-4">Contact</a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="lg:hidden p-2 text-navy"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+    <div class="container-wide py-4 flex flex-col gap-3">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="text-sm font-medium text-dark hover:text-gold py-2"
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/contact/" class="btn-primary text-sm text-center mt-2">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const icon = document.getElementById('menu-icon');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    if (icon) {
+      icon.setAttribute('d', isOpen
+        ? 'M4 6h16M4 12h16M4 18h16'
+        : 'M6 18L18 6M6 6l12 12'
+      );
+    }
+  });
+</script>

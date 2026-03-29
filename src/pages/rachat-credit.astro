@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import FAQ from '../components/FAQ.astro';
+import LeadGenForm from '../components/LeadGenForm.astro';
+import CTAAffiliation from '../components/CTAAffiliation.astro';
+
+const title = "Rachat de crédit : regroupez vos prêts et réduisez vos mensualités | Finaneo";
+const description = "Tout savoir sur le rachat de crédit en France : principe, avantages, conditions, étapes. Simulez gratuitement le regroupement de vos prêts et réduisez vos mensualités.";
+
+const faqItems = [
+  {
+    question: "Quelle est la différence entre rachat de crédit et renégociation ?",
+    answer: "La renégociation consiste à demander à votre banque actuelle de modifier les conditions de votre prêt (notamment le taux d'intérêt) sans changer d'établissement. Le rachat de crédit (ou regroupement de crédits) implique qu'un nouvel établissement bancaire rembourse l'intégralité de vos crédits en cours et vous propose un unique nouveau prêt avec de nouvelles conditions (taux, durée, mensualité). Le rachat de crédit est plus complet car il peut intégrer plusieurs prêts de natures différentes (immobilier, consommation, revolving) et inclure une trésorerie complémentaire. Les frais sont également différents : la renégociation génère peu de frais, tandis que le rachat entraîne des IRA, des frais de garantie et des frais de dossier."
+  },
+  {
+    question: "Quels types de crédits peut-on regrouper ?",
+    answer: "Le rachat de crédit peut regrouper quasiment tous les types de dettes : crédits immobiliers, crédits à la consommation (prêt personnel, crédit auto), crédits renouvelables (revolving), découverts bancaires, dettes fiscales ou familiales, et même des retards de loyer. On distingue deux catégories de rachat : le rachat de crédits à la consommation (quand la part immobilière représente moins de 60 % du montant total) et le rachat de crédits immobilier (quand la part immobilière dépasse 60 %). Cette distinction est importante car elle détermine la réglementation applicable et les conditions du prêt (durée maximale, garanties exigées)."
+  },
+  {
+    question: "Le rachat de crédit est-il rentable ?",
+    answer: "La rentabilité d'un rachat de crédit dépend de plusieurs facteurs. L'opération est généralement intéressante si la réduction de mensualité atteint au moins 10 à 15 %, si le capital restant dû est suffisamment important (au moins 50 000 euros), si la durée de remboursement restante est significative (plus de 7 ans pour un prêt immobilier) et si les frais engagés sont amortis sur la durée. Attention : en allongeant la durée de remboursement, le coût total du crédit peut augmenter même si la mensualité diminue. Un rachat de crédit bien structuré réduit à la fois la mensualité et le coût total, mais cela nécessite une étude personnalisée prenant en compte l'ensemble de vos paramètres financiers."
+  },
+  {
+    question: "Quels sont les frais liés au rachat de crédit ?",
+    answer: "Le rachat de crédit engendre plusieurs types de frais qu'il faut anticiper dans le calcul de rentabilité. Les <strong>indemnités de remboursement anticipé (IRA)</strong> sur le crédit immobilier sont plafonnées au plus faible des deux montants suivants : 6 mois d'intérêts ou 3 % du capital restant dû. Les <strong>frais de garantie</strong> du nouveau prêt (hypothèque ou caution) représentent environ 1 à 2 % du montant emprunté. Les <strong>frais de dossier</strong> de la nouvelle banque varient de 500 à 1 500 euros. Si vous passez par un courtier, des <strong>frais de courtage</strong> s'appliquent (généralement 1 % du montant du rachat). L'ensemble de ces frais peut être intégré dans le nouveau prêt pour ne pas impacter votre trésorerie."
+  },
+  {
+    question: "Peut-on faire un rachat de crédit en étant fiché FICP ?",
+    answer: "Le fichage au FICP (Fichier national des Incidents de remboursement des Crédits aux Particuliers) rend l'obtention d'un rachat de crédit extrêmement difficile auprès des banques traditionnelles. Certains organismes spécialisés proposent des solutions de rachat pour les personnes fichées, mais les conditions sont nettement moins avantageuses (taux plus élevés, garantie hypothécaire obligatoire). Si vous êtes propriétaire, le rachat hypothécaire est parfois possible malgré le fichage, car la garantie immobilière sécurise l'opération pour le prêteur. Dans tous les cas, il est recommandé de consulter un courtier spécialisé qui saura orienter votre dossier vers les établissements les plus à même d'y répondre favorablement."
+  },
+  {
+    question: "Combien de temps prend un rachat de crédit ?",
+    answer: "La durée complète d'un rachat de crédit, depuis la première simulation jusqu'au déblocage des fonds, varie généralement entre 4 et 12 semaines. La phase d'étude et de constitution du dossier prend 1 à 2 semaines. L'analyse par l'organisme prêteur nécessite 2 à 4 semaines. L'émission et l'acceptation de l'offre de prêt (avec le délai de réflexion légal de 10 jours pour un crédit immobilier) ajoutent 2 à 3 semaines. Enfin, le déblocage des fonds et le remboursement des anciens crédits prennent 1 à 2 semaines supplémentaires. Passer par un courtier spécialisé permet souvent d'accélérer le processus grâce à son expertise dans la constitution des dossiers et ses relations privilégiées avec les organismes prêteurs."
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container-wide section-padding">
+    <Breadcrumb items={[{ label: 'Rachat de crédit' }]} />
+
+    <!-- Hero / Intro -->
+    <section class="mb-16">
+      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+        Rachat de crédit : regroupez vos prêts et réduisez vos mensualités
+      </h1>
+      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+        Vous remboursez plusieurs crédits simultanément et vos mensualités pèsent sur votre budget ? Le rachat de crédit — ou regroupement de crédits — est une solution financière qui permet de fusionner l'ensemble de vos emprunts en un seul prêt, avec une mensualité unique et souvent réduite. Ce guide complet vous explique comment fonctionne cette opération, ses avantages, ses conditions et les étapes pour en bénéficier.
+      </p>
+      <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
+        Chaque année, plus de 200 000 Français ont recours au rachat de crédit pour assainir leur situation financière. Que vous souhaitiez réduire vos mensualités, simplifier la gestion de vos remboursements, financer un nouveau projet ou éviter une situation de surendettement, le regroupement de crédits offre une réponse adaptée à de nombreuses situations.
+      </p>
+    </section>
+
+    <!-- Principe du rachat -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le principe du rachat de crédit</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          Le rachat de crédit consiste à faire racheter l'ensemble de vos crédits en cours par un seul et même organisme financier. Ce dernier solde vos anciens prêts auprès de vos créanciers actuels et vous propose un <strong class="text-navy">nouveau prêt unique</strong> regroupant l'intégralité des capitaux restants dus, éventuellement complété par une trésorerie supplémentaire.
+        </p>
+        <p>
+          Le nouveau prêt est assorti d'un <strong class="text-navy">taux d'intérêt unique</strong> et d'une <strong class="text-navy">durée de remboursement ajustée</strong> à votre capacité financière. La mensualité résultante est généralement inférieure à la somme de vos anciennes mensualités, ce qui permet de retrouver un reste à vivre confortable et de sortir d'une situation de tension budgétaire.
+        </p>
+        <p>
+          Il existe deux formes principales de rachat de crédit. Le <strong class="text-navy">rachat de crédits à la consommation</strong> regroupe exclusivement des crédits conso (prêt personnel, crédit auto, revolving) ou des dossiers dont la part immobilière ne dépasse pas 60 %. Le <strong class="text-navy">rachat de crédits immobilier</strong>, plus encadré, s'applique dès que la part du crédit immobilier représente plus de 60 % du montant total regroupé. Ce dernier offre des durées plus longues (jusqu'à 25 ans) et des taux plus avantageux.
+        </p>
+      </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les avantages du rachat de crédit</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Réduction des mensualités</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">L'avantage principal du rachat de crédit est la baisse de la mensualité globale, qui peut atteindre 40 à 60 % selon les dossiers. En allongeant la durée de remboursement et en renégociant le taux, votre budget mensuel retrouve de l'air. Cette réduction vous permet de dégager une capacité d'épargne ou de financer de nouveaux projets.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Simplification de la gestion</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Fini les multiples prélèvements à des dates différentes et auprès de différents créanciers. Le rachat de crédit simplifie radicalement la gestion de vos remboursements : un seul prélèvement, une seule date, un seul interlocuteur. Cette simplification réduit le risque de rejet de prélèvement et améliore la lisibilité de votre budget.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Trésorerie complémentaire</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Le rachat de crédit peut inclure une enveloppe de trésorerie supplémentaire pour financer un projet (travaux, achat de véhicule, voyage) sans avoir à souscrire un crédit additionnel. Cette trésorerie est intégrée au nouveau prêt unique et bénéficie des mêmes conditions de remboursement.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Prévention du surendettement</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">En réduisant le taux d'endettement, le rachat de crédit constitue une alternative efficace à la procédure de surendettement auprès de la Banque de France. Il permet de rétablir un équilibre financier durable sans les contraintes et conséquences d'un plan de surendettement (inscription au FICP, restrictions bancaires).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conditions -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les conditions pour obtenir un rachat de crédit</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          L'obtention d'un rachat de crédit est soumise à l'analyse de plusieurs critères par l'organisme prêteur. Le premier est votre <strong class="text-navy">taux d'endettement après rachat</strong>, qui ne doit idéalement pas dépasser 33 à 35 % de vos revenus nets. L'objectif est que l'opération améliore réellement votre situation financière en ramenant votre endettement à un niveau soutenable.
+        </p>
+        <p>
+          Vos <strong class="text-navy">revenus et votre stabilité professionnelle</strong> sont également examinés. Un CDI, le statut de fonctionnaire ou des revenus réguliers depuis au moins deux ans pour les indépendants constituent des atouts majeurs. Les retraités peuvent également accéder au rachat de crédit, la pension constituant un revenu stable et prévisible.
+        </p>
+        <p>
+          La <strong class="text-navy">situation patrimoniale</strong> joue un rôle important, notamment pour les rachats de montants élevés. Si vous êtes propriétaire, la prise de garantie hypothécaire sur votre bien immobilier facilite grandement l'obtention du rachat et permet d'accéder à de meilleures conditions (taux plus bas, durée plus longue, montant plus élevé). Les locataires peuvent également bénéficier d'un rachat, mais avec des montants et durées généralement plus limités.
+        </p>
+        <p>
+          Enfin, votre <strong class="text-navy">historique bancaire</strong> est scruté : absence d'incidents de paiement récents, pas de fichage Banque de France (FICP, FCC), gestion saine des comptes courants. Quelques irrégularités mineures peuvent être tolérées si elles sont anciennes et ne reflètent plus votre situation actuelle.
+        </p>
+      </div>
+    </section>
+
+    <!-- Étapes -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les étapes du rachat de crédit</h2>
+      <div class="space-y-6">
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">1</div>
+          <div>
+            <h3 class="text-lg font-bold text-navy mb-2">Simulation en ligne</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Commencez par réaliser une simulation gratuite en renseignant vos crédits en cours, vos revenus et votre situation. Cette première étape vous donne une estimation de la faisabilité de l'opération, de la nouvelle mensualité envisageable et des économies potentielles. La simulation est sans engagement et confidentielle.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">2</div>
+          <div>
+            <h3 class="text-lg font-bold text-navy mb-2">Étude personnalisée</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Un conseiller spécialisé analyse votre dossier en détail : tableaux d'amortissement de vos crédits, relevés de compte, justificatifs de revenus. Il détermine la meilleure stratégie de regroupement en tenant compte de vos objectifs (réduction maximale de la mensualité, réduction du coût total, intégration d'une trésorerie complémentaire).</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">3</div>
+          <div>
+            <h3 class="text-lg font-bold text-navy mb-2">Montage et dépôt du dossier</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Le courtier ou le conseiller constitue votre dossier complet et le soumet aux organismes partenaires les mieux adaptés à votre profil. La mise en concurrence entre plusieurs établissements permet d'obtenir les conditions les plus favorables en termes de taux, durée et frais.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">4</div>
+          <div>
+            <h3 class="text-lg font-bold text-navy mb-2">Accord de principe et offre de prêt</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Après analyse, l'organisme émet un accord de principe, puis une offre de prêt formelle. Pour un rachat incluant un crédit immobilier, vous disposez d'un délai de réflexion légal de 10 jours avant de pouvoir accepter l'offre. Prenez le temps de vérifier chaque condition : taux, durée, mensualité, coût total, assurance.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">5</div>
+          <div>
+            <h3 class="text-lg font-bold text-navy mb-2">Déblocage et remboursement</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Après acceptation de l'offre, le nouvel organisme procède au déblocage des fonds. Il rembourse directement vos anciens créanciers et vous verse l'éventuelle trésorerie complémentaire. Vos anciens prêts sont soldés et vous ne remboursez plus qu'une seule mensualité auprès du nouvel établissement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemple chiffré -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Exemple concret de rachat de crédit</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-6 py-4 text-left text-sm font-semibold">Situation</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Avant rachat</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Après rachat</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Crédit immobilier</td>
+              <td class="px-6 py-4 text-sm text-gray-700">850 &euro;/mois (15 ans restants)</td>
+              <td class="px-6 py-4 text-sm text-gray-700" rowspan="4">
+                <span class="block text-gold font-semibold text-lg">980 &euro;/mois</span>
+                <span class="block text-gray-500 text-xs mt-1">Prêt unique sur 20 ans à 3,40 %</span>
+              </td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Crédit auto</td>
+              <td class="px-6 py-4 text-sm text-gray-700">280 &euro;/mois (3 ans restants)</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Crédit conso</td>
+              <td class="px-6 py-4 text-sm text-gray-700">150 &euro;/mois (4 ans restants)</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Revolving</td>
+              <td class="px-6 py-4 text-sm text-gray-700">120 &euro;/mois</td>
+            </tr>
+            <tr class="bg-light">
+              <td class="px-6 py-4 text-sm text-navy font-bold">Total mensualités</td>
+              <td class="px-6 py-4 text-sm text-navy font-bold">1 400 &euro;/mois</td>
+              <td class="px-6 py-4 text-sm text-gold font-bold">980 &euro;/mois</td>
+            </tr>
+            <tr class="bg-light">
+              <td class="px-6 py-4 text-sm text-navy font-bold">Économie mensuelle</td>
+              <td class="px-6 py-4 text-sm text-gray-700">—</td>
+              <td class="px-6 py-4 text-sm text-gold font-bold">420 &euro;/mois</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 italic">Exemple à titre indicatif. Les conditions réelles dépendent de votre profil et de l'organisme prêteur. Un allongement de la durée peut augmenter le coût total du crédit.</p>
+    </section>
+
+    <!-- CTA LeadGenForm -->
+    <section class="mb-16">
+      <LeadGenForm source="rachat-credit" formTitle="Étude de rachat gratuite" />
+    </section>
+
+    <!-- FAQ -->
+    <FAQ items={faqItems} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HubCard from '../components/HubCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Finaneo",
+  "url": "https://finaneo.fr",
+  "logo": "https://finaneo.fr/logo.svg",
+  "description": "Comparez les crédits, assurances et placements. Simulateurs gratuits, guides experts et conseils personnalisés pour optimiser vos finances.",
+  "sameAs": []
+};
+---
+
+<BaseLayout
+  title="Finaneo — Vos finances, enfin claires"
+  description="Comparez les crédits, assurances et placements. Simulateurs gratuits, guides experts et conseils personnalisés pour optimiser vos finances."
+  jsonLd={jsonLd}
+>
+  <!-- Hero -->
+  <section class="bg-[#0A2540] text-white py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+        Vos finances, enfin claires
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Comparez les meilleures offres, simulez vos projets et optimisez chaque euro.
+        Finaneo vous accompagne à chaque étape de vos décisions financières.
+      </p>
+      <a
+        href="/simulateurs/"
+        class="inline-block bg-[#C9A84C] hover:bg-[#b8963e] text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+      >
+        Comparer les offres
+      </a>
+    </div>
+  </section>
+
+  <!-- Hub Cards -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#0A2540] text-center mb-4">
+        Tous nos univers financiers
+      </h2>
+      <p class="text-gray-600 text-center max-w-xl mx-auto mb-12">
+        Explorez nos guides, comparateurs et simulateurs par thématique pour prendre les bonnes décisions.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <HubCard
+          title="Crédit immobilier"
+          description="Comparez les taux, simulez vos mensualités et trouvez le prêt immobilier le plus avantageux pour votre projet."
+          href="/credit-immobilier/"
+          icon="🏠"
+        />
+        <HubCard
+          title="Assurance emprunteur"
+          description="Réduisez le coût de votre assurance de prêt grâce à la délégation. Jusqu'à 15 000 € d'économies sur la durée du crédit."
+          href="/assurance-emprunteur/"
+          icon="🛡️"
+        />
+        <HubCard
+          title="Épargne"
+          description="Livret A, LDDS, LEP, assurance-vie : découvrez les meilleurs placements pour faire fructifier votre épargne en toute sécurité."
+          href="/epargne/"
+          icon="💰"
+        />
+        <HubCard
+          title="Investissement"
+          description="PEA, ETF, SCPI, crowdfunding : comparez les solutions d'investissement et construisez un portefeuille adapté à votre profil."
+          href="/investissement/"
+          icon="📈"
+        />
+        <HubCard
+          title="Défiscalisation"
+          description="Pinel, Denormandie, PER, dons : identifiez les dispositifs fiscaux qui vous permettent de réduire efficacement vos impôts."
+          href="/defiscalisation/"
+          icon="📋"
+        />
+        <HubCard
+          title="Rachat de crédit"
+          description="Regroupez vos crédits pour alléger vos mensualités et retrouver une capacité de financement. Simulation gratuite et sans engagement."
+          href="/rachat-credit/"
+          icon="🔄"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlighted Simulator -->
+  <section class="bg-[#F5F7FA] py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1">
+          <span class="text-sm font-semibold uppercase tracking-wider text-[#C9A84C] mb-2 block">Simulateur phare</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-[#0A2540] mb-4">
+            Calculez votre mensualité de crédit immobilier
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Renseignez le montant emprunté, la durée et le taux pour obtenir instantanément
+            vos mensualités, le coût total du crédit et un tableau d'amortissement détaillé.
+          </p>
+          <a
+            href="/simulateurs/credit-immobilier/"
+            class="inline-block bg-[#0A2540] hover:bg-[#1A1A2E] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+          >
+            Lancer la simulation
+          </a>
+        </div>
+        <div class="flex-shrink-0 text-8xl">
+          🏦
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi Finaneo -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#0A2540] text-center mb-4">
+        Pourquoi choisir Finaneo ?
+      </h2>
+      <p class="text-gray-600 text-center max-w-xl mx-auto mb-12">
+        Une plateforme conçue pour vous aider à prendre des décisions financières éclairées, en toute transparence.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-[#C9A84C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-[#0A2540] mb-2">Comparateur indépendant</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Aucun établissement bancaire ne nous rémunère pour mettre en avant ses produits. Nos comparatifs sont objectifs et basés sur des données vérifiées.
+          </p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-[#C9A84C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-[#0A2540] mb-2">Simulateurs gratuits</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Tous nos outils de simulation sont accessibles gratuitement, sans inscription et sans engagement. Calculez, comparez, décidez en toute liberté.
+          </p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-[#C9A84C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-[#0A2540] mb-2">Guides experts</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Des articles rédigés par des spécialistes de la finance personnelle pour vous accompagner dans vos choix, du premier achat immobilier à la préparation de la retraite.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles récents -->
+  <section class="bg-[#F5F7FA] py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between mb-12">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-[#0A2540] mb-2">
+            Derniers articles
+          </h2>
+          <p class="text-gray-600">
+            Conseils et analyses pour piloter vos finances au quotidien.
+          </p>
+        </div>
+        <a
+          href="/guides/"
+          class="hidden md:inline-flex items-center gap-1 text-[#C9A84C] font-semibold hover:underline"
+        >
+          Tous les guides
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ArticleCard
+          title="Capacité d'emprunt 2026 : combien pouvez-vous emprunter ?"
+          description="Taux en baisse, règles du HCSF maintenues : découvrez comment calculer précisément votre capacité d'emprunt cette année et maximiser votre budget immobilier."
+          slug="capacite-emprunt-2026"
+          category="Crédit immobilier"
+          date="2026-03-15"
+        />
+        <ArticleCard
+          title="PEA ou assurance-vie en 2026 : quel placement choisir ?"
+          description="Fiscalité, rendement, liquidité : notre comparatif détaillé pour arbitrer entre le PEA et l'assurance-vie selon votre horizon et vos objectifs patrimoniaux."
+          slug="pea-ou-assurance-vie-2026"
+          category="Épargne"
+          date="2026-03-08"
+        />
+        <ArticleCard
+          title="Rachat de crédit : combien pouvez-vous économiser ?"
+          description="Regrouper ses crédits peut faire baisser vos mensualités de 30 à 60 %. Découvrez les conditions, le fonctionnement et les pièges à éviter avant de vous lancer."
+          slug="rachat-credit-economies"
+          category="Rachat de crédit"
+          date="2026-02-25"
+        />
+      </div>
+      <div class="text-center mt-8 md:hidden">
+        <a
+          href="/guides/"
+          class="inline-flex items-center gap-1 text-[#C9A84C] font-semibold hover:underline"
+        >
+          Tous les guides
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

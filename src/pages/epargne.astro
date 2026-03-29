@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import FAQ from '../components/FAQ.astro';
+import LeadGenForm from '../components/LeadGenForm.astro';
+import CTAAffiliation from '../components/CTAAffiliation.astro';
+
+const title = "Épargne : où placer son argent en 2026 ? | Finaneo";
+const description = "Découvrez les meilleurs placements d'épargne en 2026 : Livret A, LDDS, LEP, assurance-vie, PEL. Comparatif des taux et conseils pour optimiser votre épargne.";
+
+const faqItems = [
+  {
+    question: "Quel est le plafond du Livret A en 2026 ?",
+    answer: "Le plafond du Livret A est fixé à 22 950 euros pour les particuliers (hors capitalisation des intérêts, qui peut faire dépasser ce seuil). Pour les associations, le plafond est de 76 500 euros. Chaque personne ne peut détenir qu'un seul Livret A. Les intérêts sont calculés par quinzaine et versés au 31 décembre de chaque année. Avec un taux de 3 %, un Livret A au plafond génère environ 688 euros d'intérêts annuels, totalement exonérés d'impôt et de prélèvements sociaux."
+  },
+  {
+    question: "Le LEP est-il vraiment intéressant ?",
+    answer: "Le Livret d'Épargne Populaire (LEP) est actuellement le placement réglementé le plus rémunérateur avec un taux de 5 %. Son plafond est de 10 000 euros (hors intérêts capitalisés). L'accès est conditionné par un plafond de revenus : pour en bénéficier, votre revenu fiscal de référence ne doit pas dépasser un certain seuil (environ 22 419 euros pour une personne seule en 2026). Avec un LEP au plafond, vous percevez environ 500 euros d'intérêts nets par an, sans aucune fiscalité. C'est un placement incontournable pour les épargnants éligibles."
+  },
+  {
+    question: "Quelle est la différence entre le Livret A et le LDDS ?",
+    answer: "Le Livret A et le LDDS (Livret de Développement Durable et Solidaire) partagent le même taux de rémunération (3 % en 2026) et le même régime fiscal (exonération totale). La différence principale réside dans le plafond : 22 950 euros pour le Livret A contre 12 000 euros pour le LDDS. En cumulant les deux, un épargnant peut placer jusqu'à 34 950 euros à 3 % net. Le LDDS a la particularité de financer des projets liés à l'économie sociale et solidaire et à la transition énergétique."
+  },
+  {
+    question: "L'assurance-vie est-elle encore un bon placement en 2026 ?",
+    answer: "L'assurance-vie reste le placement préféré des Français avec plus de 1 900 milliards d'euros d'encours. Les fonds euros ont vu leurs rendements remonter ces dernières années, se situant entre 2,50 % et 4 % pour les meilleurs contrats en 2025. L'atout majeur de l'assurance-vie réside dans sa fiscalité avantageuse après 8 ans de détention : un abattement annuel de 4 600 euros (9 200 euros pour un couple) sur les gains retirés. Elle permet aussi une diversification via les unités de compte (actions, immobilier, obligations) pour les épargnants acceptant un risque modéré à élevé. Enfin, son cadre successoral est particulièrement avantageux avec un abattement de 152 500 euros par bénéficiaire pour les versements effectués avant 70 ans."
+  },
+  {
+    question: "Faut-il encore ouvrir un PEL en 2026 ?",
+    answer: "Le Plan Épargne Logement (PEL) ouvert à partir de janvier 2024 offre un taux de rémunération de 2,25 % brut, soit environ 1,58 % net après prélèvement forfaitaire unique (PFU) de 30 %. Ce taux est garanti pendant toute la durée du plan (jusqu'à 10 ans). Le PEL reste intéressant dans une stratégie à long terme pour les épargnants qui souhaitent se constituer un apport immobilier avec un taux garanti. En revanche, pour une épargne de court terme, les livrets réglementés (Livret A, LDDS, LEP) offrent un meilleur rendement net grâce à leur exonération fiscale."
+  },
+  {
+    question: "Comment répartir son épargne entre différents supports ?",
+    answer: "Une stratégie d'épargne équilibrée repose sur trois niveaux. D'abord, l'<strong>épargne de précaution</strong> : conservez 3 à 6 mois de dépenses sur des livrets disponibles (Livret A, LDDS, LEP si éligible). Ensuite, l'<strong>épargne moyen terme</strong> (2 à 8 ans) : orientez-vous vers le fonds euros de l'assurance-vie ou un PEL si vous avez un projet immobilier. Enfin, l'<strong>épargne long terme</strong> (8 ans et plus) : diversifiez via les unités de compte en assurance-vie, un PEA pour les actions européennes ou des SCPI pour l'immobilier. Cette pyramide permet de concilier sécurité, disponibilité et performance."
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container-wide section-padding">
+    <Breadcrumb items={[{ label: 'Épargne' }]} />
+
+    <!-- Hero / Intro -->
+    <section class="mb-16">
+      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+        Épargne : où placer son argent en 2026 ?
+      </h1>
+      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+        Dans un contexte de taux d'intérêt toujours favorables aux épargnants, savoir où placer son argent est devenu un enjeu majeur. Livrets réglementés, assurance-vie, PEL : chaque support a ses avantages et ses limites. Ce guide complet vous aide à y voir clair et à construire une stratégie d'épargne adaptée à vos objectifs et votre horizon de placement.
+      </p>
+      <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
+        Les Français épargnent en moyenne 16 % de leurs revenus, l'un des taux les plus élevés d'Europe. Pourtant, une grande partie de cette épargne reste mal investie, perdant du pouvoir d'achat face à l'inflation. Comprendre les caractéristiques de chaque produit d'épargne est la première étape pour faire fructifier efficacement votre patrimoine.
+      </p>
+    </section>
+
+    <!-- Livrets réglementés -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les livrets réglementés : sécurité et disponibilité</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4 mb-8">
+        <p>
+          Les livrets réglementés constituent le socle de toute stratégie d'épargne. Garantis par l'État, totalement disponibles et exonérés d'impôts, ils offrent un rendement attractif pour une épargne sans risque. En 2026, les taux des livrets réglementés restent à des niveaux historiquement favorables, portés par la politique monétaire de la BCE et la dynamique inflationniste des dernières années.
+        </p>
+        <p>
+          Le <strong class="text-navy">Livret A</strong> reste le produit d'épargne le plus populaire en France avec près de 56 millions de livrets ouverts. Son taux de 3 %, combiné à son exonération fiscale totale, en fait un placement incontournable pour l'épargne de précaution. Le <strong class="text-navy">LDDS</strong>, son complément naturel, offre les mêmes conditions avec un plafond plus modeste. Quant au <strong class="text-navy">LEP</strong>, réservé aux ménages modestes, il affiche un taux exceptionnel de 5 % qui en fait le placement sans risque le plus rémunérateur du marché.
+        </p>
+      </div>
+
+      <!-- Tableau comparatif des livrets -->
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-6 py-4 text-left text-sm font-semibold">Livret</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Taux</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Plafond</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Fiscalité</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Conditions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Livret A</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">3 %</td>
+              <td class="px-6 py-4 text-sm text-gray-700">22 950 &euro;</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Exonéré</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Aucune</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">LDDS</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">3 %</td>
+              <td class="px-6 py-4 text-sm text-gray-700">12 000 &euro;</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Exonéré</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Aucune</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">LEP</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">5 %</td>
+              <td class="px-6 py-4 text-sm text-gray-700">10 000 &euro;</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Exonéré</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Sous conditions de revenus</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 italic">Taux en vigueur au 1er trimestre 2026. Les taux sont révisés deux fois par an (février et août).</p>
+    </section>
+
+    <!-- Assurance-vie -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">L'assurance-vie : le couteau suisse de l'épargne</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          L'assurance-vie demeure le placement financier préféré des Français, et ce n'est pas un hasard. Sa polyvalence est incomparable : elle permet d'épargner à son rythme, de sécuriser son capital via les fonds euros, de rechercher la performance via les unités de compte, de préparer sa retraite, de transmettre son patrimoine dans un cadre fiscal avantageux et de financer ses projets à moyen ou long terme.
+        </p>
+        <p>
+          Le <strong class="text-navy">fonds euros</strong> offre une garantie en capital et un rendement annuel qui oscille entre 2,50 % et 4 % pour les meilleurs contrats en 2025. Ce support convient aux épargnants prudents qui souhaitent sécuriser leur épargne tout en bénéficiant d'un rendement supérieur aux livrets réglementés (après prise en compte de la fiscalité pour les contrats de plus de 8 ans).
+        </p>
+        <p>
+          Les <strong class="text-navy">unités de compte</strong> (UC) permettent d'investir dans une grande variété d'actifs : actions, obligations, immobilier (SCPI, SCI, OPCI), fonds thématiques. Leur valeur fluctue à la hausse comme à la baisse, ce qui implique un risque de perte en capital. Sur le long terme, les UC offrent toutefois un potentiel de rendement significativement supérieur aux fonds euros.
+        </p>
+        <p>
+          La fiscalité de l'assurance-vie s'avère particulièrement attractive après <strong class="text-navy">8 ans de détention</strong>. Les retraits bénéficient d'un abattement annuel de 4 600 euros sur les gains pour une personne seule (9 200 euros pour un couple). Au-delà de cet abattement, les gains sont soumis au prélèvement forfaitaire unique de 30 % ou, sur option, au barème progressif de l'impôt sur le revenu plus 17,2 % de prélèvements sociaux.
+        </p>
+      </div>
+    </section>
+
+    <!-- PEL -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le PEL : un placement à taux garanti</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          Le Plan Épargne Logement reste un outil pertinent pour les épargnants ayant un projet immobilier à moyen terme. Le PEL ouvert en 2026 offre un taux brut de 2,25 %, garanti pendant toute la durée du plan (jusqu'à 10 ans). Après application du PFU de 30 %, le rendement net tombe à environ 1,58 %, ce qui le rend moins compétitif que les livrets réglementés à court terme.
+        </p>
+        <p>
+          L'intérêt du PEL réside dans la <strong class="text-navy">garantie de taux</strong> sur la durée. Si les taux de marché venaient à baisser significativement dans les années à venir, le PEL conserverait son taux initial. Le plafond de versement est fixé à 61 200 euros, et l'épargne doit être alimentée par des versements réguliers d'au moins 540 euros par an. Le PEL permet ensuite d'obtenir un prêt épargne logement à un taux déterminé à l'ouverture.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stratégie d'épargne -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Construire sa stratégie d'épargne</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Épargne de précaution</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Conservez 3 à 6 mois de dépenses courantes sur des livrets disponibles immédiatement : Livret A, LDDS, LEP si vous y êtes éligible. Cette réserve vous protège contre les imprévus sans impacter votre stratégie de long terme.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Épargne projet (2-8 ans)</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Orientez-vous vers le fonds euros de l'assurance-vie ou un PEL si vous visez un achat immobilier. Ces supports offrent un bon compromis entre rendement et sécurité pour un horizon de placement de quelques années.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Épargne long terme (8 ans+)</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Diversifiez avec les unités de compte en assurance-vie, un PEA pour les actions européennes ou des SCPI pour l'immobilier. Le temps joue en votre faveur et permet de lisser la volatilité des marchés financiers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-16">
+      <CTAAffiliation partner="Épargne" />
+    </section>
+
+    <!-- FAQ -->
+    <FAQ items={faqItems} />
+  </div>
+</BaseLayout>

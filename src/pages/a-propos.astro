@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="À propos de Finaneo"
+  description="Finaneo est un média financier indépendant. Notre mission : rendre la finance personnelle accessible à tous les Français."
+>
+  <section class="section-padding">
+    <div class="container-narrow">
+      <Breadcrumb items={[{ label: 'À propos' }]} />
+
+      <h1 class="text-3xl md:text-4xl font-extrabold text-navy mb-4">
+        À propos de Finaneo
+      </h1>
+      <p class="text-lg text-gray-600 mb-12 max-w-2xl">
+        Un média financier indépendant au service des Français.
+      </p>
+
+      <!-- Mission -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-navy mb-4">Notre mission</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Finaneo est né d'un constat simple : la finance personnelle reste un sujet complexe et intimidant pour la majorité des Français. Entre le jargon bancaire, la multiplication des offres et les réglementations qui évoluent sans cesse, il est difficile de s'y retrouver.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Notre mission est de démocratiser l'accès à l'information financière. Nous créons des guides clairs, des simulateurs gratuits et des comparatifs objectifs pour vous aider à prendre les meilleures décisions pour votre argent.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Que vous souhaitiez acheter votre premier bien immobilier, optimiser votre épargne, comprendre votre assurance ou réduire vos impôts, Finaneo vous accompagne à chaque étape avec des contenus accessibles et fiables.
+        </p>
+      </div>
+
+      <!-- Valeurs -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-navy mb-8">Nos valeurs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-light rounded-2xl p-8">
+            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2">Transparence</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Nous indiquons clairement nos sources de revenus. Lorsqu'un lien est sponsorisé ou affilié, nous le signalons. Nos recommandations restent toujours basées sur la qualité des produits, jamais sur la commission perçue.
+            </p>
+          </div>
+
+          <div class="bg-light rounded-2xl p-8">
+            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2">Indépendance</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Finaneo n'est lié à aucune banque, aucun assureur ni aucun établissement financier. Nous choisissons librement les sujets que nous traitons et les produits que nous analysons, sans pression commerciale extérieure.
+            </p>
+          </div>
+
+          <div class="bg-light rounded-2xl p-8">
+            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2">Pédagogie</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Nous croyons que chacun peut comprendre la finance si elle est bien expliquée. Nos contenus sont rédigés dans un langage simple, illustrés par des exemples concrets et accompagnés d'outils pratiques.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Équipe -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-navy mb-4">Notre équipe</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Derrière Finaneo, il y a une équipe de passionnés de finance personnelle. Nous sommes convaincus que mieux comprendre son argent, c'est mieux vivre au quotidien.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Nos rédacteurs et analystes travaillent chaque jour pour décrypter l'actualité financière, tester les produits du marché et produire des guides complets. Chaque article est vérifié et mis à jour régulièrement pour garantir la fiabilité des informations.
+        </p>
+      </div>
+
+      <!-- Monétisation -->
+      <div class="bg-light rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-2xl font-bold text-navy mb-4">Comment Finaneo se finance</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Finaneo est un site gratuit. Pour pouvoir continuer à proposer des contenus de qualité sans abonnement ni paywall, nous nous finançons principalement par l'affiliation.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Qu'est-ce que l'affiliation ?</strong> Lorsque vous cliquez sur certains liens présents dans nos guides ou comparatifs et que vous souscrivez à un produit (crédit, assurance, compte épargne...), nous pouvons recevoir une commission de la part du partenaire. Ce système est courant sur les sites d'information financière.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Ce que cela ne change pas :</strong> l'affiliation n'a aucun impact sur le prix que vous payez. Nos analyses et comparatifs sont réalisés de manière indépendante, et la présence ou l'absence d'un partenariat n'influence pas notre jugement éditorial.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Nous signalons systématiquement les liens affiliés par souci de transparence envers nos lecteurs.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

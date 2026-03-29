@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import FAQ from '../components/FAQ.astro';
+import LeadGenForm from '../components/LeadGenForm.astro';
+import CTAAffiliation from '../components/CTAAffiliation.astro';
+
+const title = "Crédit immobilier : guide complet pour financer votre bien | Finaneo";
+const description = "Tout savoir sur le crédit immobilier en France : taux actuels, étapes de souscription, apport personnel, assurance emprunteur. Simulez votre prêt gratuitement.";
+
+const faqItems = [
+  {
+    question: "Quel est le taux moyen d'un crédit immobilier en 2026 ?",
+    answer: "En mars 2026, les taux moyens observés se situent autour de 3,20 % sur 20 ans et 3,45 % sur 25 ans. Ces taux varient selon votre profil emprunteur, votre apport personnel et la banque sollicitée. Les meilleurs profils peuvent obtenir des taux inférieurs de 0,20 à 0,40 point par rapport à la moyenne du marché. Il est fortement recommandé de faire jouer la concurrence entre plusieurs établissements bancaires ou de passer par un courtier pour obtenir les conditions les plus avantageuses."
+  },
+  {
+    question: "Quel apport personnel faut-il pour obtenir un prêt immobilier ?",
+    answer: "Les banques demandent généralement un apport personnel représentant au minimum 10 % du prix du bien, ce qui correspond aux frais de notaire et de garantie. En pratique, un apport de 15 à 20 % augmente significativement vos chances d'obtenir un financement à des conditions avantageuses. Certaines banques acceptent encore de financer sans apport pour les primo-accédants disposant de revenus stables et élevés, mais ces cas deviennent de plus en plus rares. L'apport démontre votre capacité d'épargne et réduit le risque pour la banque."
+  },
+  {
+    question: "Quelle est la durée maximale d'un crédit immobilier en France ?",
+    answer: "Depuis les recommandations du Haut Conseil de Stabilité Financière (HCSF) devenues contraignantes en janvier 2022, la durée maximale d'un crédit immobilier est fixée à 25 ans. Une exception existe pour les achats dans le neuf ou en VEFA (Vente en l'État Futur d'Achèvement) : la durée peut être portée à 27 ans, incluant un différé de remboursement de 2 ans correspondant à la période de construction. Le taux d'endettement maximal est quant à lui plafonné à 35 % des revenus nets, assurance comprise."
+  },
+  {
+    question: "Peut-on renégocier son crédit immobilier ?",
+    answer: "Oui, la renégociation de crédit immobilier est possible à tout moment. Elle est particulièrement intéressante lorsque l'écart entre votre taux actuel et les taux du marché dépasse 0,70 à 1 point. Vous pouvez renégocier directement avec votre banque ou procéder à un rachat de crédit auprès d'un établissement concurrent. Dans le second cas, des frais s'appliquent : indemnités de remboursement anticipé (IRA) plafonnées à 6 mois d'intérêts ou 3 % du capital restant dû, frais de nouvelle garantie et éventuels frais de dossier. Un courtier peut vous aider à évaluer la pertinence de l'opération."
+  },
+  {
+    question: "Quels documents fournir pour une demande de crédit immobilier ?",
+    answer: "Le dossier de demande de prêt immobilier comprend plusieurs catégories de documents. Pour l'identité : pièce d'identité, livret de famille, justificatif de domicile. Pour les revenus : trois derniers bulletins de salaire, deux derniers avis d'imposition, justificatifs de revenus complémentaires éventuels. Pour la situation financière : trois derniers relevés de compte, justificatifs d'épargne et d'apport personnel, tableau d'amortissement des crédits en cours. Pour le projet : compromis de vente signé, descriptif du bien, diagnostics immobiliers. Un dossier complet et bien présenté accélère considérablement le traitement de votre demande."
+  },
+  {
+    question: "L'assurance emprunteur est-elle obligatoire ?",
+    answer: "Légalement, l'assurance emprunteur n'est pas obligatoire. En pratique, aucune banque n'accorde de crédit immobilier sans cette garantie. Elle protège à la fois l'emprunteur et la banque en cas de décès, d'invalidité ou d'incapacité de travail. Depuis la loi Lemoine de 2022, vous pouvez changer d'assurance emprunteur à tout moment, sans frais et sans attendre la date anniversaire du contrat. Cette liberté vous permet de réaliser des économies substantielles, parfois de plusieurs milliers d'euros sur la durée totale du prêt."
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container-wide section-padding">
+    <Breadcrumb items={[{ label: 'Crédit immobilier' }]} />
+
+    <!-- Hero / Intro -->
+    <section class="mb-16">
+      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+        Crédit immobilier : guide complet pour financer votre bien
+      </h1>
+      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+        Acheter un bien immobilier est le projet d'une vie pour beaucoup de Français. Que vous soyez primo-accédant ou investisseur aguerri, comprendre le fonctionnement du crédit immobilier est essentiel pour obtenir les meilleures conditions de financement. Ce guide complet vous accompagne à chaque étape, du calcul de votre capacité d'emprunt jusqu'à la signature chez le notaire.
+      </p>
+      <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
+        En France, le crédit immobilier représente plus de 1 000 milliards d'euros d'encours. Chaque année, des centaines de milliers de ménages souscrivent un prêt pour acquérir leur résidence principale, une résidence secondaire ou réaliser un investissement locatif. Les conditions de financement évoluent constamment en fonction de la politique monétaire de la Banque Centrale Européenne, des recommandations du HCSF et de la stratégie commerciale de chaque banque.
+      </p>
+    </section>
+
+    <!-- Comment obtenir un crédit -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Comment obtenir un crédit immobilier ?</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          L'obtention d'un crédit immobilier repose sur plusieurs critères évalués par les banques. Le premier est votre <strong class="text-navy">taux d'endettement</strong>, qui ne doit pas dépasser 35 % de vos revenus nets mensuels, assurance de prêt incluse. Ce plafond, imposé par le HCSF, permet de s'assurer que vous conservez un reste à vivre suffisant pour couvrir vos dépenses courantes.
+        </p>
+        <p>
+          Le second critère fondamental est la <strong class="text-navy">stabilité de vos revenus</strong>. Les banques privilégient les emprunteurs en CDI ayant terminé leur période d'essai, les fonctionnaires titulaires et les professions libérales établies depuis au moins trois ans. Les CDD, intérimaires et auto-entrepreneurs peuvent obtenir un prêt, mais les conditions sont généralement plus strictes et un apport plus conséquent sera exigé.
+        </p>
+        <p>
+          Votre <strong class="text-navy">gestion bancaire</strong> fait également l'objet d'une analyse minutieuse. Les banques examinent vos trois derniers relevés de compte pour vérifier l'absence de découverts récurrents, de rejets de prélèvements ou de dépenses jugées excessives. Un comportement financier exemplaire sur cette période témoigne de votre sérieux et augmente vos chances d'approbation.
+        </p>
+        <p>
+          Enfin, le recours à un <strong class="text-navy">courtier en crédit immobilier</strong> peut s'avérer déterminant. Ce professionnel négocie pour vous auprès de ses banques partenaires et obtient souvent des taux plus bas que ceux proposés en agence. Il vous fait également gagner un temps précieux en constituant votre dossier et en gérant les échanges avec les différents établissements.
+        </p>
+      </div>
+    </section>
+
+    <!-- Taux actuels -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les taux de crédit immobilier en 2026</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-6 py-4 text-left text-sm font-semibold">Durée</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Taux moyen</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Meilleur taux</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">10 ans</td>
+              <td class="px-6 py-4 text-sm text-gray-700">2,85 %</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">2,50 %</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">15 ans</td>
+              <td class="px-6 py-4 text-sm text-gray-700">3,05 %</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">2,70 %</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">20 ans</td>
+              <td class="px-6 py-4 text-sm text-gray-700">3,20 %</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">2,90 %</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">25 ans</td>
+              <td class="px-6 py-4 text-sm text-gray-700">3,45 %</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">3,10 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 italic">Taux indicatifs observés en mars 2026. Hors assurance et frais de dossier.</p>
+    </section>
+
+    <!-- Les étapes du crédit immobilier -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les étapes pour obtenir votre crédit immobilier</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">1. Évaluer votre capacité d'emprunt</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Calculez votre budget en fonction de vos revenus, charges et apport. Utilisez un simulateur en ligne pour obtenir une première estimation de votre enveloppe de financement. Tenez compte du taux d'endettement maximum de 35 % et prévoyez une marge pour les imprévus.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">2. Rechercher le bien immobilier</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Fort de votre budget, lancez votre recherche immobilière. Visitez plusieurs biens, comparez les quartiers et négociez le prix d'achat. N'oubliez pas d'intégrer les frais annexes : notaire (7-8 % dans l'ancien, 2-3 % dans le neuf), travaux éventuels et frais de déménagement.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">3. Signer le compromis de vente</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Le compromis engage les deux parties. Il contient une clause suspensive d'obtention de prêt qui vous protège : si le financement est refusé, la vente est annulée sans pénalité. Vous disposez généralement de 45 à 60 jours pour obtenir votre offre de prêt.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">4. Monter le dossier de prêt</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Rassemblez tous les justificatifs nécessaires et déposez votre dossier auprès de plusieurs banques ou d'un courtier. La mise en concurrence est la clé pour obtenir les meilleures conditions. Comparez non seulement les taux, mais aussi les frais de dossier, de garantie et d'assurance.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">5. Recevoir et accepter l'offre de prêt</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">La banque vous adresse une offre de prêt détaillant toutes les conditions. Vous disposez d'un délai légal de réflexion de 10 jours calendaires avant de pouvoir l'accepter. Relisez attentivement chaque clause, en particulier les conditions de remboursement anticipé et le coût total du crédit.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">6. Signer chez le notaire</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">La signature de l'acte authentique de vente se fait en présence du notaire. Les fonds sont débloqués par la banque et transférés au vendeur. Vous recevez les clés et devenez officiellement propriétaire. Le notaire procède ensuite à la publication de la vente au Service de publicité foncière.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apport personnel -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">L'apport personnel : un atout décisif</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          L'apport personnel représente la somme que vous investissez directement dans votre achat immobilier, sans recours à l'emprunt. Il constitue un élément déterminant dans la négociation de votre crédit. Plus votre apport est conséquent, plus vous bénéficiez d'un pouvoir de négociation élevé auprès des banques.
+        </p>
+        <p>
+          Concrètement, un apport de 10 % couvre les frais de notaire et de garantie. Avec 20 %, vous accédez aux meilleurs taux du marché et réduisez significativement le coût total de votre emprunt. Certains emprunteurs apportent 30 % ou plus, ce qui leur permet de raccourcir la durée du prêt et de réaliser des économies considérables sur les intérêts.
+        </p>
+        <p>
+          Pour constituer votre apport, plusieurs sources sont mobilisables : épargne personnelle (Livret A, LDDS, PEL), donation familiale, déblocage anticipé de l'épargne salariale (participation, intéressement) ou encore prêt à taux zéro (PTZ) pour les primo-accédants sous conditions de ressources.
+        </p>
+      </div>
+    </section>
+
+    <!-- Assurance emprunteur -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">L'assurance emprunteur : protégez votre investissement</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          L'assurance emprunteur représente en moyenne 25 à 30 % du coût total d'un crédit immobilier. Elle couvre les risques de décès, d'invalidité permanente totale (IPT), d'invalidité permanente partielle (IPP) et d'incapacité temporaire de travail (ITT). La garantie perte d'emploi, optionnelle, est souvent jugée coûteuse au regard de ses conditions de déclenchement restrictives.
+        </p>
+        <p>
+          Grâce à la <strong class="text-navy">loi Lemoine</strong> entrée en vigueur en 2022, vous pouvez désormais changer d'assurance emprunteur à tout moment, sans frais ni pénalités. Cette avancée majeure ouvre la voie à des économies significatives : en optant pour une délégation d'assurance auprès d'un assureur externe, vous pouvez réduire le coût de votre assurance de 30 à 60 % par rapport au contrat groupe proposé par votre banque.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA LeadGenForm -->
+    <section class="mb-16">
+      <LeadGenForm source="credit-immobilier" formTitle="Simulez votre crédit immobilier" />
+    </section>
+
+    <!-- FAQ -->
+    <FAQ items={faqItems} />
+  </div>
+</BaseLayout>

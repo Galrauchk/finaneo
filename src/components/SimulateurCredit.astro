@@ -1,0 +1,73 @@
+---
+---
+
+<div id="sim-credit" class="bg-white rounded-2xl border border-gray-200 p-8">
+  <h2 class="text-xl font-bold text-navy mb-6">Calculez votre mensualité de crédit immobilier</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div>
+      <label for="montant" class="block text-sm font-medium text-dark mb-1">Montant emprunté (€)</label>
+      <input type="number" id="montant" value="250000" min="10000" max="2000000" step="5000"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none" />
+    </div>
+    <div>
+      <label for="duree" class="block text-sm font-medium text-dark mb-1">Durée (années)</label>
+      <input type="number" id="duree" value="20" min="5" max="30" step="1"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none" />
+    </div>
+    <div>
+      <label for="taux" class="block text-sm font-medium text-dark mb-1">Taux annuel (%)</label>
+      <input type="number" id="taux" value="3.5" min="0.1" max="10" step="0.05"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none" />
+    </div>
+  </div>
+
+  <button id="btn-calc-credit" class="btn-primary mb-8">Calculer</button>
+
+  <div id="result-credit" class="hidden bg-light rounded-xl p-6 border border-gray-200">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      <div>
+        <p class="text-sm text-gray-500 mb-1">Mensualité</p>
+        <p id="res-mensualite" class="text-2xl font-bold text-navy">—</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500 mb-1">Coût total du crédit</p>
+        <p id="res-cout" class="text-2xl font-bold text-gold">—</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500 mb-1">Montant total remboursé</p>
+        <p id="res-total" class="text-2xl font-bold text-navy">—</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calcCredit() {
+    const montant = parseFloat((document.getElementById('montant') as HTMLInputElement).value);
+    const duree = parseFloat((document.getElementById('duree') as HTMLInputElement).value);
+    const tauxAnnuel = parseFloat((document.getElementById('taux') as HTMLInputElement).value);
+
+    if (!montant || !duree || !tauxAnnuel) return;
+
+    const tauxMensuel = tauxAnnuel / 100 / 12;
+    const nbMois = duree * 12;
+    const mensualite = montant * (tauxMensuel * Math.pow(1 + tauxMensuel, nbMois)) / (Math.pow(1 + tauxMensuel, nbMois) - 1);
+    const totalRembourse = mensualite * nbMois;
+    const coutCredit = totalRembourse - montant;
+
+    const fmt = (n: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+
+    document.getElementById('res-mensualite')!.textContent = fmt(mensualite);
+    document.getElementById('res-cout')!.textContent = fmt(coutCredit);
+    document.getElementById('res-total')!.textContent = fmt(totalRembourse);
+    document.getElementById('result-credit')!.classList.remove('hidden');
+  }
+
+  document.getElementById('btn-calc-credit')?.addEventListener('click', calcCredit);
+  document.querySelectorAll('#sim-credit input').forEach(input => {
+    input.addEventListener('keydown', (e) => {
+      if ((e as KeyboardEvent).key === 'Enter') calcCredit();
+    });
+  });
+</script>

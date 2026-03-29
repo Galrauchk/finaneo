@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import FAQ from '../components/FAQ.astro';
+import LeadGenForm from '../components/LeadGenForm.astro';
+import CTAAffiliation from '../components/CTAAffiliation.astro';
+
+const title = "Assurance emprunteur : comparez et économisez | Finaneo";
+const description = "Comparez les assurances emprunteur, comprenez la loi Lemoine et la délégation d'assurance. Économisez jusqu'à 60 % sur votre assurance de prêt immobilier.";
+
+const faqItems = [
+  {
+    question: "Peut-on changer d'assurance emprunteur à tout moment ?",
+    answer: "Oui, depuis l'entrée en vigueur de la loi Lemoine le 1er juin 2022 (pour les nouveaux contrats) puis le 1er septembre 2022 (pour les contrats en cours), tout emprunteur peut résilier et changer d'assurance de prêt immobilier à tout moment, sans frais et sans pénalité. La seule condition est de souscrire un nouveau contrat présentant un niveau de garanties au moins équivalent à celui exigé par la banque. La banque dispose de 10 jours ouvrés pour accepter ou refuser la substitution (un refus devant être motivé par une insuffisance de garanties)."
+  },
+  {
+    question: "Combien coûte une assurance emprunteur ?",
+    answer: "Le coût d'une assurance emprunteur varie considérablement selon votre âge, votre état de santé, votre profession et les garanties souscrites. En moyenne, le taux d'assurance groupe proposé par les banques se situe entre 0,30 % et 0,50 % du capital emprunté par an. En délégation d'assurance auprès d'un assureur externe, les taux descendent entre 0,08 % et 0,20 % pour un profil jeune et non fumeur. Sur un prêt de 250 000 euros sur 20 ans, la différence peut atteindre 15 000 à 20 000 euros d'économies sur la durée totale du crédit."
+  },
+  {
+    question: "Quelles sont les garanties obligatoires d'une assurance emprunteur ?",
+    answer: "Les garanties minimales exigées dépendent du type de projet. Pour l'achat d'une résidence principale, les banques demandent systématiquement les garanties décès, PTIA (Perte Totale et Irréversible d'Autonomie), IPT (Invalidité Permanente Totale) et ITT (Incapacité Temporaire de Travail). Pour un investissement locatif, seules les garanties décès et PTIA sont généralement requises. La garantie IPP (Invalidité Permanente Partielle) est souvent recommandée mais pas toujours imposée. La garantie perte d'emploi reste optionnelle dans tous les cas."
+  },
+  {
+    question: "Qu'est-ce que la délégation d'assurance emprunteur ?",
+    answer: "La délégation d'assurance consiste à souscrire votre assurance de prêt auprès d'un assureur externe plutôt que d'accepter le contrat groupe proposé par votre banque. Ce droit, initialement instauré par la loi Lagarde de 2010, vous permet de faire jouer la concurrence et d'obtenir des tarifs souvent bien plus avantageux. Le contrat délégué doit respecter l'équivalence de garanties définie par la banque. Les assureurs individuels proposent des contrats sur mesure, adaptés à votre profil exact, là où les contrats groupe mutualisent les risques et lissent les tarifs."
+  },
+  {
+    question: "Faut-il remplir un questionnaire de santé pour l'assurance emprunteur ?",
+    answer: "Depuis la loi Lemoine, le questionnaire de santé est supprimé pour les prêts immobiliers dont la part assurée ne dépasse pas 200 000 euros par personne et dont le remboursement s'achève avant le 60e anniversaire de l'emprunteur. Au-delà de ces seuils, un questionnaire de santé reste exigé. Par ailleurs, le droit à l'oubli a été réduit à 5 ans (contre 10 ans auparavant) pour les anciens malades du cancer et de l'hépatite C. Cette évolution facilite considérablement l'accès au crédit pour les personnes ayant connu des problèmes de santé."
+  },
+  {
+    question: "Comment comparer les assurances emprunteur efficacement ?",
+    answer: "Pour comparer efficacement les assurances emprunteur, concentrez-vous sur plusieurs critères clés : le TAEA (Taux Annuel Effectif d'Assurance) qui permet une comparaison standardisée, le coût total de l'assurance sur la durée du prêt, les exclusions de garanties (sports à risque, maladies non objectivables comme le dos ou le psychique), les délais de franchise et de carence, ainsi que la quotité assurée. N'hésitez pas à utiliser un comparateur en ligne et à solliciter plusieurs devis pour identifier l'offre la plus compétitive à garanties équivalentes."
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container-wide section-padding">
+    <Breadcrumb items={[{ label: 'Assurance emprunteur' }]} />
+
+    <!-- Hero / Intro -->
+    <section class="mb-16">
+      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+        Assurance emprunteur : comparez et économisez
+      </h1>
+      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+        L'assurance emprunteur est un poste de dépense souvent sous-estimé par les acquéreurs immobiliers. Elle représente pourtant en moyenne 25 à 30 % du coût total d'un crédit. La bonne nouvelle ? Depuis la loi Lemoine, vous avez la liberté de changer d'assurance à tout moment et de réaliser des économies substantielles. Ce guide vous explique comment optimiser cette dépense incontournable.
+      </p>
+      <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
+        En souscrivant une assurance emprunteur adaptée à votre profil plutôt qu'un contrat groupe standardisé, vous pouvez économiser plusieurs milliers d'euros sur la durée de votre prêt. C'est l'un des leviers les plus efficaces pour réduire le coût global de votre financement immobilier, parfois même plus impactant qu'une négociation de taux.
+      </p>
+    </section>
+
+    <!-- Loi Lemoine -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">La loi Lemoine : une révolution pour les emprunteurs</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          Adoptée le 28 février 2022, la <strong class="text-navy">loi Lemoine</strong> a profondément transformé le marché de l'assurance emprunteur en France. Son apport majeur est l'instauration du droit de résiliation à tout moment, sans frais et sans pénalités. Auparavant, les emprunteurs devaient attendre soit la première année (amendement Bourquin), soit la date anniversaire pour changer de contrat.
+        </p>
+        <p>
+          Cette loi comprend également deux autres avancées significatives. Premièrement, la <strong class="text-navy">suppression du questionnaire de santé</strong> pour les prêts dont la part assurée ne dépasse pas 200 000 euros par assuré et dont l'échéance intervient avant les 60 ans de l'emprunteur. Deuxièmement, la <strong class="text-navy">réduction du droit à l'oubli</strong> de 10 à 5 ans pour les personnes ayant été atteintes d'un cancer ou d'une hépatite C.
+        </p>
+        <p>
+          Concrètement, si vous avez souscrit un crédit immobilier ces dernières années avec le contrat groupe de votre banque, vous pouvez dès aujourd'hui rechercher une offre plus compétitive sur le marché. La démarche est simple : obtenez des devis comparatifs, choisissez le contrat le plus avantageux à garanties équivalentes, puis adressez votre demande de substitution à votre banque qui a l'obligation de répondre sous 10 jours ouvrés.
+        </p>
+      </div>
+    </section>
+
+    <!-- Délégation d'assurance -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">La délégation d'assurance : le choix malin</h2>
+      <div class="prose max-w-none text-gray-700 space-y-4">
+        <p>
+          La délégation d'assurance vous permet de souscrire votre couverture auprès de l'assureur de votre choix plutôt que d'accepter le contrat groupe de votre banque. Cette liberté, garantie par la loi Lagarde de 2010, est renforcée par les dispositions de la loi Lemoine qui facilitent la substitution en cours de prêt.
+        </p>
+        <p>
+          Les contrats individuels en délégation présentent un avantage tarifaire majeur : ils sont calculés sur la base de votre profil personnel (âge, état de santé, profession, mode de vie) et non sur une moyenne mutualisée. Un emprunteur de 30 ans, non fumeur, exerçant une profession sans risque, paiera ainsi une prime très inférieure à celle du contrat groupe qui lisse les tarifs entre tous les profils.
+        </p>
+        <p>
+          Les tarifs en délégation oscillent entre <strong class="text-navy">0,08 % et 0,20 %</strong> du capital emprunté pour les profils les plus favorables, contre 0,30 % à 0,50 % en contrat groupe. Sur un emprunt de 300 000 euros sur 25 ans, cette différence peut représenter une économie de 15 000 à 25 000 euros.
+        </p>
+      </div>
+    </section>
+
+    <!-- Comment choisir -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Comment choisir son assurance emprunteur ?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Analysez vos besoins</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Identifiez les garanties indispensables en fonction de votre situation : résidence principale ou investissement locatif, situation familiale, profession exercée. Évaluez la pertinence de chaque option (IPP, perte d'emploi) au regard de son coût et de ses conditions de déclenchement.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Comparez les offres</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Sollicitez au minimum trois devis auprès d'assureurs différents. Comparez le TAEA, le coût total, les exclusions, les franchises et les conditions d'indemnisation. Attention aux contrats attractifs en apparence mais comportant de nombreuses exclusions qui réduisent la couverture réelle.</p>
+        </div>
+        <div class="bg-light rounded-xl p-6 border border-gray-200">
+          <h3 class="text-lg font-bold text-navy mb-3">Vérifiez l'équivalence</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Votre nouveau contrat doit respecter les critères d'équivalence de garanties définis par la banque (listés dans la fiche standardisée d'information). Chaque banque publie une liste de critères parmi les 18 définis par le CCSF. Votre contrat doit couvrir au minimum tous les critères cochés par la banque.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparatif -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Contrat groupe vs délégation : le comparatif</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-6 py-4 text-left text-sm font-semibold">Critère</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Contrat groupe</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Délégation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Taux moyen</td>
+              <td class="px-6 py-4 text-sm text-gray-700">0,30 % - 0,50 %</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">0,08 % - 0,20 %</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Personnalisation</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Standardisé</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">Sur mesure</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Tarification</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Capital initial</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">Capital restant dû</td>
+            </tr>
+            <tr class="hover:bg-light transition-colors">
+              <td class="px-6 py-4 text-sm text-dark font-medium">Souplesse</td>
+              <td class="px-6 py-4 text-sm text-gray-700">Limitée</td>
+              <td class="px-6 py-4 text-sm text-gold font-semibold">Élevée</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-16">
+      <CTAAffiliation partner="Assurance" title="Comparez les assurances emprunteur" />
+    </section>
+
+    <!-- FAQ -->
+    <FAQ items={faqItems} />
+  </div>
+</BaseLayout>
