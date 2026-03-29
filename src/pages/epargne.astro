@@ -42,9 +42,22 @@ const faqItems = [
     answer: "Les livrets réglementés (Livret A, LDDS, LEP) bénéficient d'une garantie de l'État, ce qui les rend effectivement sans risque de perte en capital. Le fonds de garantie des dépôts (FGDR) couvre également les dépôts bancaires à hauteur de 100 000 euros par déposant et par établissement. Le principal risque est celui de l'inflation : si le taux de votre livret est inférieur à l'inflation, votre pouvoir d'achat diminue en termes réels. En 2026, avec une inflation autour de 2 % et un Livret A à 3 %, le rendement réel reste positif, ce qui est une situation favorable pour les épargnants prudents."
   }
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer.replace(/<[^>]*>/g, ''),
+    },
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Épargne' }]} />
 

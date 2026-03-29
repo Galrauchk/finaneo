@@ -1,0 +1,16 @@
+{
+  "name": "Finaneo",
+  "short_name": "Finaneo",
+  "description": "Vos finances, enfin claires",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A2540",
+  "theme_color": "#C9A84C",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

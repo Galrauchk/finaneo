@@ -5,12 +5,35 @@ import ArticleCard from '../components/ArticleCard.astro';
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Finaneo",
-  "url": "https://finaneo.fr",
-  "logo": "https://finaneo.fr/logo-finaneo.svg",
-  "description": "Comparez les crédits, assurances et placements. Simulateurs gratuits, guides experts et conseils personnalisés pour optimiser vos finances.",
-  "sameAs": []
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://finaneo.fr/#organization",
+      "name": "Finaneo",
+      "url": "https://finaneo.fr",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://finaneo.fr/logo-finaneo.svg",
+      },
+      "description": "Comparez les crédits, assurances et placements. Simulateurs gratuits, guides experts et conseils personnalisés pour optimiser vos finances.",
+      "sameAs": [],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://finaneo.fr/#website",
+      "name": "Finaneo",
+      "url": "https://finaneo.fr",
+      "publisher": { "@id": "https://finaneo.fr/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://finaneo.fr/guides/?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
 };
 
 const hubs = [

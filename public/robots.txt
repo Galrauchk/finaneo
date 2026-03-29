@@ -1,5 +1,16 @@
 User-agent: *
 Allow: /
 Disallow: /contact-merci/
+Disallow: /api/
+Disallow: /.netlify/
 
 Sitemap: https://finaneo.fr/sitemap-index.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Googlebot
+Allow: /

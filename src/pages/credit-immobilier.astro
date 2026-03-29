@@ -42,9 +42,22 @@ const faqItems = [
     answer: "Le courtier en crédit immobilier présente plusieurs avantages concrets. Premièrement, il dispose d'un accès privilégié à des grilles de taux négociées avec ses banques partenaires, souvent inférieures à celles proposées en agence. Deuxièmement, il fait gagner un temps considérable en constituant votre dossier, en le soumettant simultanément à plusieurs établissements et en gérant les relances. Troisièmement, il connaît les critères d'acceptation de chaque banque et oriente votre dossier vers l'établissement le plus susceptible de l'accepter. Enfin, ses honoraires (entre 1 500 et 3 000 euros en moyenne) sont généralement compensés par l'économie réalisée sur le taux et les conditions de prêt. Certains courtiers en ligne ne facturent aucun frais de courtage, étant rémunérés uniquement par la banque prêteuse."
   }
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer.replace(/<[^>]*>/g, ''),
+    },
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Crédit immobilier' }]} />
 

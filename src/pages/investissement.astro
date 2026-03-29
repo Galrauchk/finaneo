@@ -42,9 +42,22 @@ const faqItems = [
     answer: "La diversification consiste à répartir ses investissements entre différentes classes d'actifs (actions, obligations, immobilier), zones géographiques (Europe, États-Unis, pays émergents) et secteurs d'activité (technologie, santé, énergie). Son objectif est de réduire le risque global du portefeuille : quand une classe d'actifs ou une région baisse, une autre peut compenser. Un portefeuille composé à 100 % d'actions françaises est bien plus risqué qu'un portefeuille réparti entre un ETF MSCI World, des SCPI et des obligations. La diversification est le seul « repas gratuit » en finance, selon le prix Nobel Harry Markowitz : elle réduit le risque sans nécessairement réduire le rendement espéré."
   }
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer.replace(/<[^>]*>/g, ''),
+    },
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Investissement' }]} />
 

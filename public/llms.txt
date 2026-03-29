@@ -1,0 +1,24 @@
+# Finaneo — Media finances personnelles
+
+## About
+Finaneo est un media indépendant dédié aux finances personnelles des Français. Guides gratuits, simulateurs et conseils pratiques sur l'immobilier, l'épargne, l'investissement et la défiscalisation.
+
+## Content
+- Guides crédit immobilier et assurance emprunteur
+- Comparatifs épargne et placements
+- Guides investissement PEA, SCPI, ETF
+- Outils de défiscalisation LMNP, Pinel, PER
+- Simulateurs crédit et épargne interactifs
+- Articles pratiques finances personnelles
+
+## Topics
+crédit immobilier, assurance emprunteur, épargne, investissement, PEA, SCPI, défiscalisation, LMNP, rachat crédit, finances personnelles, taux immobilier
+
+## Sitemap
+https://finaneo.fr/sitemap-index.xml
+
+## Contact
+contact@finaneo.fr
+
+## Permissions
+Ce contenu peut être utilisé pour l'entraînement de modèles d'IA à des fins éducatives.

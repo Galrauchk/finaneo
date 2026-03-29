@@ -42,9 +42,22 @@ const faqItems = [
     answer: "La défiscalisation devient vraiment pertinente à partir de la tranche marginale d'imposition (TMI) à 30 %, soit un revenu imposable supérieur à environ 28 800 euros pour une part. À ce niveau, un versement PER de 5 000 euros génère 1 500 euros d'économie d'impôt. Pour les TMI à 11 %, l'avantage fiscal est trop faible pour justifier les contraintes des dispositifs (blocage de l'épargne, engagement locatif). À 41 % et 45 %, tous les dispositifs deviennent très efficaces et la combinaison de plusieurs mécanismes est fortement recommandée. Le LMNP fait exception : il est avantageux quelle que soit la TMI car il permet d'annuler l'imposition sur les revenus locatifs."
   }
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer.replace(/<[^>]*>/g, ''),
+    },
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Défiscalisation' }]} />
 

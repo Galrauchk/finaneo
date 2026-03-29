@@ -42,9 +42,22 @@ const faqItems = [
     answer: "La quotité représente la part du capital couvert par l'assurance pour chaque co-emprunteur. Pour un emprunteur seul, la quotité est obligatoirement de 100 %. Pour un couple, la banque exige un minimum de 100 % au total mais la répartition est libre : 50/50, 70/30, 100/100, etc. La quotité 100/100 offre la protection maximale mais coûte plus cher. Le choix dépend de l'écart de revenus entre les co-emprunteurs et de la capacité de chacun à assumer seul les mensualités. Si un conjoint perçoit 70 % des revenus du ménage, une répartition 100/70 ou 80/50 peut constituer un bon compromis entre protection et coût."
   }
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer.replace(/<[^>]*>/g, ''),
+    },
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Assurance emprunteur' }]} />
 

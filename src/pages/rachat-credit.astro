@@ -42,9 +42,22 @@ const faqItems = [
     answer: "Oui, le rachat de crédit est accessible aux retraités, et la demande est en forte croissance. La pension de retraite constitue un revenu stable et prévisible, ce qui rassure les organismes prêteurs. Les conditions spécifiques aux seniors portent principalement sur l'assurance emprunteur, dont le coût augmente avec l'âge et qui peut être difficile à obtenir après 75 ans. La durée maximale du prêt est ajustée pour que le remboursement se termine avant un certain âge (85 à 90 ans selon les organismes). Si le retraité est propriétaire, le rachat hypothécaire permet d'accéder à des montants et des durées plus importants. Le prêt viager hypothécaire est une alternative pour les seniors propriétaires qui souhaitent obtenir des liquidités sans mensualités de remboursement."
   }
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer.replace(/<[^>]*>/g, ''),
+    },
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Rachat de crédit' }]} />
 

@@ -3,11 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import SimulateurCredit from '../../components/SimulateurCredit.astro';
 import LeadGenForm from '../../components/LeadGenForm.astro';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Simulateur de crédit immobilier — Finaneo',
+  url: 'https://finaneo.fr/simulateurs/credit-immobilier/',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'All',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  description: 'Calculez votre mensualité de crédit immobilier en quelques secondes. Montant, durée, taux : obtenez votre simulation gratuite.',
+};
 ---
 
 <BaseLayout
   title="Simulateur de crédit immobilier"
   description="Calculez votre mensualité de crédit immobilier en quelques secondes. Montant, durée, taux : obtenez votre simulation gratuite."
+  jsonLd={jsonLd}
 >
   <section class="section-padding">
     <div class="container-narrow">

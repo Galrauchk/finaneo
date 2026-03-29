@@ -1,0 +1,77 @@
+# Finaneo — Index complet du contenu
+
+## Pages principales
+
+### Homepage (/)
+Media finances personnelles. Guides gratuits sur le crédit, l'épargne, l'investissement et la défiscalisation pour les Français.
+
+### Crédit immobilier (/credit-immobilier/)
+Guide complet emprunt immobilier 2026 : capacité d'emprunt, taux, PTZ, conditions d'obtention, simulateur de mensualités.
+
+### Assurance emprunteur (/assurance-emprunteur/)
+Loi Lemoine, délégation d'assurance, comparatif garanties PTIA/ITT/IPT. Économisez jusqu'à 15 000€.
+
+### Épargne (/epargne/)
+Livret A, LDDS, LEP, assurance-vie, PEL. Comparatif taux et placements sécurisés 2026.
+
+### Investissement (/investissement/)
+PEA, SCPI, ETF, bourse. Guide pour investir intelligemment selon son profil de risque.
+
+### Défiscalisation (/defiscalisation/)
+LMNP, Pinel, PER, Malraux. Réduire ses impôts légalement en 2026.
+
+### Rachat de crédit (/rachat-credit/)
+Regroupement de crédits, économies sur mensualités, conditions et simulation.
+
+### Simulateurs (/simulateurs/)
+Calculateur de mensualités crédit immobilier et simulateur d'épargne interactifs et gratuits.
+
+### Guides (/guides/)
+15 articles experts finances personnelles avec données 2026 actualisées.
+
+## Articles
+
+### Taux immobilier 2026 (/guides/taux-immobilier-2026/)
+Analyse des taux immobiliers en 2026 : historique, situation actuelle, prévisions BCE et conseils pour emprunter au meilleur taux.
+
+### Capacité d'emprunt (/guides/capacite-emprunt-2026/)
+Comment calculer sa capacité d'emprunt en 2026. Taux d'endettement, revenus, apport, simulateur.
+
+### Loi Lemoine (/guides/loi-lemoine-assurance-emprunteur/)
+Guide complet Loi Lemoine 2026 : résiliation à tout moment, suppression questionnaire santé, économies jusqu'à 15 000€.
+
+### PEA guide complet (/guides/pea-guide-complet-2026/)
+Tout sur le PEA en 2026 : ouverture, plafond 150 000€, fiscalité avantageuse après 5 ans, ETF éligibles et stratégies.
+
+### SCPI investissement (/guides/scpi-investissement-2026/)
+SCPI en 2026 : rendement, fiscalité, meilleures SCPI pour investir. Guide complet.
+
+### LMNP guide (/guides/lmnp-guide-fiscalite/)
+LMNP 2026 : guide complet du loueur meublé non professionnel, fiscalité et amortissement.
+
+### Livret A (/guides/livret-a-taux-2026/)
+Livret A en 2026 : taux, plafond 22 950€ et alternatives pour mieux épargner.
+
+### PER retraite (/guides/per-retraite-guide/)
+PER 2026 : plan épargne retraite, avantages fiscaux et stratégies de sortie.
+
+### ETF débutant (/guides/etf-debutant-guide/)
+ETF pour débutants : fonctionnement, avantages, meilleurs ETF 2026 et stratégie DCA.
+
+### Assurance-vie vs PEA (/guides/pea-ou-assurance-vie-2026/)
+Comparatif assurance-vie vs PEA : fiscalité, rendement, liquidité selon votre profil.
+
+### Apport immobilier (/guides/apport-immobilier-minimum/)
+Apport immobilier : combien faut-il en 2026 ? Minimum, sources et stratégies.
+
+### Rachat de crédit (/guides/rachat-credit-economies/)
+Rachat de crédit : simulation et calcul des économies sur vos mensualités.
+
+### Taux d'endettement (/guides/taux-endettement-maximum/)
+Taux d'endettement maximum en 2026 : règles HCSF 35% et calcul détaillé.
+
+### Primo-accédant (/guides/primo-accedant-aides-2026/)
+Primo-accédant 2026 : toutes les aides (PTZ, PAS, Action Logement) pour acheter votre premier bien.
+
+### Investir 1 000€ (/guides/investir-1000-euros/)
+Comment investir 1 000€ en 2026 : 7 stratégies concrètes du Livret A aux ETF.

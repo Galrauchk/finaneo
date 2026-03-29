@@ -3,11 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import SimulateurEpargne from '../../components/SimulateurEpargne.astro';
 import CTAAffiliation from '../../components/CTAAffiliation.astro';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: "Simulateur d'épargne — Finaneo",
+  url: 'https://finaneo.fr/simulateurs/epargne/',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'All',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  description: "Simulez la croissance de votre épargne : capital initial, versements mensuels, taux et durée. Résultat instantané.",
+};
 ---
 
 <BaseLayout
   title="Simulateur d'épargne"
   description="Simulez la croissance de votre épargne : capital initial, versements mensuels, taux et durée. Résultat instantané."
+  jsonLd={jsonLd}
 >
   <section class="section-padding">
     <div class="container-narrow">
