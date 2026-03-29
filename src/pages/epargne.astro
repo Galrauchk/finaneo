@@ -37,15 +37,16 @@ const faqItems = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container-wide section-padding">
+  <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Épargne' }]} />
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+    <section class="mb-16 reveal">
+      <img src="/illustrations/epargne.svg" alt="" class="w-20 h-20 mb-6" />
+      <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
         Épargne : où placer son argent en 2026 ?
       </h1>
-      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+      <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
         Dans un contexte de taux d'intérêt toujours favorables aux épargnants, savoir où placer son argent est devenu un enjeu majeur. Livrets réglementés, assurance-vie, PEL : chaque support a ses avantages et ses limites. Ce guide complet vous aide à y voir clair et à construire une stratégie d'épargne adaptée à vos objectifs et votre horizon de placement.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
@@ -54,9 +55,9 @@ const faqItems = [
     </section>
 
     <!-- Livrets réglementés -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les livrets réglementés : sécurité et disponibilité</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4 mb-8">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les livrets réglementés : sécurité et disponibilité</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4 mb-8">
         <p>
           Les livrets réglementés constituent le socle de toute stratégie d'épargne. Garantis par l'État, totalement disponibles et exonérés d'impôts, ils offrent un rendement attractif pour une épargne sans risque. En 2026, les taux des livrets réglementés restent à des niveaux historiquement favorables, portés par la politique monétaire de la BCE et la dynamique inflationniste des dernières années.
         </p>
@@ -67,7 +68,7 @@ const faqItems = [
 
       <!-- Tableau comparatif des livrets -->
       <div class="overflow-x-auto mb-6">
-        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-gray-200">
           <thead>
             <tr class="bg-navy text-white">
               <th class="px-6 py-4 text-left text-sm font-semibold">Livret</th>
@@ -78,26 +79,26 @@ const faqItems = [
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Livret A</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">3 %</td>
-              <td class="px-6 py-4 text-sm text-gray-700">22 950 &euro;</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Exonéré</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Aucune</td>
+              <td class="px-6 py-4 text-sm text-gray-500">22 950 &euro;</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Exonéré</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Aucune</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">LDDS</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">3 %</td>
-              <td class="px-6 py-4 text-sm text-gray-700">12 000 &euro;</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Exonéré</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Aucune</td>
+              <td class="px-6 py-4 text-sm text-gray-500">12 000 &euro;</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Exonéré</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Aucune</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">LEP</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">5 %</td>
-              <td class="px-6 py-4 text-sm text-gray-700">10 000 &euro;</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Exonéré</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Sous conditions de revenus</td>
+              <td class="px-6 py-4 text-sm text-gray-500">10 000 &euro;</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Exonéré</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Sous conditions de revenus</td>
             </tr>
           </tbody>
         </table>
@@ -106,9 +107,9 @@ const faqItems = [
     </section>
 
     <!-- Assurance-vie -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">L'assurance-vie : le couteau suisse de l'épargne</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">L'assurance-vie : le couteau suisse de l'épargne</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           L'assurance-vie demeure le placement financier préféré des Français, et ce n'est pas un hasard. Sa polyvalence est incomparable : elle permet d'épargner à son rythme, de sécuriser son capital via les fonds euros, de rechercher la performance via les unités de compte, de préparer sa retraite, de transmettre son patrimoine dans un cadre fiscal avantageux et de financer ses projets à moyen ou long terme.
         </p>
@@ -125,9 +126,9 @@ const faqItems = [
     </section>
 
     <!-- PEL -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le PEL : un placement à taux garanti</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Le PEL : un placement à taux garanti</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le Plan Épargne Logement reste un outil pertinent pour les épargnants ayant un projet immobilier à moyen terme. Le PEL ouvert en 2026 offre un taux brut de 2,25 %, garanti pendant toute la durée du plan (jusqu'à 10 ans). Après application du PFU de 30 %, le rendement net tombe à environ 1,58 %, ce qui le rend moins compétitif que les livrets réglementés à court terme.
         </p>
@@ -138,26 +139,26 @@ const faqItems = [
     </section>
 
     <!-- Stratégie d'épargne -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Construire sa stratégie d'épargne</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Construire sa stratégie d'épargne</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Épargne de précaution</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Conservez 3 à 6 mois de dépenses courantes sur des livrets disponibles immédiatement : Livret A, LDDS, LEP si vous y êtes éligible. Cette réserve vous protège contre les imprévus sans impacter votre stratégie de long terme.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Conservez 3 à 6 mois de dépenses courantes sur des livrets disponibles immédiatement : Livret A, LDDS, LEP si vous y êtes éligible. Cette réserve vous protège contre les imprévus sans impacter votre stratégie de long terme.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Épargne projet (2-8 ans)</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Orientez-vous vers le fonds euros de l'assurance-vie ou un PEL si vous visez un achat immobilier. Ces supports offrent un bon compromis entre rendement et sécurité pour un horizon de placement de quelques années.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Orientez-vous vers le fonds euros de l'assurance-vie ou un PEL si vous visez un achat immobilier. Ces supports offrent un bon compromis entre rendement et sécurité pour un horizon de placement de quelques années.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Épargne long terme (8 ans+)</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Diversifiez avec les unités de compte en assurance-vie, un PEA pour les actions européennes ou des SCPI pour l'immobilier. Le temps joue en votre faveur et permet de lisser la volatilité des marchés financiers.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Diversifiez avec les unités de compte en assurance-vie, un PEA pour les actions européennes ou des SCPI pour l'immobilier. Le temps joue en votre faveur et permet de lisser la volatilité des marchés financiers.</p>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="mb-16">
+    <section class="mb-16 reveal">
       <CTAAffiliation partner="Épargne" />
     </section>
 

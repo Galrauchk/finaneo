@@ -5,23 +5,38 @@ interface Props {
   slug: string;
   category: string;
   date: string;
+  readingTime?: string;
 }
 
-const { title, description, slug, category, date } = Astro.props;
+const { title, description, slug, category, date, readingTime = '5 min' } = Astro.props;
 const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
 });
+
+const categoryColors: Record<string, string> = {
+  'Crédit immobilier': 'bg-blue-50 text-blue-700',
+  'Investissement': 'bg-emerald-50 text-emerald-700',
+  'Rachat de crédit': 'bg-amber-50 text-amber-700',
+  'Épargne': 'bg-violet-50 text-violet-700',
+  'Défiscalisation': 'bg-rose-50 text-rose-700',
+  'Assurance': 'bg-cyan-50 text-cyan-700',
+};
+const colorClass = categoryColors[category] || 'bg-gold/10 text-gold-dark';
 ---
 
-<a href={`/guides/${slug}/`} class="group block bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-200">
+<a href={`/guides/${slug}/`} class="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1">
   <div class="p-6">
-    <div class="flex items-center gap-3 mb-3">
-      <span class="text-xs font-semibold uppercase tracking-wider text-gold bg-gold/10 px-2 py-1 rounded">{category}</span>
-      <span class="text-xs text-gray-400">{formattedDate}</span>
+    <div class="flex items-center gap-3 mb-4">
+      <span class={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${colorClass}`}>{category}</span>
+      <span class="text-xs text-gray-400 flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        {readingTime}
+      </span>
     </div>
     <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-gold transition-colors leading-snug">{title}</h3>
-    <p class="text-sm text-gray-600 leading-relaxed">{description}</p>
+    <p class="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
+    <span class="text-xs text-gray-400">{formattedDate}</span>
   </div>
 </a>

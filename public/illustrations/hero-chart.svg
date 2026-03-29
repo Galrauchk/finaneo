@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A2540" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0A2540" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <!-- Background grid -->
+  <line x1="50" y1="60" x2="380" y2="60" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="50" y1="120" x2="380" y2="120" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="50" y1="180" x2="380" y2="180" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="50" y1="240" x2="380" y2="240" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="50" y1="40" x2="50" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="116" y1="40" x2="116" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="182" y1="40" x2="182" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="248" y1="40" x2="248" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="314" y1="40" x2="314" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="380" y1="40" x2="380" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+  <!-- Bar chart elements behind -->
+  <rect x="62" y="190" width="22" height="50" rx="3" fill="url(#barGrad)"/>
+  <rect x="128" y="170" width="22" height="70" rx="3" fill="url(#barGrad)"/>
+  <rect x="194" y="150" width="22" height="90" rx="3" fill="url(#barGrad)"/>
+  <rect x="260" y="120" width="22" height="120" rx="3" fill="url(#barGrad)"/>
+  <rect x="326" y="90" width="22" height="150" rx="3" fill="url(#barGrad)"/>
+  <!-- Area fill beneath curve -->
+  <path d="M50,220 C90,210 110,190 140,175 C170,160 200,140 215,125 C230,110 260,85 285,75 C310,65 350,50 380,42 L380,240 L50,240 Z" fill="url(#areaGrad)"/>
+  <!-- Main curve line -->
+  <path d="M50,220 C90,210 110,190 140,175 C170,160 200,140 215,125 C230,110 260,85 285,75 C310,65 350,50 380,42" stroke="#0A2540" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Data points -->
+  <circle cx="50" cy="220" r="5" fill="#C9A84C"/>
+  <circle cx="116" cy="192" r="5" fill="#C9A84C"/>
+  <circle cx="182" cy="152" r="5" fill="#C9A84C"/>
+  <circle cx="248" cy="100" r="5" fill="#C9A84C"/>
+  <circle cx="314" cy="68" r="5" fill="#C9A84C"/>
+  <circle cx="380" cy="42" r="5" fill="#C9A84C"/>
+  <!-- Data point halos -->
+  <circle cx="50" cy="220" r="9" fill="#C9A84C" opacity="0.15"/>
+  <circle cx="116" cy="192" r="9" fill="#C9A84C" opacity="0.15"/>
+  <circle cx="182" cy="152" r="9" fill="#C9A84C" opacity="0.15"/>
+  <circle cx="248" cy="100" r="9" fill="#C9A84C" opacity="0.15"/>
+  <circle cx="314" cy="68" r="9" fill="#C9A84C" opacity="0.15"/>
+  <circle cx="380" cy="42" r="9" fill="#C9A84C" opacity="0.15"/>
+  <!-- Axis -->
+  <line x1="50" y1="240" x2="380" y2="240" stroke="#0A2540" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="40" x2="50" y2="240" stroke="#0A2540" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

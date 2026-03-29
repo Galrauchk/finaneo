@@ -37,15 +37,15 @@ const faqItems = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container-wide section-padding">
+  <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Rachat de crédit' }]} />
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+    <section class="mb-16 reveal">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
         Rachat de crédit : regroupez vos prêts et réduisez vos mensualités
       </h1>
-      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+      <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
         Vous remboursez plusieurs crédits simultanément et vos mensualités pèsent sur votre budget ? Le rachat de crédit — ou regroupement de crédits — est une solution financière qui permet de fusionner l'ensemble de vos emprunts en un seul prêt, avec une mensualité unique et souvent réduite. Ce guide complet vous explique comment fonctionne cette opération, ses avantages, ses conditions et les étapes pour en bénéficier.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
@@ -54,9 +54,9 @@ const faqItems = [
     </section>
 
     <!-- Principe du rachat -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le principe du rachat de crédit</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Le principe du rachat de crédit</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le rachat de crédit consiste à faire racheter l'ensemble de vos crédits en cours par un seul et même organisme financier. Ce dernier solde vos anciens prêts auprès de vos créanciers actuels et vous propose un <strong class="text-navy">nouveau prêt unique</strong> regroupant l'intégralité des capitaux restants dus, éventuellement complété par une trésorerie supplémentaire.
         </p>
@@ -70,32 +70,32 @@ const faqItems = [
     </section>
 
     <!-- Avantages -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les avantages du rachat de crédit</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les avantages du rachat de crédit</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Réduction des mensualités</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">L'avantage principal du rachat de crédit est la baisse de la mensualité globale, qui peut atteindre 40 à 60 % selon les dossiers. En allongeant la durée de remboursement et en renégociant le taux, votre budget mensuel retrouve de l'air. Cette réduction vous permet de dégager une capacité d'épargne ou de financer de nouveaux projets.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">L'avantage principal du rachat de crédit est la baisse de la mensualité globale, qui peut atteindre 40 à 60 % selon les dossiers. En allongeant la durée de remboursement et en renégociant le taux, votre budget mensuel retrouve de l'air. Cette réduction vous permet de dégager une capacité d'épargne ou de financer de nouveaux projets.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Simplification de la gestion</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Fini les multiples prélèvements à des dates différentes et auprès de différents créanciers. Le rachat de crédit simplifie radicalement la gestion de vos remboursements : un seul prélèvement, une seule date, un seul interlocuteur. Cette simplification réduit le risque de rejet de prélèvement et améliore la lisibilité de votre budget.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Fini les multiples prélèvements à des dates différentes et auprès de différents créanciers. Le rachat de crédit simplifie radicalement la gestion de vos remboursements : un seul prélèvement, une seule date, un seul interlocuteur. Cette simplification réduit le risque de rejet de prélèvement et améliore la lisibilité de votre budget.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Trésorerie complémentaire</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Le rachat de crédit peut inclure une enveloppe de trésorerie supplémentaire pour financer un projet (travaux, achat de véhicule, voyage) sans avoir à souscrire un crédit additionnel. Cette trésorerie est intégrée au nouveau prêt unique et bénéficie des mêmes conditions de remboursement.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Le rachat de crédit peut inclure une enveloppe de trésorerie supplémentaire pour financer un projet (travaux, achat de véhicule, voyage) sans avoir à souscrire un crédit additionnel. Cette trésorerie est intégrée au nouveau prêt unique et bénéficie des mêmes conditions de remboursement.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Prévention du surendettement</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">En réduisant le taux d'endettement, le rachat de crédit constitue une alternative efficace à la procédure de surendettement auprès de la Banque de France. Il permet de rétablir un équilibre financier durable sans les contraintes et conséquences d'un plan de surendettement (inscription au FICP, restrictions bancaires).</p>
+          <p class="text-sm text-gray-500 leading-relaxed">En réduisant le taux d'endettement, le rachat de crédit constitue une alternative efficace à la procédure de surendettement auprès de la Banque de France. Il permet de rétablir un équilibre financier durable sans les contraintes et conséquences d'un plan de surendettement (inscription au FICP, restrictions bancaires).</p>
         </div>
       </div>
     </section>
 
     <!-- Conditions -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les conditions pour obtenir un rachat de crédit</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les conditions pour obtenir un rachat de crédit</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           L'obtention d'un rachat de crédit est soumise à l'analyse de plusieurs critères par l'organisme prêteur. Le premier est votre <strong class="text-navy">taux d'endettement après rachat</strong>, qui ne doit idéalement pas dépasser 33 à 35 % de vos revenus nets. L'objectif est que l'opération améliore réellement votre situation financière en ramenant votre endettement à un niveau soutenable.
         </p>
@@ -112,52 +112,52 @@ const faqItems = [
     </section>
 
     <!-- Étapes -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les étapes du rachat de crédit</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les étapes du rachat de crédit</h2>
       <div class="space-y-6">
         <div class="flex gap-4 items-start">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">1</div>
           <div>
             <h3 class="text-lg font-bold text-navy mb-2">Simulation en ligne</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">Commencez par réaliser une simulation gratuite en renseignant vos crédits en cours, vos revenus et votre situation. Cette première étape vous donne une estimation de la faisabilité de l'opération, de la nouvelle mensualité envisageable et des économies potentielles. La simulation est sans engagement et confidentielle.</p>
+            <p class="text-sm text-gray-500 leading-relaxed">Commencez par réaliser une simulation gratuite en renseignant vos crédits en cours, vos revenus et votre situation. Cette première étape vous donne une estimation de la faisabilité de l'opération, de la nouvelle mensualité envisageable et des économies potentielles. La simulation est sans engagement et confidentielle.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">2</div>
           <div>
             <h3 class="text-lg font-bold text-navy mb-2">Étude personnalisée</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">Un conseiller spécialisé analyse votre dossier en détail : tableaux d'amortissement de vos crédits, relevés de compte, justificatifs de revenus. Il détermine la meilleure stratégie de regroupement en tenant compte de vos objectifs (réduction maximale de la mensualité, réduction du coût total, intégration d'une trésorerie complémentaire).</p>
+            <p class="text-sm text-gray-500 leading-relaxed">Un conseiller spécialisé analyse votre dossier en détail : tableaux d'amortissement de vos crédits, relevés de compte, justificatifs de revenus. Il détermine la meilleure stratégie de regroupement en tenant compte de vos objectifs (réduction maximale de la mensualité, réduction du coût total, intégration d'une trésorerie complémentaire).</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">3</div>
           <div>
             <h3 class="text-lg font-bold text-navy mb-2">Montage et dépôt du dossier</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">Le courtier ou le conseiller constitue votre dossier complet et le soumet aux organismes partenaires les mieux adaptés à votre profil. La mise en concurrence entre plusieurs établissements permet d'obtenir les conditions les plus favorables en termes de taux, durée et frais.</p>
+            <p class="text-sm text-gray-500 leading-relaxed">Le courtier ou le conseiller constitue votre dossier complet et le soumet aux organismes partenaires les mieux adaptés à votre profil. La mise en concurrence entre plusieurs établissements permet d'obtenir les conditions les plus favorables en termes de taux, durée et frais.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">4</div>
           <div>
             <h3 class="text-lg font-bold text-navy mb-2">Accord de principe et offre de prêt</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">Après analyse, l'organisme émet un accord de principe, puis une offre de prêt formelle. Pour un rachat incluant un crédit immobilier, vous disposez d'un délai de réflexion légal de 10 jours avant de pouvoir accepter l'offre. Prenez le temps de vérifier chaque condition : taux, durée, mensualité, coût total, assurance.</p>
+            <p class="text-sm text-gray-500 leading-relaxed">Après analyse, l'organisme émet un accord de principe, puis une offre de prêt formelle. Pour un rachat incluant un crédit immobilier, vous disposez d'un délai de réflexion légal de 10 jours avant de pouvoir accepter l'offre. Prenez le temps de vérifier chaque condition : taux, durée, mensualité, coût total, assurance.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">5</div>
           <div>
             <h3 class="text-lg font-bold text-navy mb-2">Déblocage et remboursement</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">Après acceptation de l'offre, le nouvel organisme procède au déblocage des fonds. Il rembourse directement vos anciens créanciers et vous verse l'éventuelle trésorerie complémentaire. Vos anciens prêts sont soldés et vous ne remboursez plus qu'une seule mensualité auprès du nouvel établissement.</p>
+            <p class="text-sm text-gray-500 leading-relaxed">Après acceptation de l'offre, le nouvel organisme procède au déblocage des fonds. Il rembourse directement vos anciens créanciers et vous verse l'éventuelle trésorerie complémentaire. Vos anciens prêts sont soldés et vous ne remboursez plus qu'une seule mensualité auprès du nouvel établissement.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Exemple chiffré -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Exemple concret de rachat de crédit</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Exemple concret de rachat de crédit</h2>
       <div class="overflow-x-auto mb-6">
-        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-gray-200">
           <thead>
             <tr class="bg-navy text-white">
               <th class="px-6 py-4 text-left text-sm font-semibold">Situation</th>
@@ -166,34 +166,34 @@ const faqItems = [
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Crédit immobilier</td>
-              <td class="px-6 py-4 text-sm text-gray-700">850 &euro;/mois (15 ans restants)</td>
-              <td class="px-6 py-4 text-sm text-gray-700" rowspan="4">
+              <td class="px-6 py-4 text-sm text-gray-500">850 &euro;/mois (15 ans restants)</td>
+              <td class="px-6 py-4 text-sm text-gray-500" rowspan="4">
                 <span class="block text-gold font-semibold text-lg">980 &euro;/mois</span>
                 <span class="block text-gray-500 text-xs mt-1">Prêt unique sur 20 ans à 3,40 %</span>
               </td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Crédit auto</td>
-              <td class="px-6 py-4 text-sm text-gray-700">280 &euro;/mois (3 ans restants)</td>
+              <td class="px-6 py-4 text-sm text-gray-500">280 &euro;/mois (3 ans restants)</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Crédit conso</td>
-              <td class="px-6 py-4 text-sm text-gray-700">150 &euro;/mois (4 ans restants)</td>
+              <td class="px-6 py-4 text-sm text-gray-500">150 &euro;/mois (4 ans restants)</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Revolving</td>
-              <td class="px-6 py-4 text-sm text-gray-700">120 &euro;/mois</td>
+              <td class="px-6 py-4 text-sm text-gray-500">120 &euro;/mois</td>
             </tr>
-            <tr class="bg-light">
+            <tr class="bg-surface">
               <td class="px-6 py-4 text-sm text-navy font-bold">Total mensualités</td>
               <td class="px-6 py-4 text-sm text-navy font-bold">1 400 &euro;/mois</td>
               <td class="px-6 py-4 text-sm text-gold font-bold">980 &euro;/mois</td>
             </tr>
-            <tr class="bg-light">
+            <tr class="bg-surface">
               <td class="px-6 py-4 text-sm text-navy font-bold">Économie mensuelle</td>
-              <td class="px-6 py-4 text-sm text-gray-700">—</td>
+              <td class="px-6 py-4 text-sm text-gray-500">—</td>
               <td class="px-6 py-4 text-sm text-gold font-bold">420 &euro;/mois</td>
             </tr>
           </tbody>
@@ -203,7 +203,7 @@ const faqItems = [
     </section>
 
     <!-- CTA LeadGenForm -->
-    <section class="mb-16">
+    <section class="mb-16 reveal">
       <LeadGenForm source="rachat-credit" formTitle="Étude de rachat gratuite" />
     </section>
 

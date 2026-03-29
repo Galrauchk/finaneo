@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0F3460"/>
+    </linearGradient>
+    <linearGradient id="shieldAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#B8943E"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield shape -->
+  <path d="M100,18 L165,45 L165,105 C165,145 135,172 100,188 C65,172 35,145 35,105 L35,45 Z" fill="url(#shieldGrad)"/>
+  <!-- Inner shield border -->
+  <path d="M100,30 L155,52 L155,105 C155,140 130,163 100,177 C70,163 45,140 45,105 L45,52 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.4"/>
+  <!-- Euro sign -->
+  <text x="100" y="125" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="60" fill="url(#shieldAccent)" text-anchor="middle">&#8364;</text>
+  <!-- Percent badge top-right -->
+  <circle cx="155" cy="50" r="18" fill="#C9A84C"/>
+  <text x="155" y="56" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="16" fill="#0A2540" text-anchor="middle">%</text>
+  <!-- Checkmark accent -->
+  <path d="M82,138 L95,150 L120,125" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+</svg>

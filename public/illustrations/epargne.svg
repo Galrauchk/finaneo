@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="piggyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0F3460"/>
+    </linearGradient>
+  </defs>
+  <!-- Piggy bank body (ellipse) -->
+  <ellipse cx="100" cy="115" rx="60" ry="48" fill="url(#piggyGrad)"/>
+  <!-- Head bump -->
+  <circle cx="150" cy="95" r="22" fill="#0A2540"/>
+  <!-- Snout -->
+  <ellipse cx="168" cy="100" rx="10" ry="8" fill="#0E2F4F"/>
+  <circle cx="165" cy="98" r="2" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="171" cy="98" r="2" fill="#FFFFFF" opacity="0.4"/>
+  <!-- Eye -->
+  <circle cx="148" cy="88" r="3" fill="#FFFFFF"/>
+  <circle cx="148" cy="88" r="1.5" fill="#0A2540"/>
+  <!-- Ear -->
+  <path d="M138,75 L132,60 L148,72" fill="#0E2F4F" stroke="#0A2540" stroke-width="1"/>
+  <!-- Coin slot on top -->
+  <rect x="88" y="64" width="24" height="4" rx="2" fill="#C9A84C"/>
+  <!-- Coin going in -->
+  <ellipse cx="100" cy="55" rx="12" ry="14" fill="#C9A84C"/>
+  <text x="100" y="60" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="#0A2540" text-anchor="middle">&#8364;</text>
+  <!-- Legs -->
+  <rect x="65" y="155" width="14" height="20" rx="4" fill="#0A2540"/>
+  <rect x="120" y="155" width="14" height="20" rx="4" fill="#0A2540"/>
+  <!-- Tail curl -->
+  <path d="M42,105 C30,100 28,115 38,115" stroke="#0A2540" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Sparkle accents -->
+  <path d="M60,50 L62,44 L64,50 L70,52 L64,54 L62,60 L60,54 L54,52 Z" fill="#C9A84C" opacity="0.6"/>
+  <path d="M155,50 L156,46 L157,50 L161,51 L157,52 L156,56 L155,52 L151,51 Z" fill="#C9A84C" opacity="0.4"/>
+</svg>

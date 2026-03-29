@@ -37,15 +37,16 @@ const faqItems = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container-wide section-padding">
+  <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Défiscalisation' }]} />
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+    <section class="mb-16 reveal">
+      <img src="/illustrations/defiscalisation.svg" alt="" class="w-20 h-20 mb-6" />
+      <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
         Défiscalisation : réduisez vos impôts légalement
       </h1>
-      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+      <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
         La France offre de nombreux dispositifs permettant de réduire légalement sa charge fiscale. Qu'il s'agisse d'investissement immobilier, de placements financiers ou de produits d'épargne retraite, chaque contribuable peut optimiser sa situation fiscale en fonction de ses revenus, de son patrimoine et de ses objectifs. Ce guide détaille les principaux dispositifs de défiscalisation disponibles en 2026.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
@@ -54,9 +55,9 @@ const faqItems = [
     </section>
 
     <!-- Loi Pinel -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">La loi Pinel : bilan et alternatives</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">La loi Pinel : bilan et alternatives</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le dispositif Pinel a permis à des centaines de milliers de contribuables de bénéficier d'une réduction d'impôt en contrepartie d'un investissement locatif dans le neuf. Le principe était simple : en louant un logement neuf pendant 6, 9 ou 12 ans à un loyer plafonné, l'investisseur obtenait une réduction d'impôt de 9 %, 12 % ou 14 % du prix du bien (taux Pinel+).
         </p>
@@ -67,9 +68,9 @@ const faqItems = [
     </section>
 
     <!-- LMNP -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le LMNP : l'investissement locatif meublé optimisé</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Le LMNP : l'investissement locatif meublé optimisé</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le statut de Loueur Meublé Non Professionnel est devenu le dispositif phare de l'investissement locatif en France. Il s'applique à la location de logements meublés (résidence principale du locataire, résidence étudiante, résidence de tourisme) et offre une fiscalité extrêmement favorable en régime réel.
         </p>
@@ -83,9 +84,9 @@ const faqItems = [
     </section>
 
     <!-- PER -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le PER : préparer sa retraite en réduisant ses impôts</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Le PER : préparer sa retraite en réduisant ses impôts</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le Plan d'Épargne Retraite, créé par la loi PACTE de 2019, est un outil à double vocation : préparer sa retraite et optimiser sa fiscalité. Les versements volontaires sont déductibles du revenu imposable, ce qui génère une économie d'impôt proportionnelle à votre tranche marginale d'imposition.
         </p>
@@ -99,9 +100,9 @@ const faqItems = [
     </section>
 
     <!-- Girardin -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le Girardin industriel : un rendement fiscal exceptionnel</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Le Girardin industriel : un rendement fiscal exceptionnel</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le Girardin industriel est un dispositif unique en son genre puisqu'il offre une réduction d'impôt supérieure à l'investissement réalisé. Concrètement, pour un apport de 10 000 euros, vous pouvez obtenir une réduction d'impôt de 11 000 à 12 000 euros dès l'année suivante, soit un rendement fiscal de 10 à 20 %.
         </p>
@@ -115,26 +116,26 @@ const faqItems = [
     </section>
 
     <!-- Comment choisir -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Comment choisir son dispositif de défiscalisation ?</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Comment choisir son dispositif de défiscalisation ?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">TMI 11 %</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">À ce niveau d'imposition, les dispositifs de défiscalisation ne sont pas prioritaires. Concentrez-vous sur l'épargne classique (Livret A, assurance-vie) et le LMNP en micro-BIC si vous souhaitez investir dans l'immobilier locatif meublé.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">À ce niveau d'imposition, les dispositifs de défiscalisation ne sont pas prioritaires. Concentrez-vous sur l'épargne classique (Livret A, assurance-vie) et le LMNP en micro-BIC si vous souhaitez investir dans l'immobilier locatif meublé.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">TMI 30 %</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Le PER devient pertinent avec 30 % d'économie sur chaque euro versé. Le LMNP en régime réel est très avantageux pour l'investissement locatif. Le déficit foncier peut être intéressant si vous rénovez un bien ancien.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Le PER devient pertinent avec 30 % d'économie sur chaque euro versé. Le LMNP en régime réel est très avantageux pour l'investissement locatif. Le déficit foncier peut être intéressant si vous rénovez un bien ancien.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">TMI 41-45 %</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Tous les dispositifs sont très efficaces. Combinez PER (déduction maximale), Girardin industriel (réduction supérieure à la mise), LMNP réel et éventuellement FCPI/FIP pour une stratégie d'optimisation globale.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Tous les dispositifs sont très efficaces. Combinez PER (déduction maximale), Girardin industriel (réduction supérieure à la mise), LMNP réel et éventuellement FCPI/FIP pour une stratégie d'optimisation globale.</p>
         </div>
       </div>
     </section>
 
     <!-- CTA LeadGenForm -->
-    <section class="mb-16">
+    <section class="mb-16 reveal">
       <LeadGenForm source="defiscalisation" formTitle="Bilan fiscal gratuit" />
     </section>
 

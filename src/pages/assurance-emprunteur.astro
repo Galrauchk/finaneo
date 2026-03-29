@@ -37,15 +37,15 @@ const faqItems = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container-wide section-padding">
+  <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Assurance emprunteur' }]} />
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+    <section class="mb-16 reveal">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
         Assurance emprunteur : comparez et économisez
       </h1>
-      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+      <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
         L'assurance emprunteur est un poste de dépense souvent sous-estimé par les acquéreurs immobiliers. Elle représente pourtant en moyenne 25 à 30 % du coût total d'un crédit. La bonne nouvelle ? Depuis la loi Lemoine, vous avez la liberté de changer d'assurance à tout moment et de réaliser des économies substantielles. Ce guide vous explique comment optimiser cette dépense incontournable.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
@@ -54,9 +54,9 @@ const faqItems = [
     </section>
 
     <!-- Loi Lemoine -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">La loi Lemoine : une révolution pour les emprunteurs</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">La loi Lemoine : une révolution pour les emprunteurs</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Adoptée le 28 février 2022, la <strong class="text-navy">loi Lemoine</strong> a profondément transformé le marché de l'assurance emprunteur en France. Son apport majeur est l'instauration du droit de résiliation à tout moment, sans frais et sans pénalités. Auparavant, les emprunteurs devaient attendre soit la première année (amendement Bourquin), soit la date anniversaire pour changer de contrat.
         </p>
@@ -70,9 +70,9 @@ const faqItems = [
     </section>
 
     <!-- Délégation d'assurance -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">La délégation d'assurance : le choix malin</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">La délégation d'assurance : le choix malin</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           La délégation d'assurance vous permet de souscrire votre couverture auprès de l'assureur de votre choix plutôt que d'accepter le contrat groupe de votre banque. Cette liberté, garantie par la loi Lagarde de 2010, est renforcée par les dispositions de la loi Lemoine qui facilitent la substitution en cours de prêt.
         </p>
@@ -86,29 +86,29 @@ const faqItems = [
     </section>
 
     <!-- Comment choisir -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Comment choisir son assurance emprunteur ?</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Comment choisir son assurance emprunteur ?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Analysez vos besoins</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Identifiez les garanties indispensables en fonction de votre situation : résidence principale ou investissement locatif, situation familiale, profession exercée. Évaluez la pertinence de chaque option (IPP, perte d'emploi) au regard de son coût et de ses conditions de déclenchement.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Identifiez les garanties indispensables en fonction de votre situation : résidence principale ou investissement locatif, situation familiale, profession exercée. Évaluez la pertinence de chaque option (IPP, perte d'emploi) au regard de son coût et de ses conditions de déclenchement.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Comparez les offres</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Sollicitez au minimum trois devis auprès d'assureurs différents. Comparez le TAEA, le coût total, les exclusions, les franchises et les conditions d'indemnisation. Attention aux contrats attractifs en apparence mais comportant de nombreuses exclusions qui réduisent la couverture réelle.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Sollicitez au minimum trois devis auprès d'assureurs différents. Comparez le TAEA, le coût total, les exclusions, les franchises et les conditions d'indemnisation. Attention aux contrats attractifs en apparence mais comportant de nombreuses exclusions qui réduisent la couverture réelle.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">Vérifiez l'équivalence</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Votre nouveau contrat doit respecter les critères d'équivalence de garanties définis par la banque (listés dans la fiche standardisée d'information). Chaque banque publie une liste de critères parmi les 18 définis par le CCSF. Votre contrat doit couvrir au minimum tous les critères cochés par la banque.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Votre nouveau contrat doit respecter les critères d'équivalence de garanties définis par la banque (listés dans la fiche standardisée d'information). Chaque banque publie une liste de critères parmi les 18 définis par le CCSF. Votre contrat doit couvrir au minimum tous les critères cochés par la banque.</p>
         </div>
       </div>
     </section>
 
     <!-- Comparatif -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Contrat groupe vs délégation : le comparatif</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Contrat groupe vs délégation : le comparatif</h2>
       <div class="overflow-x-auto mb-6">
-        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-gray-200">
           <thead>
             <tr class="bg-navy text-white">
               <th class="px-6 py-4 text-left text-sm font-semibold">Critère</th>
@@ -117,24 +117,24 @@ const faqItems = [
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Taux moyen</td>
-              <td class="px-6 py-4 text-sm text-gray-700">0,30 % - 0,50 %</td>
+              <td class="px-6 py-4 text-sm text-gray-500">0,30 % - 0,50 %</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">0,08 % - 0,20 %</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Personnalisation</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Standardisé</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Standardisé</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">Sur mesure</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Tarification</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Capital initial</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Capital initial</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">Capital restant dû</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">Souplesse</td>
-              <td class="px-6 py-4 text-sm text-gray-700">Limitée</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Limitée</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">Élevée</td>
             </tr>
           </tbody>
@@ -143,7 +143,7 @@ const faqItems = [
     </section>
 
     <!-- CTA -->
-    <section class="mb-16">
+    <section class="mb-16 reveal">
       <CTAAffiliation partner="Assurance" title="Comparez les assurances emprunteur" />
     </section>
 

@@ -4,16 +4,23 @@ interface Props {
   description: string;
   href: string;
   icon: string;
+  illustration?: string;
+  accentColor?: string;
 }
 
-const { title, description, href, icon } = Astro.props;
+const { title, description, href, icon, illustration, accentColor = '#C9A84C' } = Astro.props;
 ---
 
-<a href={href} class="group block bg-white rounded-xl border border-gray-200 p-6 hover:border-gold hover:shadow-lg transition-all duration-200">
-  <div class="text-3xl mb-4">{icon}</div>
+<a href={href} class="group block bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={`background: ${accentColor}`}></div>
+  {illustration ? (
+    <img src={illustration} alt="" class="w-16 h-16 mb-5" loading="lazy" />
+  ) : (
+    <div class="text-3xl mb-5">{icon}</div>
+  )}
   <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-gold transition-colors">{title}</h3>
-  <p class="text-sm text-gray-600 leading-relaxed">{description}</p>
-  <span class="inline-flex items-center gap-1 text-gold text-sm font-medium mt-4">
+  <p class="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
+  <span class="inline-flex items-center gap-1.5 text-gold text-sm font-semibold">
     Découvrir
     <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

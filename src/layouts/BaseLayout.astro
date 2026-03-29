@@ -32,5 +32,21 @@ const { title, description, canonical, jsonLd, noindex } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <!-- Global scroll reveal -->
+    <script>
+      const revealEls = document.querySelectorAll('.reveal');
+      if (revealEls.length > 0) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach((el) => obs.observe(el));
+      }
+    </script>
   </body>
 </html>

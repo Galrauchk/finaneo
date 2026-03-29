@@ -1,75 +1,99 @@
 ---
-const year = new Date().getFullYear();
-const columns = [
-  {
-    title: 'Thématiques',
-    links: [
-      { label: 'Crédit immobilier', href: '/credit-immobilier/' },
-      { label: 'Assurance emprunteur', href: '/assurance-emprunteur/' },
-      { label: 'Épargne', href: '/epargne/' },
-      { label: 'Investissement', href: '/investissement/' },
-      { label: 'Défiscalisation', href: '/defiscalisation/' },
-      { label: 'Rachat de crédit', href: '/rachat-credit/' },
-    ],
-  },
-  {
-    title: 'Outils',
-    links: [
-      { label: 'Simulateur crédit', href: '/simulateurs/credit-immobilier/' },
-      { label: 'Simulateur épargne', href: '/simulateurs/epargne/' },
-      { label: 'Guides', href: '/guides/' },
-    ],
-  },
-  {
-    title: 'Finaneo',
-    links: [
-      { label: 'À propos', href: '/a-propos/' },
-      { label: 'Contact', href: '/contact/' },
-      { label: 'Mentions légales', href: '/mentions-legales/' },
-      { label: 'Politique de confidentialité', href: '/politique-confidentialite/' },
-    ],
-  },
+const thematiques = [
+  { label: 'Credit immobilier', href: '/credit-immobilier/' },
+  { label: 'Assurance emprunteur', href: '/assurance-emprunteur/' },
+  { label: 'Epargne', href: '/epargne/' },
+  { label: 'Investissement', href: '/investissement/' },
+  { label: 'Defiscalisation', href: '/defiscalisation/' },
+  { label: 'Rachat de credit', href: '/rachat-credit/' },
+];
+
+const outils = [
+  { label: 'Simulateur credit', href: '/simulateurs/credit-immobilier/' },
+  { label: 'Simulateur epargne', href: '/simulateurs/epargne/' },
+  { label: 'Guides', href: '/guides/' },
+  { label: 'Tous les simulateurs', href: '/simulateurs/' },
+];
+
+const finaneo = [
+  { label: 'A propos', href: '/a-propos/' },
+  { label: 'Contact', href: '/contact/' },
+  { label: 'Mentions legales', href: '/mentions-legales/' },
+  { label: 'Politique de confidentialite', href: '/politique-confidentialite/' },
 ];
 ---
 
 <footer class="bg-navy text-white">
-  <div class="container-wide section-padding">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-      <!-- Brand -->
-      <div>
-        <a href="/" class="flex items-center gap-2 mb-4">
-          <span class="w-8 h-8 bg-gold rounded-md flex items-center justify-center">
-            <span class="text-navy font-bold text-lg">F</span>
-          </span>
-          <span class="font-bold text-xl">Finaneo</span>
+  <div class="container-site py-16 md:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      <!-- Brand column -->
+      <div class="md:col-span-2 lg:col-span-1">
+        <a href="/" class="inline-block mb-5">
+          <svg viewBox="0 0 140 32" class="h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="footer-logo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C9A84C"/><stop offset="100%" stop-color="#d4bc72"/></linearGradient></defs>
+            <path d="M16 2L28 9v14l-12 7L4 23V9l12-7z" fill="url(#footer-logo-grad)"/>
+            <path d="M16 20V12m0 0l-4 4m4-4l4 4" stroke="#0A2540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="38" y="22" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" fill="white">Finaneo</text>
+          </svg>
         </a>
-        <p class="text-gray-400 text-sm leading-relaxed">
+        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
           Vos finances, enfin claires. Comparez, simulez et faites les meilleurs choix pour votre argent.
         </p>
       </div>
 
-      {columns.map((col) => (
-        <div>
-          <h4 class="font-semibold text-gold mb-4 text-sm uppercase tracking-wider">{col.title}</h4>
-          <ul class="space-y-2">
-            {col.links.map((link) => (
-              <li>
-                <a href={link.href} class="text-gray-400 hover:text-white text-sm transition-colors">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <!-- Thematiques -->
+      <div>
+        <h4 class="text-gold font-semibold text-xs uppercase tracking-widest mb-5">Th&eacute;matiques</h4>
+        <ul class="space-y-3">
+          {thematiques.map((link) => (
+            <li>
+              <a href={link.href} class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Outils -->
+      <div>
+        <h4 class="text-gold font-semibold text-xs uppercase tracking-widest mb-5">Outils</h4>
+        <ul class="space-y-3">
+          {outils.map((link) => (
+            <li>
+              <a href={link.href} class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Finaneo -->
+      <div>
+        <h4 class="text-gold font-semibold text-xs uppercase tracking-widest mb-5">Finaneo</h4>
+        <ul class="space-y-3">
+          {finaneo.map((link) => (
+            <li>
+              <a href={link.href} class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
 
-    <div class="border-t border-gray-700 mt-12 pt-8">
-      <p class="text-gray-500 text-xs leading-relaxed mb-4">
-        <strong>Avertissement :</strong> Les informations publiées sur finaneo.fr sont fournies à titre indicatif et ne constituent pas un conseil en investissement, une recommandation personnalisée ou une incitation à souscrire un produit financier. Les performances passées ne préjugent pas des performances futures. Toute décision d'investissement doit être prise après consultation d'un professionnel agréé.
+    <!-- Gold separator -->
+    <div class="mt-14 mb-8 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+
+    <!-- Disclaimer -->
+    <div class="space-y-4">
+      <p class="text-gray-400 text-xs leading-relaxed max-w-4xl">
+        <strong class="text-gray-300">Avertissement :</strong> Les informations publi&eacute;es sur finaneo.fr sont fournies &agrave; titre indicatif et ne constituent pas un conseil en investissement, une recommandation personnalis&eacute;e ou une incitation &agrave; souscrire un produit financier. Les performances pass&eacute;es ne pr&eacute;jugent pas des performances futures. Toute d&eacute;cision d'investissement doit &ecirc;tre prise apr&egrave;s consultation d'un professionnel agr&eacute;&eacute;.
       </p>
       <p class="text-gray-500 text-xs">
-        © {year} Finaneo — Tous droits réservés.
+        &copy; 2026 Finaneo &mdash; Fait avec passion
       </p>
     </div>
   </div>

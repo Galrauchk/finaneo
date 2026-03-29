@@ -37,15 +37,16 @@ const faqItems = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container-wide section-padding">
+  <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Crédit immobilier' }]} />
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+    <section class="mb-16 reveal">
+      <img src="/illustrations/credit-immo.svg" alt="" class="w-20 h-20 mb-6" />
+      <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
         Crédit immobilier : guide complet pour financer votre bien
       </h1>
-      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+      <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
         Acheter un bien immobilier est le projet d'une vie pour beaucoup de Français. Que vous soyez primo-accédant ou investisseur aguerri, comprendre le fonctionnement du crédit immobilier est essentiel pour obtenir les meilleures conditions de financement. Ce guide complet vous accompagne à chaque étape, du calcul de votre capacité d'emprunt jusqu'à la signature chez le notaire.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
@@ -54,9 +55,9 @@ const faqItems = [
     </section>
 
     <!-- Comment obtenir un crédit -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Comment obtenir un crédit immobilier ?</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Comment obtenir un crédit immobilier ?</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           L'obtention d'un crédit immobilier repose sur plusieurs critères évalués par les banques. Le premier est votre <strong class="text-navy">taux d'endettement</strong>, qui ne doit pas dépasser 35 % de vos revenus nets mensuels, assurance de prêt incluse. Ce plafond, imposé par le HCSF, permet de s'assurer que vous conservez un reste à vivre suffisant pour couvrir vos dépenses courantes.
         </p>
@@ -73,10 +74,10 @@ const faqItems = [
     </section>
 
     <!-- Taux actuels -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les taux de crédit immobilier en 2026</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les taux de crédit immobilier en 2026</h2>
       <div class="overflow-x-auto mb-6">
-        <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-gray-200">
           <thead>
             <tr class="bg-navy text-white">
               <th class="px-6 py-4 text-left text-sm font-semibold">Durée</th>
@@ -85,24 +86,24 @@ const faqItems = [
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">10 ans</td>
-              <td class="px-6 py-4 text-sm text-gray-700">2,85 %</td>
+              <td class="px-6 py-4 text-sm text-gray-500">2,85 %</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">2,50 %</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">15 ans</td>
-              <td class="px-6 py-4 text-sm text-gray-700">3,05 %</td>
+              <td class="px-6 py-4 text-sm text-gray-500">3,05 %</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">2,70 %</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">20 ans</td>
-              <td class="px-6 py-4 text-sm text-gray-700">3,20 %</td>
+              <td class="px-6 py-4 text-sm text-gray-500">3,20 %</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">2,90 %</td>
             </tr>
-            <tr class="hover:bg-light transition-colors">
+            <tr class="hover:bg-surface transition-colors">
               <td class="px-6 py-4 text-sm text-dark font-medium">25 ans</td>
-              <td class="px-6 py-4 text-sm text-gray-700">3,45 %</td>
+              <td class="px-6 py-4 text-sm text-gray-500">3,45 %</td>
               <td class="px-6 py-4 text-sm text-gold font-semibold">3,10 %</td>
             </tr>
           </tbody>
@@ -112,40 +113,40 @@ const faqItems = [
     </section>
 
     <!-- Les étapes du crédit immobilier -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les étapes pour obtenir votre crédit immobilier</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les étapes pour obtenir votre crédit immobilier</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">1. Évaluer votre capacité d'emprunt</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Calculez votre budget en fonction de vos revenus, charges et apport. Utilisez un simulateur en ligne pour obtenir une première estimation de votre enveloppe de financement. Tenez compte du taux d'endettement maximum de 35 % et prévoyez une marge pour les imprévus.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Calculez votre budget en fonction de vos revenus, charges et apport. Utilisez un simulateur en ligne pour obtenir une première estimation de votre enveloppe de financement. Tenez compte du taux d'endettement maximum de 35 % et prévoyez une marge pour les imprévus.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">2. Rechercher le bien immobilier</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Fort de votre budget, lancez votre recherche immobilière. Visitez plusieurs biens, comparez les quartiers et négociez le prix d'achat. N'oubliez pas d'intégrer les frais annexes : notaire (7-8 % dans l'ancien, 2-3 % dans le neuf), travaux éventuels et frais de déménagement.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Fort de votre budget, lancez votre recherche immobilière. Visitez plusieurs biens, comparez les quartiers et négociez le prix d'achat. N'oubliez pas d'intégrer les frais annexes : notaire (7-8 % dans l'ancien, 2-3 % dans le neuf), travaux éventuels et frais de déménagement.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">3. Signer le compromis de vente</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Le compromis engage les deux parties. Il contient une clause suspensive d'obtention de prêt qui vous protège : si le financement est refusé, la vente est annulée sans pénalité. Vous disposez généralement de 45 à 60 jours pour obtenir votre offre de prêt.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Le compromis engage les deux parties. Il contient une clause suspensive d'obtention de prêt qui vous protège : si le financement est refusé, la vente est annulée sans pénalité. Vous disposez généralement de 45 à 60 jours pour obtenir votre offre de prêt.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">4. Monter le dossier de prêt</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Rassemblez tous les justificatifs nécessaires et déposez votre dossier auprès de plusieurs banques ou d'un courtier. La mise en concurrence est la clé pour obtenir les meilleures conditions. Comparez non seulement les taux, mais aussi les frais de dossier, de garantie et d'assurance.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Rassemblez tous les justificatifs nécessaires et déposez votre dossier auprès de plusieurs banques ou d'un courtier. La mise en concurrence est la clé pour obtenir les meilleures conditions. Comparez non seulement les taux, mais aussi les frais de dossier, de garantie et d'assurance.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">5. Recevoir et accepter l'offre de prêt</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">La banque vous adresse une offre de prêt détaillant toutes les conditions. Vous disposez d'un délai légal de réflexion de 10 jours calendaires avant de pouvoir l'accepter. Relisez attentivement chaque clause, en particulier les conditions de remboursement anticipé et le coût total du crédit.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">La banque vous adresse une offre de prêt détaillant toutes les conditions. Vous disposez d'un délai légal de réflexion de 10 jours calendaires avant de pouvoir l'accepter. Relisez attentivement chaque clause, en particulier les conditions de remboursement anticipé et le coût total du crédit.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">6. Signer chez le notaire</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">La signature de l'acte authentique de vente se fait en présence du notaire. Les fonds sont débloqués par la banque et transférés au vendeur. Vous recevez les clés et devenez officiellement propriétaire. Le notaire procède ensuite à la publication de la vente au Service de publicité foncière.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">La signature de l'acte authentique de vente se fait en présence du notaire. Les fonds sont débloqués par la banque et transférés au vendeur. Vous recevez les clés et devenez officiellement propriétaire. Le notaire procède ensuite à la publication de la vente au Service de publicité foncière.</p>
         </div>
       </div>
     </section>
 
     <!-- Apport personnel -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">L'apport personnel : un atout décisif</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">L'apport personnel : un atout décisif</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           L'apport personnel représente la somme que vous investissez directement dans votre achat immobilier, sans recours à l'emprunt. Il constitue un élément déterminant dans la négociation de votre crédit. Plus votre apport est conséquent, plus vous bénéficiez d'un pouvoir de négociation élevé auprès des banques.
         </p>
@@ -159,9 +160,9 @@ const faqItems = [
     </section>
 
     <!-- Assurance emprunteur -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">L'assurance emprunteur : protégez votre investissement</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">L'assurance emprunteur : protégez votre investissement</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           L'assurance emprunteur représente en moyenne 25 à 30 % du coût total d'un crédit immobilier. Elle couvre les risques de décès, d'invalidité permanente totale (IPT), d'invalidité permanente partielle (IPP) et d'incapacité temporaire de travail (ITT). La garantie perte d'emploi, optionnelle, est souvent jugée coûteuse au regard de ses conditions de déclenchement restrictives.
         </p>
@@ -172,7 +173,7 @@ const faqItems = [
     </section>
 
     <!-- CTA LeadGenForm -->
-    <section class="mb-16">
+    <section class="mb-16 reveal">
       <LeadGenForm source="credit-immobilier" formTitle="Simulez votre crédit immobilier" />
     </section>
 

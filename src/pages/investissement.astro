@@ -37,15 +37,16 @@ const faqItems = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container-wide section-padding">
+  <div class="container-site section-padding">
     <Breadcrumb items={[{ label: 'Investissement' }]} />
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+    <section class="mb-16 reveal">
+      <img src="/illustrations/investissement.svg" alt="" class="w-20 h-20 mb-6" />
+      <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
         Investissement : PEA, SCPI, bourse — par où commencer
       </h1>
-      <p class="text-lg text-gray-700 max-w-3xl leading-relaxed mb-4">
+      <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
         Investir son argent plutôt que le laisser dormir sur un compte courant est une décision patrimoniale fondamentale. Mais face à la multiplicité des supports — PEA, SCPI, ETF, actions, obligations — il est normal de se sentir perdu. Ce guide vous donne les clés pour comprendre chaque type d'investissement et construire un portefeuille adapté à votre profil et vos objectifs.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
@@ -54,9 +55,9 @@ const faqItems = [
     </section>
 
     <!-- PEA explained -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Le PEA : l'enveloppe fiscale incontournable</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Le PEA : l'enveloppe fiscale incontournable</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le Plan d'Épargne en Actions est l'enveloppe fiscale de référence pour investir en bourse en France. Créé en 1992, il permet d'investir dans des actions européennes et des fonds éligibles tout en bénéficiant d'une exonération d'impôt sur le revenu après 5 ans de détention. Seuls les prélèvements sociaux de 17,2 % restent dus sur les gains réalisés.
         </p>
@@ -73,9 +74,9 @@ const faqItems = [
     </section>
 
     <!-- SCPI explained -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Les SCPI : investir dans l'immobilier sans contrainte</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Les SCPI : investir dans l'immobilier sans contrainte</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Les Sociétés Civiles de Placement Immobilier permettent d'investir dans l'immobilier professionnel de manière mutualisée. En achetant des parts de SCPI, vous devenez copropriétaire d'un portefeuille diversifié de biens immobiliers (bureaux, commerces, entrepôts, établissements de santé, hôtels) et percevez des revenus locatifs réguliers, généralement distribués trimestriellement.
         </p>
@@ -89,9 +90,9 @@ const faqItems = [
     </section>
 
     <!-- Bourse et ETF -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Bourse et ETF : la puissance de l'investissement passif</h2>
-      <div class="prose max-w-none text-gray-700 space-y-4">
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Bourse et ETF : la puissance de l'investissement passif</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           L'investissement en bourse a longtemps été perçu comme réservé aux initiés. Les ETF (fonds indiciels cotés) ont démocratisé l'accès aux marchés financiers en proposant des produits simples, transparents et peu coûteux. Un ETF réplique un indice boursier : quand l'indice monte de 1 %, l'ETF monte de 1 % (moins les frais de gestion, infimes).
         </p>
@@ -105,30 +106,30 @@ const faqItems = [
     </section>
 
     <!-- Comment débuter -->
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Comment débuter en investissement ?</h2>
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Comment débuter en investissement ?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">1. Constituez votre épargne de précaution</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Avant d'investir, assurez-vous de disposer de 3 à 6 mois de dépenses sur des livrets disponibles (Livret A, LDDS). Cette réserve vous évitera de devoir revendre vos investissements en cas d'imprévu, potentiellement au mauvais moment.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Avant d'investir, assurez-vous de disposer de 3 à 6 mois de dépenses sur des livrets disponibles (Livret A, LDDS). Cette réserve vous évitera de devoir revendre vos investissements en cas d'imprévu, potentiellement au mauvais moment.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">2. Définissez votre profil et vos objectifs</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Votre horizon de placement, votre tolérance au risque et vos objectifs (retraite, projet immobilier, constitution de patrimoine) déterminent la répartition idéale de votre portefeuille entre actions, obligations et immobilier.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Votre horizon de placement, votre tolérance au risque et vos objectifs (retraite, projet immobilier, constitution de patrimoine) déterminent la répartition idéale de votre portefeuille entre actions, obligations et immobilier.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">3. Ouvrez les bonnes enveloppes</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Ouvrez un PEA chez un courtier en ligne pour les actions, et une assurance-vie pour la diversification. L'ancienneté fiscale commence à la date d'ouverture : ouvrez ces enveloppes le plus tôt possible, même avec un montant symbolique.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Ouvrez un PEA chez un courtier en ligne pour les actions, et une assurance-vie pour la diversification. L'ancienneté fiscale commence à la date d'ouverture : ouvrez ces enveloppes le plus tôt possible, même avec un montant symbolique.</p>
         </div>
-        <div class="bg-light rounded-xl p-6 border border-gray-200">
+        <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">4. Investissez régulièrement</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">Mettez en place des versements automatiques mensuels sur vos supports d'investissement. La régularité et la patience sont les deux qualités les plus importantes d'un investisseur à succès. Commencez petit, mais commencez maintenant.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Mettez en place des versements automatiques mensuels sur vos supports d'investissement. La régularité et la patience sont les deux qualités les plus importantes d'un investisseur à succès. Commencez petit, mais commencez maintenant.</p>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="mb-16">
+    <section class="mb-16 reveal">
       <CTAAffiliation partner="Courtier" title="Ouvrez votre PEA en ligne" />
     </section>
 

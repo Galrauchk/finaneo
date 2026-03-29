@@ -1,79 +1,266 @@
 ---
-const navItems = [
-  { label: 'Crédit immobilier', href: '/credit-immobilier/' },
-  { label: 'Assurance', href: '/assurance-emprunteur/' },
-  { label: 'Épargne', href: '/epargne/' },
+const thematiques = [
+  { label: 'Credit immobilier', href: '/credit-immobilier/' },
+  { label: 'Assurance emprunteur', href: '/assurance-emprunteur/' },
+  { label: 'Epargne', href: '/epargne/' },
   { label: 'Investissement', href: '/investissement/' },
-  { label: 'Simulateurs', href: '/simulateurs/' },
-  { label: 'Guides', href: '/guides/' },
+  { label: 'Defiscalisation', href: '/defiscalisation/' },
+  { label: 'Rachat de credit', href: '/rachat-credit/' },
 ];
 ---
 
-<header class="bg-white border-b border-gray-100 sticky top-0 z-50">
-  <div class="container-wide flex items-center justify-between h-16">
-    <a href="/" class="flex items-center gap-2">
-      <span class="w-8 h-8 bg-navy rounded-md flex items-center justify-center">
-        <span class="text-gold font-bold text-lg">F</span>
-      </span>
-      <span class="text-navy font-bold text-xl">Finaneo</span>
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="container-site flex items-center justify-between h-[72px]">
+    <!-- Logo -->
+    <a href="/" class="relative z-10 flex-shrink-0">
+      <svg viewBox="0 0 140 32" class="h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0A2540"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+        <path d="M16 2L28 9v14l-12 7L4 23V9l12-7z" fill="url(#logo-grad)"/>
+        <path d="M16 20V12m0 0l-4 4m4-4l4 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="38" y="22" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" fill="#0A2540">Finaneo</text>
+      </svg>
     </a>
 
     <!-- Desktop nav -->
-    <nav class="hidden lg:flex items-center gap-6">
-      {navItems.map((item) => (
-        <a
-          href={item.href}
-          class="text-sm font-medium text-dark hover:text-gold transition-colors"
+    <nav class="hidden lg:flex items-center gap-1">
+      <!-- Thematiques dropdown -->
+      <div class="relative" id="dropdown-thematiques">
+        <button
+          type="button"
+          class="nav-link flex items-center gap-1 px-4 py-2 text-sm font-medium text-navy/80 hover:text-navy rounded-lg transition-colors duration-200 relative group"
+          aria-expanded="false"
+          aria-haspopup="true"
         >
-          {item.label}
-        </a>
-      ))}
-      <a href="/contact/" class="btn-primary text-sm !py-2 !px-4">Contact</a>
+          <span>Th&eacute;matiques</span>
+          <svg class="w-4 h-4 transition-transform duration-200 group-[.open]:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+          <span class="nav-underline absolute bottom-0 left-4 right-4 h-0.5 bg-gold scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+        </button>
+        <div class="dropdown-menu absolute top-full left-0 pt-2 opacity-0 invisible translate-y-1 transition-all duration-200 pointer-events-none">
+          <div class="bg-white rounded-xl shadow-card-hover border border-gray-100/80 py-2 min-w-[220px]">
+            {thematiques.map((item) => (
+              <a
+                href={item.href}
+                class="flex items-center px-4 py-2.5 text-sm text-navy/70 hover:text-navy hover:bg-light transition-colors duration-150"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <a href="/simulateurs/" class="nav-link relative px-4 py-2 text-sm font-medium text-navy/80 hover:text-navy rounded-lg transition-colors duration-200 group">
+        Simulateurs
+        <span class="nav-underline absolute bottom-0 left-4 right-4 h-0.5 bg-gold scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+
+      <a href="/guides/" class="nav-link relative px-4 py-2 text-sm font-medium text-navy/80 hover:text-navy rounded-lg transition-colors duration-200 group">
+        Guides
+        <span class="nav-underline absolute bottom-0 left-4 right-4 h-0.5 bg-gold scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+
+      <!-- CTA -->
+      <a
+        href="/simulateurs/credit-immobilier/"
+        class="ml-4 inline-flex items-center gap-2 px-5 py-2.5 bg-gold text-navy text-sm font-semibold rounded-xl hover:bg-gold-light active:bg-gold-dark transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+      >
+        Simuler mon cr&eacute;dit
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
     </nav>
 
     <!-- Mobile hamburger -->
     <button
       id="menu-toggle"
-      class="lg:hidden p-2 text-navy"
+      class="relative z-10 lg:hidden p-2 text-navy rounded-lg hover:bg-light transition-colors duration-200"
       aria-label="Ouvrir le menu"
       aria-expanded="false"
     >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+      <div class="w-6 h-5 flex flex-col justify-between" id="hamburger-icon">
+        <span class="block h-0.5 w-6 bg-navy rounded-full transition-all duration-300 origin-center"></span>
+        <span class="block h-0.5 w-6 bg-navy rounded-full transition-all duration-300"></span>
+        <span class="block h-0.5 w-6 bg-navy rounded-full transition-all duration-300 origin-center"></span>
+      </div>
     </button>
   </div>
 
-  <!-- Mobile nav -->
-  <nav id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
-    <div class="container-wide py-4 flex flex-col gap-3">
-      {navItems.map((item) => (
-        <a
-          href={item.href}
-          class="text-sm font-medium text-dark hover:text-gold py-2"
+  <!-- Mobile overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-navy/60 backdrop-blur-sm opacity-0 invisible transition-all duration-300 lg:hidden" style="z-index: 40;"></div>
+
+  <!-- Mobile slide-in menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-[300px] max-w-[85vw] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out lg:hidden overflow-y-auto" style="z-index: 50;">
+    <div class="pt-20 pb-8 px-6">
+      <!-- Mobile Thematiques -->
+      <div class="mb-2" id="mobile-dropdown">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full py-3 text-base font-semibold text-navy border-b border-gray-100 transition-colors duration-200"
         >
-          {item.label}
-        </a>
-      ))}
-      <a href="/contact/" class="btn-primary text-sm text-center mt-2">Contact</a>
+          <span>Th&eacute;matiques</span>
+          <svg class="w-5 h-5 text-navy/40 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="mobile-sub hidden pl-4 pb-2">
+          {thematiques.map((item) => (
+            <a
+              href={item.href}
+              class="mobile-link block py-2.5 text-sm text-navy/70 hover:text-gold transition-colors duration-200"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <a href="/simulateurs/" class="mobile-link block py-3 text-base font-semibold text-navy border-b border-gray-100 hover:text-gold transition-colors duration-200">
+        Simulateurs
+      </a>
+
+      <a href="/guides/" class="mobile-link block py-3 text-base font-semibold text-navy border-b border-gray-100 hover:text-gold transition-colors duration-200">
+        Guides
+      </a>
+
+      <!-- Mobile CTA -->
+      <a
+        href="/simulateurs/credit-immobilier/"
+        class="mobile-link mt-6 flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-gold text-navy font-semibold rounded-xl hover:bg-gold-light active:bg-gold-dark transition-all duration-200 shadow-sm"
+      >
+        Simuler mon cr&eacute;dit
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
     </div>
-  </nav>
+  </div>
 </header>
 
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const icon = document.getElementById('menu-icon');
+<!-- Spacer so content is not hidden behind fixed header -->
+<div class="h-[72px]"></div>
 
-  toggle?.addEventListener('click', () => {
-    const isOpen = !menu?.classList.contains('hidden');
-    menu?.classList.toggle('hidden');
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-    if (icon) {
-      icon.setAttribute('d', isOpen
-        ? 'M4 6h16M4 12h16M4 18h16'
-        : 'M6 18L18 6M6 6l12 12'
-      );
+<script>
+  const header = document.getElementById('site-header');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const mobileDropdown = document.getElementById('mobile-dropdown');
+  const desktopDropdown = document.getElementById('dropdown-thematiques');
+
+  // --- Scroll detection ---
+  let lastScroll = 0;
+  function onScroll() {
+    const scrollY = window.scrollY;
+    if (scrollY > 20) {
+      header?.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-nav');
+    } else {
+      header?.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-nav');
+    }
+    lastScroll = scrollY;
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // --- Mobile menu toggle ---
+  let mobileOpen = false;
+
+  function openMobile() {
+    mobileOpen = true;
+    mobileMenu?.classList.remove('translate-x-full');
+    mobileOverlay?.classList.remove('opacity-0', 'invisible');
+    mobileOverlay?.classList.add('opacity-100');
+    menuToggle?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    // Animate hamburger to X
+    const bars = hamburgerIcon?.querySelectorAll('span');
+    if (bars && bars.length === 3) {
+      bars[0].classList.add('rotate-45', 'translate-y-[9px]');
+      bars[1].classList.add('opacity-0', 'scale-x-0');
+      bars[2].classList.add('-rotate-45', '-translate-y-[9px]');
+    }
+  }
+
+  function closeMobile() {
+    mobileOpen = false;
+    mobileMenu?.classList.add('translate-x-full');
+    mobileOverlay?.classList.add('opacity-0', 'invisible');
+    mobileOverlay?.classList.remove('opacity-100');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    // Animate X back to hamburger
+    const bars = hamburgerIcon?.querySelectorAll('span');
+    if (bars && bars.length === 3) {
+      bars[0].classList.remove('rotate-45', 'translate-y-[9px]');
+      bars[1].classList.remove('opacity-0', 'scale-x-0');
+      bars[2].classList.remove('-rotate-45', '-translate-y-[9px]');
+    }
+  }
+
+  menuToggle?.addEventListener('click', () => {
+    mobileOpen ? closeMobile() : openMobile();
+  });
+
+  // Close on overlay click
+  mobileOverlay?.addEventListener('click', closeMobile);
+
+  // Close on mobile link click
+  mobileMenu?.querySelectorAll('.mobile-link').forEach((link) => {
+    link.addEventListener('click', closeMobile);
+  });
+
+  // --- Desktop dropdown (hover) ---
+  if (desktopDropdown) {
+    const btn = desktopDropdown.querySelector('button');
+    const menu = desktopDropdown.querySelector('.dropdown-menu');
+    let hoverTimeout: ReturnType<typeof setTimeout>;
+
+    function showDropdown() {
+      clearTimeout(hoverTimeout);
+      menu?.classList.remove('opacity-0', 'invisible', 'translate-y-1', 'pointer-events-none');
+      menu?.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      btn?.setAttribute('aria-expanded', 'true');
+      btn?.classList.add('open');
+    }
+
+    function hideDropdown() {
+      hoverTimeout = setTimeout(() => {
+        menu?.classList.add('opacity-0', 'invisible', 'translate-y-1', 'pointer-events-none');
+        menu?.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        btn?.setAttribute('aria-expanded', 'false');
+        btn?.classList.remove('open');
+      }, 150);
+    }
+
+    desktopDropdown.addEventListener('mouseenter', showDropdown);
+    desktopDropdown.addEventListener('mouseleave', hideDropdown);
+    // Also toggle on click for accessibility
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? hideDropdown() : showDropdown();
+    });
+  }
+
+  // --- Mobile dropdown (click) ---
+  if (mobileDropdown) {
+    const btn = mobileDropdown.querySelector('button');
+    const sub = mobileDropdown.querySelector('.mobile-sub');
+    const chevron = btn?.querySelector('svg');
+
+    btn?.addEventListener('click', () => {
+      const isOpen = !sub?.classList.contains('hidden');
+      sub?.classList.toggle('hidden');
+      chevron?.classList.toggle('rotate-180');
+    });
+  }
+
+  // --- Close mobile on resize to desktop ---
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024 && mobileOpen) {
+      closeMobile();
     }
   });
 </script>

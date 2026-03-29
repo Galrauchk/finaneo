@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <linearGradient id="teamGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0F3460"/>
+    </linearGradient>
+  </defs>
+  <!-- Person 1 (left) -->
+  <circle cx="90" cy="75" r="22" fill="#0A2540"/>
+  <path d="M55,155 C55,120 65,105 90,105 C115,105 125,120 125,155" fill="#0A2540"/>
+  <!-- Person 1 gold accent (tie/lapel) -->
+  <path d="M87,108 L90,125 L93,108" fill="#C9A84C"/>
+  <!-- Person 2 (center, taller) -->
+  <circle cx="150" cy="62" r="26" fill="url(#teamGrad1)"/>
+  <path d="M108,160 C108,118 120,95 150,95 C180,95 192,118 192,160" fill="url(#teamGrad1)"/>
+  <!-- Person 2 gold accent (badge) -->
+  <circle cx="150" cy="108" r="6" fill="#C9A84C"/>
+  <!-- Person 3 (right) -->
+  <circle cx="210" cy="75" r="22" fill="#0A2540"/>
+  <path d="M175,155 C175,120 185,105 210,105 C235,105 245,120 245,155" fill="#0A2540"/>
+  <!-- Person 3 gold accent (tie/lapel) -->
+  <path d="M207,108 L210,125 L213,108" fill="#C9A84C"/>
+  <!-- Connecting line below (teamwork symbol) -->
+  <line x1="75" y1="165" x2="245" y2="165" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Gold dots on connecting line -->
+  <circle cx="90" cy="165" r="3" fill="#C9A84C"/>
+  <circle cx="150" cy="165" r="3" fill="#C9A84C"/>
+  <circle cx="210" cy="165" r="3" fill="#C9A84C"/>
+  <!-- Subtle sparkle accent -->
+  <path d="M250,50 L252,44 L254,50 L260,52 L254,54 L252,60 L250,54 L244,52 Z" fill="#C9A84C" opacity="0.4"/>
+  <path d="M45,55 L47,50 L49,55 L54,57 L49,59 L47,64 L45,59 L40,57 Z" fill="#C9A84C" opacity="0.3"/>
+</svg>
