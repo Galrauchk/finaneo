@@ -5,33 +5,41 @@ import FAQ from '../components/FAQ.astro';
 import LeadGenForm from '../components/LeadGenForm.astro';
 import CTAAffiliation from '../components/CTAAffiliation.astro';
 
-const title = "Investissement : PEA, SCPI, bourse — par où commencer | Finaneo";
-const description = "Guide complet pour investir en 2026 : PEA, SCPI, bourse, ETF. Apprenez à construire un portefeuille diversifié et à faire fructifier votre épargne sur le long terme.";
+const title = "Investissement 2026 : PEA, SCPI, bourse — par où commencer ? | Finaneo";
+const description = "PEA, SCPI, ETF, bourse : guide complet pour investir en 2026. Comparatif des enveloppes fiscales, stratégies DCA et conseils pour débutants.";
 
 const faqItems = [
   {
     question: "Quelle est la différence entre un PEA et un compte-titres ?",
-    answer: "Le PEA (Plan d'Épargne en Actions) bénéficie d'une fiscalité avantageuse : après 5 ans de détention, les plus-values et dividendes sont exonérés d'impôt sur le revenu (seuls les prélèvements sociaux de 17,2 % s'appliquent). En contrepartie, le PEA est limité à 150 000 euros de versements et aux actions européennes (UE/EEE) ainsi qu'aux ETF éligibles. Le compte-titres ordinaire (CTO) n'a aucune limite de versement ni restriction géographique, mais les gains sont soumis au PFU de 30 % (ou au barème progressif sur option). En pratique, il est recommandé de remplir d'abord son PEA avant d'utiliser un CTO."
+    answer: "Le PEA bénéficie d'une fiscalité avantageuse : après 5 ans de détention, les plus-values et dividendes sont exonérés d'impôt sur le revenu (seuls les prélèvements sociaux de 17,2 % s'appliquent). En contrepartie, le PEA est limité à 150 000 euros de versements et aux actions européennes (UE/EEE) ainsi qu'aux ETF éligibles. Le compte-titres ordinaire (CTO) n'a aucune limite de versement ni restriction géographique, mais les gains sont soumis au PFU de 30 %. En pratique, il est recommandé de remplir d'abord son PEA avant d'utiliser un CTO pour optimiser sa fiscalité."
   },
   {
     question: "Les SCPI sont-elles un bon investissement en 2026 ?",
-    answer: "Les SCPI (Sociétés Civiles de Placement Immobilier) continuent d'offrir un rendement attractif, avec un taux de distribution moyen de 4,5 % à 5 % en 2025. Elles permettent d'investir dans l'immobilier professionnel (bureaux, commerces, santé, logistique) sans les contraintes de gestion directe. Cependant, il faut garder à l'esprit que le prix des parts peut fluctuer à la baisse, que les frais d'entrée sont élevés (8 à 12 %) et que la liquidité est moindre par rapport aux placements financiers. Les SCPI sont donc adaptées à un horizon d'investissement long (8 à 10 ans minimum) et à une logique de revenus réguliers."
+    answer: "Les SCPI continuent d'offrir un rendement attractif, avec un taux de distribution moyen de 4 % à 5 % en 2026. Elles permettent d'investir dans l'immobilier professionnel (bureaux, commerces, santé, logistique) sans les contraintes de gestion directe. Cependant, les frais d'entrée sont élevés (8 à 12 %), la liquidité est moindre que les placements financiers, et le prix des parts peut fluctuer à la baisse. Les SCPI sont adaptées à un horizon de 8 à 10 ans minimum et à une logique de revenus complémentaires réguliers."
   },
   {
     question: "Qu'est-ce qu'un ETF et pourquoi en parle-t-on autant ?",
-    answer: "Un ETF (Exchange Traded Fund), ou tracker, est un fonds indiciel coté en bourse qui réplique la performance d'un indice de référence (CAC 40, S&P 500, MSCI World, etc.). Les ETF ont révolutionné l'investissement grâce à trois avantages majeurs : des frais de gestion très faibles (0,10 % à 0,50 % par an contre 1,5 % à 2,5 % pour les fonds actifs), une diversification instantanée (un ETF MSCI World investit dans plus de 1 500 entreprises de 23 pays développés) et une accessibilité remarquable (achetable à partir de quelques dizaines d'euros via un PEA ou un compte-titres). De nombreuses études académiques montrent que les ETF surperforment la majorité des fonds gérés activement sur le long terme."
+    answer: "Un ETF (Exchange Traded Fund), ou tracker, est un fonds indiciel coté en bourse qui réplique la performance d'un indice de référence (CAC 40, S&P 500, MSCI World). Les ETF offrent trois avantages majeurs : des frais très faibles (0,10 % à 0,50 % par an contre 1,5 % à 2,5 % pour les fonds actifs), une diversification instantanée (un ETF MSCI World investit dans plus de 1 500 entreprises de 23 pays développés) et une accessibilité remarquable (achetable à partir de quelques dizaines d'euros via un PEA). De nombreuses études académiques montrent que les ETF surperforment la majorité des fonds gérés activement sur le long terme."
   },
   {
     question: "Combien investir quand on débute ?",
-    answer: "Il n'y a pas de montant minimum pour commencer à investir. Beaucoup de courtiers en ligne permettent d'acheter des fractions d'actions ou d'ETF à partir de 10 ou 50 euros. L'essentiel est de respecter deux principes fondamentaux. Premièrement, n'investissez que de l'argent dont vous n'avez pas besoin à court terme (après constitution de votre épargne de précaution). Deuxièmement, privilégiez l'investissement programmé (versements réguliers mensuels) plutôt qu'un placement en une seule fois, ce qui permet de lisser le risque de marché dans le temps. Commencer avec 50 à 200 euros par mois en ETF diversifiés est une excellente approche pour un débutant."
+    answer: "Il n'y a pas de montant minimum pour commencer à investir. Beaucoup de courtiers en ligne permettent d'acheter des fractions d'actions ou d'ETF à partir de 10 ou 50 euros. L'essentiel est de respecter deux principes : n'investissez que de l'argent dont vous n'avez pas besoin à court terme (après constitution de votre épargne de précaution), et privilégiez l'investissement programmé mensuel plutôt qu'un placement en une seule fois. Commencer avec 50 à 200 euros par mois en ETF diversifiés est une excellente approche pour un débutant."
   },
   {
     question: "Quels sont les risques de l'investissement en bourse ?",
-    answer: "L'investissement en bourse comporte un risque de perte en capital, c'est-à-dire que la valeur de vos placements peut diminuer. Les principaux risques sont : le risque de marché (baisse générale des cours liée à la conjoncture économique), le risque spécifique (mauvaise performance d'une entreprise particulière), le risque de change (pour les investissements hors zone euro) et le risque de liquidité (difficulté à revendre certains titres). Pour atténuer ces risques, diversifiez vos investissements (secteurs, zones géographiques, classes d'actifs), investissez sur le long terme (10 ans minimum) et ne paniquez pas lors des baisses temporaires. Historiquement, les marchés actions ont toujours fini par remonter sur des périodes de 10 à 15 ans."
+    answer: "L'investissement en bourse comporte un risque de perte en capital. Les principaux risques sont : le risque de marché (baisse générale des cours), le risque spécifique (mauvaise performance d'une entreprise), le risque de change (investissements hors zone euro) et le risque de liquidité. Pour les atténuer, diversifiez vos investissements en secteurs et zones géographiques, investissez sur le long terme (10 ans minimum) et ne cédez pas à la panique lors des baisses temporaires. Historiquement, les marchés actions ont toujours fini par remonter sur des périodes de 10 à 15 ans."
   },
   {
     question: "PEA bancaire ou PEA assurance : lequel choisir ?",
-    answer: "Le PEA bancaire, proposé par les banques et courtiers en ligne, offre un accès direct aux marchés boursiers avec un large choix de titres (actions, ETF, OPCVM). C'est le format le plus courant et le plus flexible. Le PEA assurance, adossé à un contrat de capitalisation, propose une gestion plus proche de l'assurance-vie avec des unités de compte. Il est moins répandu et offre généralement un choix de supports plus restreint. En pratique, le PEA bancaire est recommandé pour la grande majorité des investisseurs, surtout chez un courtier en ligne où les frais sont minimaux (0 euro de frais de garde, commissions d'ordre réduites)."
+    answer: "Le PEA bancaire, proposé par les banques et courtiers en ligne, offre un accès direct aux marchés avec un large choix de titres (actions, ETF, OPCVM). Le PEA assurance, adossé à un contrat de capitalisation, propose une gestion plus proche de l'assurance-vie avec des unités de compte. Le PEA bancaire est recommandé pour la grande majorité des investisseurs, surtout chez un courtier en ligne où les frais sont minimaux : 0 euro de frais de garde et commissions d'ordre réduites. Réservez le PEA assurance aux situations patrimoniales spécifiques, après conseil d'un professionnel."
+  },
+  {
+    question: "Qu'est-ce que la stratégie DCA et pourquoi est-elle recommandée ?",
+    answer: "Le DCA (Dollar Cost Averaging), ou investissement programmé, consiste à investir un montant fixe à intervalles réguliers, généralement chaque mois, quelle que soit l'évolution des marchés. Cette stratégie élimine le risque de mauvais timing : vous achetez automatiquement plus de parts quand les cours sont bas et moins quand ils sont hauts, ce qui lisse votre prix d'achat moyen. Sur le long terme, le DCA surpasse la stratégie qui consiste à attendre le « bon moment » pour investir, car personne ne peut prédire les marchés de manière fiable. En pratique, programmez un virement automatique mensuel vers votre PEA ou votre assurance-vie et investissez-le systématiquement dans un ETF diversifié."
+  },
+  {
+    question: "Pourquoi la diversification est-elle si importante en investissement ?",
+    answer: "La diversification consiste à répartir ses investissements entre différentes classes d'actifs (actions, obligations, immobilier), zones géographiques (Europe, États-Unis, pays émergents) et secteurs d'activité (technologie, santé, énergie). Son objectif est de réduire le risque global du portefeuille : quand une classe d'actifs ou une région baisse, une autre peut compenser. Un portefeuille composé à 100 % d'actions françaises est bien plus risqué qu'un portefeuille réparti entre un ETF MSCI World, des SCPI et des obligations. La diversification est le seul « repas gratuit » en finance, selon le prix Nobel Harry Markowitz : elle réduit le risque sans nécessairement réduire le rendement espéré."
   }
 ];
 ---
@@ -44,47 +52,50 @@ const faqItems = [
     <section class="mb-16 reveal">
       <img src="/illustrations/investissement.svg" alt="" class="w-20 h-20 mb-6" />
       <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
-        Investissement : PEA, SCPI, bourse — par où commencer
+        Investissement 2026 : PEA, SCPI, bourse — par où commencer ?
       </h1>
       <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
-        Investir son argent plutôt que le laisser dormir sur un compte courant est une décision patrimoniale fondamentale. Mais face à la multiplicité des supports — PEA, SCPI, ETF, actions, obligations — il est normal de se sentir perdu. Ce guide vous donne les clés pour comprendre chaque type d'investissement et construire un portefeuille adapté à votre profil et vos objectifs.
+        Investir son argent plutôt que le laisser dormir sur un compte courant est l'une des décisions financières les plus impactantes que vous puissiez prendre. En 2026, les possibilités sont nombreuses : PEA pour les actions européennes avec une fiscalité allégée, SCPI pour l'immobilier sans contraintes de gestion, ETF pour une diversification mondiale à frais réduits, ou encore assurance-vie pour combiner souplesse et avantages fiscaux. Mais face à cette multiplicité de supports, il est normal de se sentir perdu. Ce guide complet vous donne les clés pour comprendre chaque type d'investissement, choisir les bonnes enveloppes fiscales et construire un portefeuille adapté à votre profil.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
-        Sur les 30 dernières années, les marchés actions mondiaux ont offert un rendement annuel moyen d'environ 8 % (dividendes réinvestis). L'immobilier d'investissement, via les SCPI, délivre des rendements de 4 à 6 % par an. Ces performances, largement supérieures à l'inflation, justifient l'intérêt croissant des Français pour l'investissement, à condition de respecter quelques règles essentielles de diversification et de gestion du risque.
+        Sur les 30 dernières années, les marchés actions mondiaux ont offert un rendement annuel moyen d'environ 8 % (dividendes réinvestis). L'immobilier d'investissement via les SCPI délivre des rendements de 4 à 5 % par an. Ces performances, largement supérieures à l'inflation, justifient l'intérêt croissant des Français pour l'investissement. Selon l'AMF, le nombre de nouveaux investisseurs en bourse a plus que doublé depuis 2020, portés par les courtiers en ligne et la démocratisation des ETF. Reste à respecter quelques règles essentielles de diversification, de gestion du risque et de discipline pour en tirer pleinement parti.
       </p>
     </section>
 
     <!-- PEA explained -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Le PEA : l'enveloppe fiscale incontournable</h2>
+      <h2 class="text-h2 text-navy mb-6">Le PEA : l'enveloppe fiscale incontournable pour investir en bourse</h2>
       <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
-          Le Plan d'Épargne en Actions est l'enveloppe fiscale de référence pour investir en bourse en France. Créé en 1992, il permet d'investir dans des actions européennes et des fonds éligibles tout en bénéficiant d'une exonération d'impôt sur le revenu après 5 ans de détention. Seuls les prélèvements sociaux de 17,2 % restent dus sur les gains réalisés.
+          Le Plan d'Épargne en Actions est l'enveloppe fiscale de référence pour investir en bourse en France. Créé en 1992, il permet d'investir dans des actions européennes et des fonds éligibles tout en bénéficiant d'une <strong class="text-navy">exonération d'impôt sur le revenu après 5 ans</strong> de détention. Seuls les prélèvements sociaux de 17,2 % restent dus sur les gains réalisés, contre 30 % de PFU sur un compte-titres ordinaire. Sur une plus-value de 50 000 euros, la différence représente 6 400 euros d'économie d'impôt.
         </p>
         <p>
-          Le PEA est plafonné à <strong class="text-navy">150 000 euros de versements</strong> (225 000 euros en incluant le PEA-PME). Les retraits avant 5 ans entraînent la clôture du plan et l'imposition des gains au PFU de 30 %. Après 5 ans, les retraits partiels sont possibles sans clôture et avec la fiscalité allégée.
+          Le PEA est plafonné à <strong class="text-navy">150 000 euros de versements</strong>. Le PEA-PME, dédié aux petites et moyennes entreprises, offre un plafond complémentaire de 75 000 euros, portant le total à <strong class="text-navy">225 000 euros</strong> en cumulant les deux enveloppes. Les retraits avant 5 ans entraînent la clôture du plan et l'imposition des gains au PFU de 30 %. Après 5 ans, les retraits partiels sont possibles sans clôture et avec la fiscalité allégée. C'est pourquoi il est conseillé d'ouvrir son PEA le plus tôt possible, même avec un versement symbolique, pour faire courir le délai fiscal.
         </p>
         <p>
-          Pour ouvrir un PEA, vous pouvez vous adresser à votre banque traditionnelle ou, de préférence, à un <strong class="text-navy">courtier en ligne</strong> qui proposera des frais bien plus compétitifs. Les frais font une différence considérable sur le long terme : un écart de 1 % de frais annuels sur 25 ans représente une différence de performance de plus de 25 % sur le capital final. Les courtiers en ligne comme Boursorama, Fortuneo ou Bourse Direct proposent des PEA sans frais de garde et avec des commissions d'ordre très réduites.
+          Le choix du <strong class="text-navy">courtier en ligne</strong> est déterminant pour la performance à long terme. Les frais font une différence considérable : un écart de 1 % de frais annuels sur 25 ans représente une différence de plus de 25 % sur le capital final. Les courtiers en ligne proposent des PEA sans frais de garde et avec des commissions d'ordre très réduites, là où les banques traditionnelles facturent souvent des droits de garde annuels et des frais d'ordre élevés. Depuis la loi Pacte, les frais du PEA sont encadrés : maximum 0,4 % de frais de transaction pour les ETF et fonds, et 0 euro de frais de garde pour les titres vifs.
         </p>
         <p>
-          La stratégie la plus recommandée pour un PEA est l'investissement en <strong class="text-navy">ETF diversifiés</strong>. Un simple ETF MSCI World éligible PEA vous expose à plus de 1 500 grandes entreprises mondiales en une seule ligne. Cette approche passive, soutenue par des décennies de recherche académique, surperforme la majorité des gérants professionnels sur le long terme.
+          La stratégie la plus recommandée pour un PEA est l'investissement en <strong class="text-navy">ETF diversifiés</strong>. Un simple ETF MSCI World éligible PEA (via réplication synthétique) vous expose à plus de 1 500 grandes entreprises de 23 pays développés en une seule ligne. Vous pouvez compléter avec un ETF marchés émergents et un ETF petites capitalisations pour une couverture encore plus large. Cette approche passive, soutenue par des décennies de recherche académique en finance, surperforme la majorité des gérants professionnels sur le long terme.
         </p>
       </div>
     </section>
 
     <!-- SCPI explained -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Les SCPI : investir dans l'immobilier sans contrainte</h2>
+      <h2 class="text-h2 text-navy mb-6">SCPI en 2026 : investir dans l'immobilier sans contrainte de gestion</h2>
       <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
-          Les Sociétés Civiles de Placement Immobilier permettent d'investir dans l'immobilier professionnel de manière mutualisée. En achetant des parts de SCPI, vous devenez copropriétaire d'un portefeuille diversifié de biens immobiliers (bureaux, commerces, entrepôts, établissements de santé, hôtels) et percevez des revenus locatifs réguliers, généralement distribués trimestriellement.
+          Les Sociétés Civiles de Placement Immobilier permettent d'investir dans l'immobilier professionnel de manière mutualisée. En achetant des parts de SCPI, vous devenez copropriétaire d'un portefeuille diversifié de biens immobiliers — bureaux, commerces, entrepôts logistiques, établissements de santé, hôtels — et percevez des revenus locatifs réguliers, généralement distribués trimestriellement. C'est ce qu'on appelle la « pierre papier » : les avantages de l'immobilier sans les contraintes de gestion locative.
         </p>
         <p>
-          Le <strong class="text-navy">taux de distribution moyen</strong> des SCPI s'est établi autour de 4,5 % à 5 % ces dernières années. Certaines SCPI spécialisées (logistique, santé) affichent des rendements encore supérieurs. L'avantage principal des SCPI est d'offrir une exposition à l'immobilier professionnel de qualité, habituellement réservé aux investisseurs institutionnels, à partir de quelques centaines d'euros.
+          Le <strong class="text-navy">rendement moyen des SCPI</strong> se situe entre 4 % et 5 % en 2026. Certaines SCPI spécialisées dans la logistique, la santé ou les marchés européens affichent des taux de distribution encore supérieurs. Le mécanisme est simple : la société de gestion collecte les loyers auprès des locataires professionnels, déduit les charges de gestion, et reverse le solde aux porteurs de parts sous forme de dividendes. La diversification du patrimoine immobilier (dizaines voire centaines d'immeubles, différents locataires et secteurs) réduit considérablement le risque par rapport à un investissement immobilier en direct.
         </p>
         <p>
-          Il faut cependant être attentif aux <strong class="text-navy">frais de souscription</strong>, qui varient entre 8 % et 12 % du montant investi. Ces frais impliquent qu'il faut conserver ses parts suffisamment longtemps (8 à 10 ans minimum) pour les amortir et générer une rentabilité nette satisfaisante. Les SCPI sont aussi soumises à la fiscalité des revenus fonciers, sauf si elles sont détenues via une assurance-vie (qui permet de bénéficier de la fiscalité avantageuse de cette enveloppe).
+          Il faut cependant être vigilant sur les <strong class="text-navy">frais de souscription</strong>, qui varient entre 8 % et 12 % du montant investi selon les SCPI. Ces frais, prélevés à l'achat, sont intégrés dans le prix de la part et impliquent qu'il faut conserver ses parts suffisamment longtemps pour les amortir. Avec un rendement annuel de 4,5 % et des frais d'entrée de 10 %, il faut environ 2 à 3 ans pour simplement récupérer les frais. C'est pourquoi l'<strong class="text-navy">horizon recommandé est de 8 à 10 ans minimum</strong>. Les nouvelles SCPI sans frais d'entrée, apparues ces dernières années, modifient cette donne mais appliquent des frais de gestion plus élevés.
+        </p>
+        <p>
+          Côté fiscalité, les revenus des SCPI détenues en direct sont soumis à l'impôt sur le revenu dans la catégorie des revenus fonciers, plus les prélèvements sociaux de 17,2 %. Pour optimiser la fiscalité, il est possible de loger des parts de SCPI dans une assurance-vie, ce qui permet de bénéficier du cadre fiscal de cette enveloppe. Les SCPI investies en Europe offrent également un avantage fiscal grâce aux conventions de non double imposition.
         </p>
       </div>
     </section>
@@ -94,36 +105,112 @@ const faqItems = [
       <h2 class="text-h2 text-navy mb-6">Bourse et ETF : la puissance de l'investissement passif</h2>
       <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
-          L'investissement en bourse a longtemps été perçu comme réservé aux initiés. Les ETF (fonds indiciels cotés) ont démocratisé l'accès aux marchés financiers en proposant des produits simples, transparents et peu coûteux. Un ETF réplique un indice boursier : quand l'indice monte de 1 %, l'ETF monte de 1 % (moins les frais de gestion, infimes).
+          L'investissement en bourse a longtemps été perçu comme réservé aux initiés fortunés. Les ETF (fonds indiciels cotés) ont révolutionné cette réalité en proposant des produits simples, transparents et accessibles à tous. Un ETF réplique fidèlement un indice boursier : quand l'indice monte de 1 %, l'ETF monte de 1 % (moins les frais de gestion, généralement inférieurs à 0,30 % par an). Cette simplicité est leur force.
         </p>
         <p>
-          Parmi les ETF les plus populaires auprès des investisseurs français, on trouve l'<strong class="text-navy">ETF MSCI World</strong> (exposition aux 23 marchés développés), l'<strong class="text-navy">ETF S&P 500</strong> (les 500 plus grandes entreprises américaines) et l'<strong class="text-navy">ETF CAC 40</strong> (les 40 plus grandes capitalisations françaises). Ces ETF sont accessibles via un PEA grâce au mécanisme de réplication synthétique.
+          Parmi les ETF les plus populaires auprès des investisseurs français, trois se distinguent. L'<strong class="text-navy">ETF MSCI World</strong> offre une exposition aux 23 marchés développés, soit environ 1 500 entreprises couvrant 85 % de la capitalisation mondiale. L'<strong class="text-navy">ETF S&P 500</strong> cible les 500 plus grandes entreprises américaines, qui représentent à elles seules plus de 60 % de la capitalisation mondiale. L'<strong class="text-navy">ETF CAC 40</strong> couvre les 40 plus grandes capitalisations françaises. Ces ETF sont accessibles via un PEA grâce au mécanisme de réplication synthétique, même s'ils investissent hors Europe.
         </p>
         <p>
-          La stratégie d'investissement programmé, appelée <strong class="text-navy">DCA (Dollar Cost Averaging)</strong>, consiste à investir un montant fixe chaque mois, quelle que soit l'évolution des marchés. Cette approche élimine le risque de mauvais timing (investir au plus haut) et permet de lisser le prix d'achat moyen dans le temps. Elle est particulièrement adaptée aux investisseurs débutants qui souhaitent construire un patrimoine de manière régulière et disciplinée.
+          Le choix entre <strong class="text-navy">ETF et actions individuelles</strong> est un sujet central pour tout investisseur. Les actions individuelles offrent le potentiel de surperformance (si vous choisissez les bonnes entreprises) mais aussi un risque bien plus élevé. Sélectionner des actions rentables de manière régulière est extrêmement difficile, même pour les professionnels : plus de 80 % des gérants de fonds actifs sous-performent leur indice de référence sur 10 ans. Les ETF, eux, offrent une diversification instantanée qui réduit drastiquement le risque spécifique. Pour la plupart des investisseurs, un portefeuille composé de 2 à 4 ETF bien choisis sera plus performant qu'une sélection d'actions individuelles.
+        </p>
+        <p>
+          La stratégie <strong class="text-navy">DCA (Dollar Cost Averaging)</strong>, ou investissement programmé, est la méthode la plus efficace pour construire un patrimoine en bourse. Elle consiste à investir un montant fixe chaque mois, par exemple 200 euros, quelle que soit l'évolution des marchés. Quand les cours sont bas, vous achetez plus de parts ; quand ils sont hauts, vous en achetez moins. Sur le long terme, cette approche lisse votre prix d'achat moyen et élimine le stress du timing de marché. La régularité et la discipline sont les deux qualités les plus importantes d'un investisseur à succès, bien plus que la capacité à prédire les marchés.
         </p>
       </div>
     </section>
 
+    <!-- Tableau comparatif enveloppes fiscales -->
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Comparatif des enveloppes fiscales pour investir en 2026</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4 mb-8">
+        <p>
+          Le choix de l'enveloppe fiscale est tout aussi important que le choix des supports d'investissement. PEA, CTO, assurance-vie et PER offrent chacun des avantages spécifiques. Voici un tableau synthétique pour vous aider à choisir.
+        </p>
+      </div>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-gray-200">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-4 py-4 text-left text-sm font-semibold">Critère</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">PEA</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">CTO</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">Assurance-vie</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">PER</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-dark font-medium">Plafond</td>
+              <td class="px-4 py-4 text-sm text-gray-500">150 000 &euro; (225 000 &euro; avec PEA-PME)</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Illimité</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Illimité</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Illimité</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-dark font-medium">Fiscalité des gains</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">17,2 % après 5 ans</td>
+              <td class="px-4 py-4 text-sm text-gray-500">PFU 30 %</td>
+              <td class="px-4 py-4 text-sm text-gray-500">24,7 % après 8 ans (avec abattement)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">PFU 30 % à la sortie en capital</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-dark font-medium">Univers d'investissement</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Actions Europe + ETF éligibles</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Tout (mondial, crypto, dérivés)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Fonds euros + UC (selon contrat)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Fonds euros + UC (selon contrat)</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-dark font-medium">Disponibilité</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Libre après 5 ans</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Totale</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Quelques jours</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Bloqué jusqu'à la retraite (sauf exceptions)</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-dark font-medium">Avantage fiscal à l'entrée</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Non</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Non</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Non</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Oui (déduction du revenu imposable)</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-dark font-medium">Idéal pour</td>
+              <td class="px-4 py-4 text-sm text-gold font-semibold">Investissement actions long terme</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Marchés internationaux, trading</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Diversification, transmission</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Préparation retraite, réduction d'impôt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 italic">Sources : AMF, Euronext. Données actualisées au 1er trimestre 2026. Le PFU (prélèvement forfaitaire unique) comprend 12,8 % d'IR et 17,2 % de prélèvements sociaux.</p>
+    </section>
+
     <!-- Comment débuter -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Comment débuter en investissement ?</h2>
+      <h2 class="text-h2 text-navy mb-6">Comment débuter en investissement : 4 étapes concrètes</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4 mb-8">
+        <p>
+          Investir peut sembler intimidant, mais la méthode est en réalité simple. En suivant ces quatre étapes dans l'ordre, vous poserez des fondations solides pour construire un patrimoine financier sur le long terme. L'important est de commencer, même modestement, plutôt que d'attendre le moment parfait qui n'arrive jamais.
+        </p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">1. Constituez votre épargne de précaution</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Avant d'investir, assurez-vous de disposer de 3 à 6 mois de dépenses sur des livrets disponibles (Livret A, LDDS). Cette réserve vous évitera de devoir revendre vos investissements en cas d'imprévu, potentiellement au mauvais moment.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Avant d'investir, assurez-vous de disposer de 3 à 6 mois de dépenses sur des livrets disponibles (Livret A, LDDS). Cette réserve vous évitera de devoir revendre vos investissements en cas d'imprévu, potentiellement au mauvais moment. Un imprévu ne doit jamais vous forcer à vendre vos actions en pleine baisse de marché.</p>
         </div>
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">2. Définissez votre profil et vos objectifs</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Votre horizon de placement, votre tolérance au risque et vos objectifs (retraite, projet immobilier, constitution de patrimoine) déterminent la répartition idéale de votre portefeuille entre actions, obligations et immobilier.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Votre horizon de placement, votre tolérance au risque et vos objectifs (retraite, projet immobilier, constitution de patrimoine, revenus complémentaires) déterminent la répartition idéale de votre portefeuille entre actions, obligations et immobilier. Un horizon de 20 ans permet de prendre plus de risques qu'un horizon de 5 ans.</p>
         </div>
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
           <h3 class="text-lg font-bold text-navy mb-3">3. Ouvrez les bonnes enveloppes</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Ouvrez un PEA chez un courtier en ligne pour les actions, et une assurance-vie pour la diversification. L'ancienneté fiscale commence à la date d'ouverture : ouvrez ces enveloppes le plus tôt possible, même avec un montant symbolique.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Ouvrez un PEA chez un courtier en ligne pour les actions, et une assurance-vie pour la diversification. L'ancienneté fiscale commence à la date d'ouverture : ouvrez ces enveloppes le plus tôt possible, même avec un versement symbolique de 100 euros. Après 5 ans de PEA et 8 ans d'assurance-vie, votre fiscalité sera considérablement réduite.</p>
         </div>
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
-          <h3 class="text-lg font-bold text-navy mb-3">4. Investissez régulièrement</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Mettez en place des versements automatiques mensuels sur vos supports d'investissement. La régularité et la patience sont les deux qualités les plus importantes d'un investisseur à succès. Commencez petit, mais commencez maintenant.</p>
+          <h3 class="text-lg font-bold text-navy mb-3">4. Investissez régulièrement en DCA</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Mettez en place des versements automatiques mensuels sur vos supports d'investissement. La stratégie DCA (investissement programmé) lisse votre prix d'achat et élimine le stress du timing. Commencez avec un montant que vous pouvez maintenir sur la durée, même 50 euros par mois. La régularité et la patience sont les deux qualités les plus importantes d'un investisseur à succès.</p>
         </div>
       </div>
     </section>
@@ -135,5 +222,12 @@ const faqItems = [
 
     <!-- FAQ -->
     <FAQ items={faqItems} />
+
+    <!-- Sources -->
+    <section class="mt-12 mb-8 reveal">
+      <p class="text-sm text-gray-400">
+        Sources : <a href="https://www.amf-france.org" class="underline hover:text-navy" target="_blank" rel="noopener noreferrer">AMF (Autorité des marchés financiers)</a>, <a href="https://www.euronext.com" class="underline hover:text-navy" target="_blank" rel="noopener noreferrer">Euronext</a>. Données vérifiées au 29 mars 2026. Les performances passées ne préjugent pas des performances futures. Ce contenu est fourni à titre informatif et ne constitue pas un conseil en investissement.
+      </p>
+    </section>
   </div>
 </BaseLayout>

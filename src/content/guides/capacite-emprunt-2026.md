@@ -1,154 +1,225 @@
 ---
-title: "Comment calculer sa capacité d'emprunt en 2026"
-description: "Découvrez comment calculer votre capacité d'emprunt en 2026 : revenus, taux d'endettement, apport et astuces pour emprunter plus."
+title: "Capacité d'emprunt : calculez la vôtre en 5 minutes"
+description: "Apprenez à calculer votre capacité d'emprunt en 2026. Formule, simulateur, astuces pour emprunter plus : le guide complet."
 category: "Crédit immobilier"
 date: "2026-03-15"
+updatedDate: "2026-03-28"
+readingTime: "10 min"
+tags: ["capacité emprunt", "crédit immobilier", "simulation", "taux endettement"]
 ---
 
-## Qu'est-ce que la capacité d'emprunt ?
+Avant de visiter le moindre bien immobilier, il faut répondre à une question fondamentale : combien pouvez-vous emprunter ? Votre capacité d'emprunt détermine le budget maximal que vous pouvez consacrer à votre projet. En 2026, avec des taux qui se stabilisent autour de 3,20 % sur 20 ans et la règle stricte du HCSF plafonnant l'endettement à 35 %, connaître précisément votre capacité vous évite de perdre du temps et vous donne un avantage dans la négociation. Ce guide vous apprend à la calculer vous-même en quelques minutes.
 
-La capacité d'emprunt correspond au montant maximum qu'un établissement bancaire accepte de vous prêter pour financer votre projet immobilier. Ce montant dépend de plusieurs critères : vos revenus, vos charges existantes, la durée du prêt souhaitée et le taux d'intérêt en vigueur. En 2026, avec des taux qui se stabilisent après la hausse observée entre 2022 et 2024, il est essentiel de bien comprendre les mécanismes pour optimiser votre dossier de financement.
+## La formule de base de la capacité d'emprunt
 
-Connaître sa capacité d'emprunt est la première étape de tout projet immobilier. Elle vous permet de cibler les biens correspondant à votre budget réel et d'éviter de perdre du temps sur des annonces hors de portée. Voyons ensemble comment la calculer précisément.
+La capacité d'emprunt repose sur une formule simple que toute banque applique :
 
-## Le taux d'endettement de 35 % : la règle fondamentale
+**Capacité d'emprunt = (Revenus nets mensuels x 0,35 - Charges de crédit existantes) x Nombre de mois du prêt x Coefficient d'actualisation**
 
-Depuis les recommandations du Haut Conseil de Stabilité Financière (HCSF) devenues contraignantes en janvier 2022, le taux d'endettement maximum est fixé à **35 % des revenus nets**, assurance emprunteur incluse. Cette règle reste pleinement en vigueur en 2026.
+En version simplifiée, la mensualité maximale se calcule ainsi :
 
-### Comment calculer votre taux d'endettement
+**Mensualité maximale = Revenus nets mensuels x 0,35 - Charges mensuelles de crédit en cours**
 
-La formule est simple :
+Ce plafond de 35 % inclut l'assurance emprunteur, conformément aux directives du Haut Conseil de Stabilité Financière (HCSF) en vigueur depuis janvier 2022.
 
-**Taux d'endettement = (Charges de crédit mensuelles / Revenus nets mensuels) x 100**
+### Pourquoi 35 % et pas plus ?
 
-Par exemple, si vous gagnez 3 500 euros nets par mois, vos mensualités totales de crédit (y compris le futur prêt immobilier) ne doivent pas dépasser 1 225 euros. Si vous remboursez déjà un crédit auto de 250 euros par mois, il vous reste 975 euros de mensualité disponible pour votre prêt immobilier.
+Le HCSF a fixé ce seuil pour protéger les emprunteurs contre le surendettement. L'idée est de garantir un reste à vivre suffisant après paiement de toutes les mensualités. Les banques disposent toutefois d'une marge de flexibilité : elles peuvent accorder jusqu'à 20 % de leurs nouveaux dossiers en dépassant ce seuil, prioritairement pour les primo-accédants en résidence principale.
 
-### Les exceptions à la règle des 35 %
+## Les cinq facteurs qui déterminent votre capacité
 
-Les banques disposent d'une marge de flexibilité : elles peuvent accorder jusqu'à **20 % de leurs dossiers** en dépassant ce seuil. Cette dérogation est principalement réservée aux primo-accédants qui achètent leur résidence principale et aux emprunteurs disposant d'un reste à vivre confortable. Un cadre supérieur gagnant 7 000 euros nets pourra parfois obtenir un taux d'endettement de 37 ou 38 %, car son reste à vivre reste largement suffisant.
+### 1. Vos revenus
 
-## Les revenus pris en compte par les banques
+Les banques retiennent les revenus nets avant prélèvement à la source. Voici comment chaque type de revenu est comptabilisé :
 
-Tous les revenus ne se valent pas aux yeux d'un établissement bancaire. Voici ce qui est retenu dans le calcul de votre capacité d'emprunt.
+| Type de revenu | Prise en compte |
+|---------------|----------------|
+| Salaire net fixe (CDI) | 100 % |
+| Revenus fonctionnaire | 100 % |
+| Pension de retraite | 100 % |
+| Primes contractuelles récurrentes | 70-80 % (moyenne 3 ans) |
+| Revenus locatifs | 70 % (pondération vacance/charges) |
+| Commissions / variable | 70 % (moyenne 2-3 ans) |
+| Revenus auto-entrepreneur (> 3 ans) | Moyenne du bénéfice sur 3 ans |
+| Allocations familiales | Rarement pris en compte |
+| Indemnités chômage | Non retenues |
 
-### Les revenus intégralement comptabilisés
+Pour un couple, les revenus des deux co-emprunteurs s'additionnent, ce qui augmente mécaniquement la capacité. C'est l'un des leviers les plus puissants.
 
-- **Le salaire net fixe** : base de calcul principale, avant prélèvement à la source
-- **Les revenus de la fonction publique** : pris en compte à 100 % grâce à la sécurité de l'emploi
-- **Les pensions de retraite** : considérées comme des revenus stables
-- **Les rentes** : rentes viagères, rentes d'invalidité
+### 2. Vos charges existantes
 
-### Les revenus partiellement comptabilisés
+Toute mensualité de crédit en cours diminue directement votre capacité : crédit auto, crédit à la consommation, prêt étudiant, crédit renouvelable. Les pensions alimentaires versées sont également déduites.
 
-- **Les primes régulières et contractuelles** : généralement retenues à hauteur de 70 à 80 % de la moyenne des trois dernières années
-- **Les revenus locatifs** : comptabilisés à 70 % de leur montant pour tenir compte des charges, vacances locatives et impôts
-- **Les revenus variables** (commissions, heures supplémentaires) : moyenne des deux ou trois dernières années, souvent pondérée à 70 %
+Un crédit auto de 300 euros par mois réduit votre capacité d'environ 86 000 euros sur 25 ans à 3,45 %. Solder ses petits crédits avant de déposer un dossier immobilier est souvent la meilleure stratégie.
 
-### Les revenus rarement pris en compte
+### 3. Le taux d'intérêt
 
-- **Les allocations familiales** : exclues car temporaires
-- **Les indemnités chômage** : non retenues par la plupart des banques
-- **Les revenus d'auto-entrepreneur** de moins de 3 ans : jugés trop incertains
+Le taux d'intérêt détermine le coût de l'argent emprunté. Plus le taux est bas, plus vous pouvez emprunter pour une même mensualité. En mars 2026, les taux moyens se situent autour de :
 
-## Les charges déduites de votre capacité
+- 10 ans : 2,85 %
+- 15 ans : 3,05 %
+- 20 ans : 3,20 %
+- 25 ans : 3,45 %
 
-Les banques déduisent de votre capacité d'emprunt l'ensemble des charges récurrentes liées à des engagements financiers.
+### 4. La durée du prêt
 
-### Les crédits en cours
+Plus la durée est longue, plus la mensualité diminue et plus vous pouvez emprunter. La durée maximale autorisée est de 25 ans (27 ans en VEFA ou avec travaux). Voici l'impact de la durée sur la capacité d'emprunt pour une mensualité identique de 1 000 euros :
 
-Tout crédit en cours de remboursement réduit directement votre capacité : crédit auto, crédit à la consommation, prêt étudiant, autre prêt immobilier. C'est pourquoi il est souvent judicieux de solder ses petits crédits avant de déposer un dossier de prêt immobilier.
+| Durée | Taux 2026 | Capital empruntable |
+|-------|----------|-------------------|
+| 15 ans | 3,05 % | 145 200 € |
+| 20 ans | 3,20 % | 177 500 € |
+| 25 ans | 3,45 % | 199 800 € |
 
-### Les pensions alimentaires
+Passer de 20 à 25 ans augmente la capacité d'environ 12 à 15 %, mais le coût total des intérêts augmente de manière significative.
 
-Si vous versez une pension alimentaire, celle-ci est systématiquement déduite de vos revenus dans le calcul du taux d'endettement. À l'inverse, si vous percevez une pension, certaines banques l'intègrent à vos revenus.
+### 5. L'apport personnel
 
-### Les charges de copropriété et loyers résiduels
+L'apport ne modifie pas directement votre capacité d'emprunt (qui dépend de vos revenus et charges), mais il s'ajoute au capital emprunté pour définir votre budget total. Les banques exigent en 2026 un apport minimum de 10 % du prix du bien, couvrant les frais de notaire (7-8 % dans l'ancien, 2-3 % dans le neuf) et les frais de garantie.
 
-Si vous conservez un bien locatif avec un crédit en cours, la mensualité est comptée dans vos charges, même si les loyers perçus compensent partiellement cette charge.
+Un apport supérieur à 20 % vous donne accès aux meilleurs taux et renforce considérablement votre dossier.
 
-## Utiliser un simulateur de capacité d'emprunt
+## Exemples chiffrés détaillés
 
-Un simulateur en ligne vous donne une estimation rapide et fiable de votre capacité d'emprunt. Pour obtenir un résultat pertinent, vous devez renseigner :
+### Exemple 1 : Célibataire primo-accédant
 
-1. **Vos revenus nets mensuels** (et ceux de votre co-emprunteur le cas échéant)
-2. **Vos charges de crédit actuelles**
-3. **La durée souhaitée du prêt** (15, 20 ou 25 ans)
-4. **Le taux d'intérêt estimé** (consultez les barèmes actuels)
-5. **Le montant de votre apport personnel**
+**Profil** : Julie, 29 ans, CDI, salaire net 2 600 euros/mois, aucun crédit en cours, apport de 20 000 euros.
 
-Le simulateur calcule alors votre mensualité maximale, le capital empruntable et le coût total du crédit. Chez Finaneo, notre simulateur de crédit immobilier intègre les taux actualisés de 2026 pour vous donner un résultat au plus proche de la réalité bancaire.
+- Mensualité maximale : 2 600 x 0,35 = **910 euros** (assurance incluse)
+- Assurance estimée : 30 euros/mois (0,12 % du capital)
+- Mensualité hors assurance : 880 euros
+- Sur 25 ans à 3,45 % : capacité d'emprunt de **175 800 euros**
+- Budget total avec apport : **195 800 euros**
 
-## L'apport personnel : un levier déterminant
+Julie peut viser un appartement autour de 190 000 euros frais de notaire inclus.
 
-L'apport personnel est la somme que vous investissez directement dans votre achat, sans passer par un emprunt. En 2026, les banques demandent généralement un apport minimum de **10 % du prix du bien**, correspondant aux frais de notaire et de garantie.
+### Exemple 2 : Couple avec crédit en cours
 
-### Pourquoi un apport plus élevé améliore votre dossier
+**Profil** : Sarah (3 200 euros nets) et Mehdi (2 800 euros nets), crédit auto de 280 euros/mois (reste 18 mois), apport de 45 000 euros.
 
-- **Réduction du montant emprunté** : mécaniquement, vous empruntez moins et vos mensualités diminuent
-- **Meilleur taux négocié** : un apport de 20 % ou plus vous donne accès aux meilleures grilles tarifaires
-- **Signal de sérieux** : l'apport démontre votre capacité d'épargne et rassure la banque
-- **Marge de sécurité** : en cas de revente rapide, vous évitez le risque de negative equity
+- Revenus cumulés : 6 000 euros
+- Mensualité maximale : 6 000 x 0,35 = **2 100 euros**
+- Après déduction du crédit auto : 2 100 - 280 = **1 820 euros** disponibles
+- Assurance estimée : 65 euros/mois
+- Mensualité hors assurance : 1 755 euros
+- Sur 20 ans à 3,20 % : capacité d'emprunt de **310 400 euros**
+- Budget total avec apport : **355 400 euros**
 
-### Comment constituer son apport
+Si Sarah et Mehdi attendent 18 mois pour solder le crédit auto :
 
-Les sources d'apport les plus courantes sont l'épargne personnelle (Livret A, LDDS, PEL), un don familial, la revente d'un bien, ou encore le déblocage anticipé de l'épargne salariale. Le Prêt à Taux Zéro (PTZ) 2026, recentré sur les zones tendues et la rénovation énergétique, peut également compléter votre apport.
+- Mensualité disponible : 2 100 - 70 (assurance) = 2 030 euros
+- Sur 20 ans à 3,20 % : capacité d'emprunt de **359 100 euros**
+- Budget total : **404 100 euros**
 
-## Choisir la durée optimale de son prêt
+Solder le crédit auto libère près de 49 000 euros de capacité supplémentaire.
 
-La durée du prêt influence directement votre capacité d'emprunt. Plus la durée est longue, plus vos mensualités sont faibles et plus vous pouvez emprunter. Mais attention : une durée plus longue signifie aussi un coût total du crédit plus élevé.
+### Exemple 3 : Famille avec revenus mixtes
 
-### Comparatif selon la durée (taux indicatifs 2026)
+**Profil** : Antoine (fonctionnaire, 3 500 euros nets) et Clara (commerciale, fixe 2 000 euros + variable 800 euros/mois en moyenne), pension alimentaire versée de 400 euros/mois, apport de 60 000 euros.
 
-- **Sur 15 ans** (taux ~3,10 %) : mensualité de 696 € pour 100 000 € empruntés — coût total des intérêts : 25 300 €
-- **Sur 20 ans** (taux ~3,30 %) : mensualité de 571 € pour 100 000 € empruntés — coût total des intérêts : 37 000 €
-- **Sur 25 ans** (taux ~3,50 %) : mensualité de 500 € pour 100 000 € empruntés — coût total des intérêts : 50 100 €
+- Revenus retenus : 3 500 + 2 000 + (800 x 0,70) = **6 060 euros**
+- Mensualité maximale : 6 060 x 0,35 = **2 121 euros**
+- Après pension alimentaire : 2 121 - 400 = **1 721 euros**
+- Assurance estimée : 70 euros/mois
+- Sur 20 ans à 3,20 % : capacité d'emprunt de **292 500 euros**
+- Budget total avec apport : **352 500 euros**
 
-La durée maximale autorisée par le HCSF est de **25 ans**, étendue à 27 ans dans le cas d'un achat en VEFA (vente en l'état futur d'achèvement) ou avec travaux importants.
+## Comment utiliser un simulateur efficacement
 
-### Notre recommandation
+Un simulateur de capacité d'emprunt en ligne vous donne un résultat en moins de deux minutes. Pour obtenir une estimation fiable, préparez les informations suivantes :
 
-Privilégiez la durée la plus courte compatible avec un reste à vivre confortable. Un bon compromis se situe souvent autour de 20 ans : il offre un bon équilibre entre mensualité raisonnable et coût total maîtrisé.
+1. **Revenus nets mensuels** de chaque emprunteur (salaire fixe + primes pondérées)
+2. **Charges de crédit mensuelles** en cours (consultez vos tableaux d'amortissement)
+3. **Durée souhaitée** du prêt (15, 20 ou 25 ans)
+4. **Montant de l'apport** personnel disponible
+5. **Type de projet** : résidence principale, secondaire ou investissement locatif
 
-## 7 astuces pour augmenter sa capacité d'emprunt
+Le simulateur calcule instantanément votre mensualité maximale, le capital empruntable et le coût total du crédit avec les taux actualisés de 2026. Chez Finaneo, notre outil intègre également le coût de l'assurance emprunteur pour un résultat conforme au calcul réel des banques.
 
-### 1. Soldez vos crédits en cours
+## 8 astuces pour augmenter votre capacité d'emprunt
 
-Un crédit auto de 300 €/mois vous fait perdre environ 90 000 € de capacité sur 25 ans. Si vous disposez de l'épargne nécessaire, remboursez-le par anticipation avant de déposer votre dossier.
+### 1. Soldez vos crédits à la consommation
 
-### 2. Optimisez votre assurance emprunteur
+Chaque crédit en cours réduit votre capacité d'emprunt de manière disproportionnée. Un crédit renouvelable de 150 euros/mois vous coûte environ 43 000 euros de capacité sur 25 ans. Si vous disposez de l'épargne nécessaire, remboursez-le par anticipation avant de déposer votre dossier de prêt immobilier.
 
-Grâce à la loi Lemoine, vous pouvez choisir librement votre assurance de prêt. Une délégation d'assurance peut réduire le coût de 50 % par rapport au contrat groupe de la banque, ce qui diminue votre taux d'endettement (l'assurance étant incluse dans le calcul des 35 %).
+### 2. Empruntez à deux
 
-### 3. Empruntez à deux
+Ajouter un co-emprunteur augmente mécaniquement les revenus pris en compte. Même un co-emprunteur au SMIC (environ 1 400 euros nets) ajoute près de 140 000 euros de capacité sur 25 ans.
 
-Les revenus du co-emprunteur s'ajoutent aux vôtres, augmentant mécaniquement votre capacité. C'est l'un des leviers les plus puissants, notamment pour les couples à deux revenus stables.
+### 3. Allongez la durée du prêt
 
-### 4. Allongez la durée du prêt
+Passer de 20 à 25 ans augmente votre capacité de 12 à 15 %. Le surcoût en intérêts est réel (environ 20 000 à 30 000 euros pour un prêt de 200 000 euros) mais peut être compensé par des remboursements anticipés partiels.
 
-Passer de 20 à 25 ans augmente votre capacité d'emprunt d'environ 15 à 18 %, au prix d'un surcoût en intérêts.
+### 4. Déléguez votre assurance emprunteur
 
-### 5. Négociez le taux
+Grâce à la loi Lemoine, choisir une assurance externe peut diviser le coût par deux. Comme l'assurance est incluse dans le calcul des 35 %, une économie de 40 euros/mois sur l'assurance libère directement 40 euros de mensualité pour le prêt principal, soit environ 7 000 euros de capacité supplémentaire sur 20 ans.
 
-Un écart de 0,20 point sur le taux représente environ 5 000 € de capacité supplémentaire pour 100 000 € empruntés sur 20 ans. Faites jouer la concurrence entre les banques ou passez par un courtier.
+### 5. Négociez votre taux
+
+Un écart de 0,20 point sur le taux représente environ 5 000 euros de capacité supplémentaire pour chaque tranche de 100 000 euros sur 20 ans. Faites jouer la concurrence entre au moins trois banques ou mandatez un courtier.
 
 ### 6. Mobilisez les prêts aidés
 
-Le PTZ, le prêt Action Logement (ex-1 % Logement) ou les prêts des collectivités locales viennent compléter votre financement sans impacter votre taux d'endettement de la même manière qu'un prêt classique.
+Le Prêt à Taux Zéro (PTZ) 2026, le prêt Action Logement (jusqu'à 40 000 euros à taux réduit) et les prêts des collectivités locales viennent compléter votre financement. Le PTZ n'est pas comptabilisé de la même manière dans le taux d'endettement, ce qui peut vous permettre d'emprunter davantage.
 
-### 7. Présentez un dossier irréprochable
+### 7. Augmentez votre apport
 
-Évitez les découverts bancaires et les dépenses de jeux en ligne dans les trois mois précédant votre demande. Les banques analysent vos relevés de compte : un comportement financier exemplaire renforce votre crédibilité.
+L'apport ne modifie pas la capacité d'emprunt en soi, mais il s'y ajoute pour définir votre budget total. De plus, un apport conséquent (20 % ou plus) vous donne accès aux meilleures grilles tarifaires, ce qui augmente indirectement votre capacité.
 
-## Exemple concret de calcul
+### 8. Présentez des comptes bancaires irréprochables
 
-Prenons le cas d'un couple : Marie gagne 2 800 € nets et Thomas 2 200 € nets, soit 5 000 € de revenus cumulés. Ils n'ont aucun crédit en cours et disposent de 30 000 € d'apport.
+Les banques analysent vos trois derniers relevés de compte. Évitez les découverts, les rejets de prélèvement, les dépenses de jeux en ligne et les abonnements superflus. Un comportement financier exemplaire rassure le décideur bancaire et peut vous valoir une dérogation sur le taux d'endettement.
 
-- Mensualité maximale (35 %) : 5 000 × 0,35 = **1 750 €**
-- Sur 20 ans à 3,30 % : capacité d'emprunt de **306 000 €**
-- Avec l'apport : budget total de **336 000 €** (hors frais de notaire couverts par l'apport)
+## Les exceptions à la règle des 35 %
 
-Ce couple peut viser un bien autour de 330 000 €, frais de notaire inclus.
+Les banques peuvent déroger au plafond de 35 % dans 20 % de leurs dossiers. Cette flexibilité est principalement accordée aux :
+
+- **Primo-accédants** achetant leur résidence principale (au moins 80 % de la dérogation)
+- **Emprunteurs à hauts revenus** avec un reste à vivre confortable (au-delà de 5 000 euros nets, certaines banques acceptent 37-38 %)
+- **Investisseurs locatifs** présentant un patrimoine solide et une gestion financière exemplaire
+
+Le reste à vivre (revenus moins l'ensemble des charges fixes) est le critère déterminant. Un ménage avec 8 000 euros de revenus et 37 % d'endettement conserve un reste à vivre de 5 040 euros, largement supérieur à celui d'un ménage à 3 000 euros de revenus plafonné à 35 %.
+
+## Le rôle du reste à vivre
+
+Au-delà du taux d'endettement, les banques analysent votre reste à vivre, c'est-à-dire la somme qui vous reste chaque mois après paiement de toutes vos charges fixes (logement, crédits, pensions). Les seuils communément admis sont :
+
+| Composition du foyer | Reste à vivre minimum |
+|---------------------|----------------------|
+| Personne seule | 700 - 800 € |
+| Couple sans enfant | 1 000 - 1 200 € |
+| Couple + 1 enfant | 1 200 - 1 500 € |
+| Couple + 2 enfants | 1 500 - 1 800 € |
+| Par enfant supplémentaire | + 300 € |
+
+Un reste à vivre généreux compense partiellement un taux d'endettement proche du seuil.
 
 ## Conclusion
 
-Calculer sa capacité d'emprunt en 2026 repose sur une équation simple mais aux multiples variables. En maîtrisant le taux d'endettement de 35 %, en optimisant votre apport et en actionnant les bons leviers, vous maximisez vos chances d'obtenir le financement adapté à votre projet. Utilisez notre simulateur de crédit immobilier pour obtenir une estimation personnalisée en quelques minutes, puis comparez les offres pour décrocher le meilleur taux.
+Calculer votre capacité d'emprunt en 2026 est la première étape indispensable de tout projet immobilier. La formule repose sur un principe simple, revenus multipliés par 0,35 moins les charges existantes, mais les leviers d'optimisation sont nombreux : solder ses crédits en cours, allonger la durée, déléguer l'assurance, négocier le taux et mobiliser les aides disponibles. Utilisez notre simulateur de crédit immobilier pour obtenir une estimation personnalisée en quelques clics, puis faites jouer la concurrence entre les banques pour décrocher les meilleures conditions.
+
+## FAQ
+
+### Quelle est la capacité d'emprunt pour un salaire de 3 000 euros ?
+
+Pour un salaire net de 3 000 euros sans crédit en cours, la mensualité maximale est de 1 050 euros (3 000 x 0,35). Cela correspond à une capacité d'emprunt d'environ 185 000 euros sur 20 ans à 3,20 % ou 209 000 euros sur 25 ans à 3,45 %, hors assurance.
+
+### Le taux d'endettement de 35 % est-il toujours obligatoire en 2026 ?
+
+Oui, la norme HCSF fixant le taux d'endettement maximum à 35 % (assurance incluse) reste pleinement en vigueur en 2026. Les banques disposent d'une marge de 20 % de leurs dossiers pour déroger à cette règle, principalement pour les primo-accédants.
+
+### Comment augmenter sa capacité d'emprunt rapidement ?
+
+Les trois leviers les plus efficaces à court terme sont : solder ses crédits à la consommation existants, opter pour une assurance emprunteur en délégation (loi Lemoine) et allonger la durée du prêt. Sur le moyen terme, augmenter son apport et ses revenus sont les stratégies les plus structurantes.
+
+### Les revenus locatifs augmentent-ils la capacité d'emprunt ?
+
+Oui, mais partiellement. Les banques retiennent 70 % des revenus locatifs perçus pour compenser la vacance locative, les charges et la fiscalité. Si vous percevez 800 euros de loyer, seuls 560 euros seront ajoutés à vos revenus pour le calcul de la capacité.
+
+### Peut-on emprunter sans apport en 2026 ?
+
+C'est devenu rare mais pas impossible. Certaines banques acceptent de financer 110 % du projet (bien + frais de notaire) pour des profils très solides : jeunes cadres en CDI avec un fort potentiel d'évolution salariale, fonctionnaires, ou emprunteurs disposant d'une épargne de précaution conséquente qu'ils préfèrent ne pas mobiliser.
+
+---
+
+*Sources : Haut Conseil de Stabilité Financière (HCSF), Banque de France, Observatoire Crédit Logement/CSA, barèmes courtiers mars 2026.*

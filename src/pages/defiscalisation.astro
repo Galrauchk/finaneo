@@ -5,33 +5,41 @@ import FAQ from '../components/FAQ.astro';
 import LeadGenForm from '../components/LeadGenForm.astro';
 import CTAAffiliation from '../components/CTAAffiliation.astro';
 
-const title = "Défiscalisation : réduisez vos impôts légalement | Finaneo";
-const description = "Découvrez les dispositifs de défiscalisation en France : loi Pinel, LMNP, PER, Girardin. Guide complet pour réduire vos impôts en toute légalité en 2026.";
+const title = "Défiscalisation 2026 : tous les dispositifs pour réduire vos impôts | Finaneo";
+const description = "Guide complet défiscalisation 2026 : LMNP, PER, Girardin, Denormandie, déficit foncier. Comparatif, plafonds et stratégies pour payer moins d'impôts.";
 
 const faqItems = [
   {
     question: "La loi Pinel existe-t-elle encore en 2026 ?",
-    answer: "Le dispositif Pinel classique a pris fin au 31 décembre 2024. Le Pinel+ (ou Super Pinel), qui imposait des critères de performance énergétique et de qualité d'usage renforcés, s'est également éteint à cette date. En 2026, les investisseurs en immobilier locatif neuf peuvent toutefois se tourner vers d'autres dispositifs comme le Denormandie (rénovation dans l'ancien en centre-ville), le LMNP ou le déficit foncier. Il est possible que de nouveaux dispositifs fiscaux soient instaurés par la loi de finances, mais à ce jour, le Pinel n'a pas été reconduit sous une forme nouvelle."
+    answer: "Le dispositif Pinel classique et le Pinel+ ont pris fin au 31 décembre 2024. Aucune reconduction n'a été votée dans la loi de finances 2025 ni dans les textes ultérieurs. Les investisseurs ayant souscrit avant cette date continuent de bénéficier de leur réduction d'impôt pendant toute la durée de leur engagement (6, 9 ou 12 ans). Pour les nouveaux investisseurs en 2026, les alternatives sont le Denormandie (rénovation dans l'ancien en centre-ville), le LMNP au régime réel, le déficit foncier ou le dispositif Malraux pour les biens situés en secteur sauvegardé."
   },
   {
-    question: "Le LMNP est-il toujours avantageux en 2026 ?",
-    answer: "Le statut de Loueur Meublé Non Professionnel (LMNP) reste l'un des dispositifs les plus intéressants pour l'investissement locatif. En régime réel, il permet de déduire l'ensemble des charges (travaux, intérêts d'emprunt, frais de gestion, assurance) et surtout d'amortir le bien immobilier et le mobilier, ce qui réduit considérablement — voire annule — les revenus imposables. Attention toutefois : la loi de finances 2025 a modifié le traitement des amortissements lors de la revente, réintégrant une partie des amortissements dans le calcul de la plus-value. Il est essentiel de se faire accompagner par un expert-comptable pour optimiser ce statut."
+    question: "Le LMNP est-il toujours avantageux après la loi de finances 2025 ?",
+    answer: "Oui, le LMNP reste l'un des dispositifs les plus puissants pour l'investissement locatif. La loi de finances 2025 a toutefois modifié le traitement des amortissements lors de la revente : une partie des amortissements déduits est désormais réintégrée dans le calcul de la plus-value imposable. Cela réduit l'avantage à la sortie mais ne remet pas en cause l'intérêt du dispositif pendant la phase de détention. Le régime réel permet toujours de déduire toutes les charges et d'amortir le bien, ce qui génère souvent une imposition nulle sur les loyers pendant 10 à 15 ans. Il est essentiel de se faire accompagner par un expert-comptable pour optimiser la stratégie d'amortissement et anticiper la fiscalité de la revente."
   },
   {
-    question: "Le PER permet-il vraiment de réduire ses impôts ?",
-    answer: "Oui, le Plan d'Épargne Retraite offre un avantage fiscal immédiat : les versements volontaires sont déductibles de votre revenu imposable, dans la limite d'un plafond annuel (10 % des revenus professionnels de l'année N-1, avec un minimum de 4 399 euros et un maximum de 35 194 euros en 2026). Pour un contribuable dans la tranche à 30 %, un versement de 10 000 euros sur son PER génère une économie d'impôt de 3 000 euros. L'avantage est encore plus marqué pour les contribuables dans les tranches à 41 % ou 45 %. En contrepartie, l'épargne est bloquée jusqu'à la retraite (sauf cas de déblocage anticipé : achat de résidence principale, invalidité, surendettement, etc.) et les sommes seront imposées à la sortie."
+    question: "Quel est le plafond de déduction du PER en 2026 ?",
+    answer: "Le plafond de déduction du PER en 2026 est fixé à 10 % des revenus professionnels de l'année N-1, avec un plancher de 4 399 euros (pour les personnes ayant de faibles revenus ou sans activité) et un plafond de 35 194 euros (correspondant à 10 % de 8 fois le plafond annuel de la Sécurité sociale). Les plafonds non utilisés des trois années précédentes sont reportables, ce qui permet de verser davantage certaines années. Les couples mariés ou pacsés peuvent mutualiser leurs plafonds. Ces montants sont indiqués sur votre avis d'imposition, à la ligne « plafond épargne retraite »."
   },
   {
-    question: "Qu'est-ce que le dispositif Girardin industriel ?",
-    answer: "Le Girardin industriel est un dispositif de défiscalisation lié à l'investissement productif en Outre-mer. Il permet d'obtenir une réduction d'impôt supérieure au montant investi (rendement fiscal de 110 % à 120 % de la mise de fonds). Concrètement, pour 10 000 euros investis, vous pouvez obtenir une réduction d'impôt de 11 000 à 12 000 euros. Ce dispositif est soumis au plafonnement des niches fiscales majoré à 18 000 euros (contre 10 000 euros pour le droit commun). Le Girardin est un investissement « one-shot » : la réduction s'applique l'année de l'investissement. Le risque principal est la requalification fiscale en cas de non-respect des conditions par l'exploitant ultramarin, d'où l'importance de passer par un opérateur reconnu offrant une garantie de bonne fin."
+    question: "Qu'est-ce que le dispositif Girardin industriel et quel est son rendement ?",
+    answer: "Le Girardin industriel est un dispositif de défiscalisation lié à l'investissement productif en Outre-mer. Il permet d'obtenir une réduction d'impôt supérieure au montant investi, avec un rendement fiscal généralement compris entre 10 % et 20 %. Pour 10 000 euros investis, vous pouvez obtenir une réduction d'impôt de 11 000 à 12 000 euros. C'est un investissement one-shot : la réduction s'applique intégralement l'année de l'investissement. Il bénéficie du plafond majoré des niches fiscales à 18 000 euros. Le risque principal est la requalification fiscale si l'exploitant ultramarin ne respecte pas les conditions d'exploitation pendant 5 ans."
   },
   {
-    question: "Quel est le plafond global des niches fiscales ?",
-    answer: "Le plafonnement global des niches fiscales limite le montant total des avantages fiscaux dont peut bénéficier un foyer à 10 000 euros par an. Ce plafond inclut la plupart des réductions et crédits d'impôt : emploi à domicile, garde d'enfants, dons aux associations (dans une certaine mesure), investissement locatif (Pinel, Denormandie), etc. Le plafond est relevé à 18 000 euros pour les investissements outre-mer (Girardin) et le Sofica. Important : le PER n'entre pas dans le plafonnement des niches fiscales car il s'agit d'une déduction du revenu imposable et non d'une réduction d'impôt. Le déficit foncier n'est pas non plus concerné par ce plafond."
+    question: "Quel est le plafond global des niches fiscales en 2026 ?",
+    answer: "Le plafonnement global des niches fiscales est de 10 000 euros par an et par foyer fiscal. Ce plafond couvre la plupart des réductions et crédits d'impôt : emploi à domicile, garde d'enfants, investissement locatif (Denormandie), FCPI/FIP, etc. Le plafond est relevé à 18 000 euros pour les investissements Outre-mer (Girardin industriel) et les Sofica. Important : le PER échappe à ce plafonnement car il fonctionne par déduction du revenu imposable et non par réduction d'impôt. Le déficit foncier n'est pas non plus soumis à ce plafond. Il est donc possible de cumuler PER + Girardin + déficit foncier pour une optimisation fiscale très significative."
   },
   {
-    question: "Comment choisir le bon dispositif de défiscalisation ?",
-    answer: "Le choix du dispositif dépend de plusieurs facteurs : votre tranche marginale d'imposition (les dispositifs sont d'autant plus intéressants que votre TMI est élevée), votre situation patrimoniale, vos objectifs (réduction d'impôt immédiate, constitution de patrimoine, préparation de la retraite), votre horizon de placement et votre appétence au risque. Un contribuable dans la tranche à 30 % privilégiera le PER et le LMNP. Un contribuable à 41 % ou 45 % pourra combiner PER, Girardin industriel et déficit foncier. Dans tous les cas, un bilan patrimonial réalisé par un conseiller en gestion de patrimoine permet d'identifier la stratégie la plus adaptée à votre situation."
+    question: "Comment fonctionne le déficit foncier ?",
+    answer: "Le déficit foncier se crée lorsque les charges déductibles (travaux de rénovation, intérêts d'emprunt, charges de copropriété, taxe foncière, frais de gestion) dépassent les loyers perçus. Ce déficit est imputable sur le revenu global à hauteur de 10 700 euros par an (ou 21 400 euros pour les travaux de rénovation énergétique dans certains cas). L'excédent est reportable sur les revenus fonciers des 10 années suivantes. L'avantage principal : le déficit foncier n'entre pas dans le plafonnement des niches fiscales. Pour en bénéficier, le bien doit être loué nu (non meublé) et les travaux doivent être des travaux d'entretien, de réparation ou d'amélioration (hors construction et agrandissement)."
+  },
+  {
+    question: "Peut-on cumuler plusieurs dispositifs de défiscalisation ?",
+    answer: "Oui, le cumul de plusieurs dispositifs est non seulement possible mais recommandé pour une stratégie d'optimisation fiscale complète. Par exemple, un contribuable dans la tranche à 41 % peut verser sur son PER (déduction du revenu imposable, hors plafond des niches fiscales), investir en Girardin industriel (réduction d'impôt jusqu'à 18 000 euros), générer du déficit foncier par des travaux (imputation sur le revenu global hors plafond), et détenir un bien en LMNP (revenus BIC quasi non imposés). Les dispositifs soumis au plafond des niches fiscales (Denormandie, FCPI, Sofica) se cumulent entre eux dans la limite de 10 000 ou 18 000 euros."
+  },
+  {
+    question: "À partir de quel niveau d'imposition la défiscalisation est-elle intéressante ?",
+    answer: "La défiscalisation devient vraiment pertinente à partir de la tranche marginale d'imposition (TMI) à 30 %, soit un revenu imposable supérieur à environ 28 800 euros pour une part. À ce niveau, un versement PER de 5 000 euros génère 1 500 euros d'économie d'impôt. Pour les TMI à 11 %, l'avantage fiscal est trop faible pour justifier les contraintes des dispositifs (blocage de l'épargne, engagement locatif). À 41 % et 45 %, tous les dispositifs deviennent très efficaces et la combinaison de plusieurs mécanismes est fortement recommandée. Le LMNP fait exception : il est avantageux quelle que soit la TMI car il permet d'annuler l'imposition sur les revenus locatifs."
   }
 ];
 ---
@@ -44,64 +52,92 @@ const faqItems = [
     <section class="mb-16 reveal">
       <img src="/illustrations/defiscalisation.svg" alt="" class="w-20 h-20 mb-6" />
       <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-6 leading-tight">
-        Défiscalisation : réduisez vos impôts légalement
+        Défiscalisation 2026 : tous les dispositifs pour réduire vos impôts
       </h1>
       <p class="text-lg text-gray-500 max-w-3xl leading-relaxed mb-4">
-        La France offre de nombreux dispositifs permettant de réduire légalement sa charge fiscale. Qu'il s'agisse d'investissement immobilier, de placements financiers ou de produits d'épargne retraite, chaque contribuable peut optimiser sa situation fiscale en fonction de ses revenus, de son patrimoine et de ses objectifs. Ce guide détaille les principaux dispositifs de défiscalisation disponibles en 2026.
+        La pression fiscale en France figure parmi les plus élevées d'Europe, mais le législateur a prévu de nombreux mécanismes permettant de réduire légalement sa charge d'impôt sur le revenu. Investissement immobilier locatif, épargne retraite, financement de l'économie ultramarine, rénovation du patrimoine ancien : chaque contribuable peut trouver le dispositif adapté à son profil, ses revenus et ses objectifs patrimoniaux. En 2026, le paysage de la défiscalisation a évolué avec la fin du Pinel, les modifications apportées au LMNP par la loi de finances 2025, et la revalorisation des plafonds du Plan d'Épargne Retraite. Ce guide fait le point sur chaque dispositif disponible, ses conditions d'éligibilité, ses avantages réels et ses limites.
       </p>
       <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
-        Réduire ses impôts n'est pas réservé aux plus fortunés. De nombreux dispositifs sont accessibles à partir de quelques milliers d'euros d'investissement. L'essentiel est de choisir le mécanisme adapté à votre profil et de ne jamais investir uniquement pour l'avantage fiscal : la qualité intrinsèque du placement doit toujours rester votre critère principal.
+        Réduire ses impôts n'est pas réservé aux contribuables les plus fortunés. Un salarié imposé dans la tranche à 30 % peut économiser plusieurs milliers d'euros par an grâce à un simple versement PER ou un investissement LMNP bien structuré. L'essentiel est de ne jamais investir uniquement pour l'avantage fiscal : la qualité intrinsèque du placement — rendement, liquidité, risque maîtrisé — doit toujours rester votre critère principal. Un dispositif fiscal n'efface pas un mauvais investissement.
       </p>
-    </section>
-
-    <!-- Loi Pinel -->
-    <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">La loi Pinel : bilan et alternatives</h2>
-      <div class="prose max-w-none text-gray-500 space-y-4">
-        <p>
-          Le dispositif Pinel a permis à des centaines de milliers de contribuables de bénéficier d'une réduction d'impôt en contrepartie d'un investissement locatif dans le neuf. Le principe était simple : en louant un logement neuf pendant 6, 9 ou 12 ans à un loyer plafonné, l'investisseur obtenait une réduction d'impôt de 9 %, 12 % ou 14 % du prix du bien (taux Pinel+).
-        </p>
-        <p>
-          Depuis le 1er janvier 2025, le dispositif Pinel n'est plus disponible. Les investisseurs ayant souscrit avant cette date continuent cependant de bénéficier de la réduction d'impôt pendant toute la durée de leur engagement locatif. Pour les nouveaux projets, il convient de se tourner vers des alternatives comme le <strong class="text-navy">dispositif Denormandie</strong> (rénovation dans l'ancien en centre-ville éligible), le <strong class="text-navy">déficit foncier</strong> (travaux de rénovation déductibles des revenus fonciers et du revenu global jusqu'à 10 700 euros) ou le <strong class="text-navy">LMNP</strong>.
-        </p>
-      </div>
     </section>
 
     <!-- LMNP -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Le LMNP : l'investissement locatif meublé optimisé</h2>
+      <h2 class="text-h2 text-navy mb-6">LMNP : le statut phare de l'investissement locatif meublé</h2>
       <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
-          Le statut de Loueur Meublé Non Professionnel est devenu le dispositif phare de l'investissement locatif en France. Il s'applique à la location de logements meublés (résidence principale du locataire, résidence étudiante, résidence de tourisme) et offre une fiscalité extrêmement favorable en régime réel.
+          Le statut de Loueur Meublé Non Professionnel (LMNP) est devenu le dispositif incontournable de l'investissement locatif en France. Il s'applique dès lors que vous louez un logement équipé du mobilier nécessaire à la vie courante (lit, table, chaises, plaques de cuisson, réfrigérateur, vaisselle, etc.), que ce soit en résidence principale du locataire, en résidence étudiante, en EHPAD ou en résidence de tourisme.
         </p>
         <p>
-          En régime réel simplifié, le LMNP permet de déduire l'intégralité des charges liées à l'exploitation du bien : intérêts d'emprunt, taxe foncière, charges de copropriété, frais de gestion, assurance propriétaire non occupant, travaux d'entretien et de réparation. Surtout, il autorise l'<strong class="text-navy">amortissement du bien</strong> (hors terrain) et du mobilier, ce qui constitue une charge comptable non décaissée réduisant — voire annulant — le résultat imposable.
+          <strong class="text-navy">Le mécanisme d'amortissement</strong> est le coeur de l'avantage LMNP. En régime réel simplifié, vous pouvez amortir comptablement le bâti (hors terrain) sur 25 à 30 ans, et le mobilier sur 5 à 10 ans selon les composants. Pour un bien acquis 200 000 euros dont 60 000 euros de terrain, l'amortissement annuel du bâti représente environ 4 667 euros (140 000 / 30 ans), auquel s'ajoutent 1 000 à 2 000 euros d'amortissement du mobilier. Cette charge comptable, non décaissée, vient réduire le résultat imposable sans affecter votre trésorerie réelle.
         </p>
         <p>
-          Pour un bien acquis 200 000 euros (dont 60 000 euros de terrain), l'amortissement annuel du bâti sur 30 ans représente environ 4 667 euros, auquel s'ajoute l'amortissement du mobilier sur 5 à 10 ans. Ces amortissements, combinés aux charges déductibles, permettent souvent de ne payer aucun impôt sur les loyers perçus pendant de nombreuses années. Le régime micro-BIC, plus simple, offre un abattement forfaitaire de 50 % (ou 71 % pour les meublés de tourisme classés), mais il est généralement moins avantageux que le régime réel.
+          <strong class="text-navy">Régime réel vs micro-BIC</strong> : le régime micro-BIC offre un abattement forfaitaire de 50 % sur les recettes locatives (ou 71 % pour les meublés de tourisme classés), ce qui est simple mais rarement optimal. Le régime réel simplifié permet de déduire l'intégralité des charges réelles — intérêts d'emprunt, taxe foncière, charges de copropriété, assurance PNO, frais de gestion, honoraires comptables, travaux d'entretien — en plus de l'amortissement. Dans la grande majorité des cas, le régime réel est plus avantageux dès que les charges réelles dépassent 50 % des loyers, ce qui est presque toujours le cas lorsqu'un emprunt est en cours.
+        </p>
+        <p>
+          <strong class="text-navy">La CFE (Cotisation Foncière des Entreprises)</strong> est due par tout loueur en meublé, même non professionnel. Son montant varie selon la commune et la valeur locative du bien, généralement entre 200 et 1 500 euros par an. Elle est déductible des revenus BIC en régime réel. Pensez à vous déclarer auprès du greffe du tribunal de commerce (formulaire P0i) dans les 15 jours suivant le début de l'activité.
+        </p>
+        <p>
+          <strong class="text-navy">Impact de la loi de finances 2025</strong> : la réforme majeure concerne le traitement des amortissements lors de la revente. Désormais, les amortissements déduits pendant la phase de détention sont partiellement réintégrés dans le calcul de la plus-value immobilière. Concrètement, cela augmente la plus-value imposable lors de la cession. L'avantage fiscal pendant la détention reste intact, mais il est désormais indispensable d'intégrer la fiscalité de sortie dans votre business plan. Un accompagnement par un expert-comptable spécialisé en LMNP est fortement recommandé pour optimiser la durée de détention et le calendrier de revente.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pinel et alternatives -->
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Loi Pinel : bilan et alternatives en 2026</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
+        <p>
+          Le dispositif Pinel a permis à des centaines de milliers de contribuables de bénéficier d'une réduction d'impôt en contrepartie d'un investissement locatif dans le neuf. Le principe : en louant un logement neuf pendant 6, 9 ou 12 ans à un loyer plafonné et à des locataires sous conditions de ressources, l'investisseur obtenait une réduction d'impôt allant de 9 % à 14 % du prix du bien (taux Pinel+). Le dispositif, créé en 2014, aura traversé de nombreuses évolutions avant de s'éteindre définitivement au 31 décembre 2024.
+        </p>
+        <p>
+          <strong class="text-navy">Le bilan du Pinel est contrasté.</strong> D'un côté, il a permis de dynamiser la construction de logements neufs dans les zones tendues et a offert un avantage fiscal significatif à de nombreux ménages. De l'autre, les prix de vente souvent gonflés par les promoteurs, les loyers plafonnés limitant la rentabilité et les difficultés locatives dans certaines zones ont conduit à des opérations décevantes pour une partie des investisseurs. La fin du Pinel invite à tirer les leçons de ces écueils.
+        </p>
+        <p>
+          <strong class="text-navy">Le dispositif Denormandie</strong> constitue l'alternative directe au Pinel pour l'investissement locatif défiscalisant. Il s'applique à l'acquisition de logements anciens nécessitant des travaux de rénovation représentant au moins 25 % du coût total de l'opération, dans des communes éligibles (centres-villes dégradés). La réduction d'impôt est identique à celle de l'ancien Pinel : 12 % sur 6 ans, 18 % sur 9 ans, 21 % sur 12 ans. Le Denormandie présente l'avantage de combiner défiscalisation et contribution à la rénovation du parc immobilier ancien.
+        </p>
+        <p>
+          Le <strong class="text-navy">déficit foncier</strong> est une autre alternative puissante. En rénovant un bien ancien loué nu, les travaux d'entretien, de réparation et d'amélioration sont déductibles des revenus fonciers, et le déficit éventuel est imputable sur le revenu global jusqu'à 10 700 euros par an. Ce mécanisme échappe au plafonnement des niches fiscales, ce qui en fait un levier complémentaire très efficace.
         </p>
       </div>
     </section>
 
     <!-- PER -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Le PER : préparer sa retraite en réduisant ses impôts</h2>
+      <h2 class="text-h2 text-navy mb-6">PER : préparer sa retraite en réduisant ses impôts</h2>
       <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
-          Le Plan d'Épargne Retraite, créé par la loi PACTE de 2019, est un outil à double vocation : préparer sa retraite et optimiser sa fiscalité. Les versements volontaires sont déductibles du revenu imposable, ce qui génère une économie d'impôt proportionnelle à votre tranche marginale d'imposition.
+          Le Plan d'Épargne Retraite, instauré par la loi PACTE de 2019, est devenu un pilier de l'optimisation fiscale des ménages français. Son principe est simple : les versements volontaires sont déductibles du revenu imposable, ce qui génère une économie d'impôt immédiate proportionnelle à votre tranche marginale d'imposition (TMI). Pour un contribuable à la TMI de 30 %, un versement de 10 000 euros réduit l'impôt de 3 000 euros. À 41 %, l'économie atteint 4 100 euros.
         </p>
         <p>
-          Le plafond de déduction est de <strong class="text-navy">10 % des revenus professionnels</strong> de l'année précédente, avec un plancher de 4 399 euros et un plafond de 35 194 euros en 2026. Les plafonds non utilisés des trois années précédentes sont reportables, ce qui permet des versements plus importants certaines années.
+          <strong class="text-navy">Plafonds de déduction 2026</strong> : le plafond est fixé à 10 % des revenus professionnels de l'année N-1, avec un minimum de <strong class="text-navy">4 399 euros</strong> (accessible même sans revenu d'activité) et un maximum de <strong class="text-navy">35 194 euros</strong>. Les plafonds non consommés des trois années précédentes sont reportables, ce qui permet des versements exceptionnels certaines années. Les couples mariés ou pacsés peuvent mutualiser leurs plafonds respectifs, offrant une capacité de déduction pouvant dépasser 70 000 euros certaines années.
         </p>
         <p>
-          Le PER offre une grande souplesse dans le choix des supports d'investissement : fonds euros, unités de compte (actions, obligations, immobilier), gestion pilotée à horizon (qui sécurise progressivement le portefeuille à l'approche de la retraite). À la sortie, l'épargnant peut choisir entre un capital, une rente viagère ou une combinaison des deux. L'imposition à la sortie est compensée par le fait que le contribuable est généralement dans une tranche d'imposition plus basse à la retraite qu'en activité.
+          <strong class="text-navy">Sortie en capital ou en rente</strong> : à la retraite, le PER offre trois options. La sortie en capital à 100 % est imposée : le capital correspondant aux versements déduits est soumis au barème de l'IR (sans application du quotient), et les plus-values sont soumises au PFU de 30 %. La sortie en rente viagère est imposée au titre des pensions (après abattement de 10 %). La sortie mixte (une partie en capital, le reste en rente) permet de combiner les deux régimes. La stratégie optimale consiste généralement à verser pendant les années de forte imposition et à sortir pendant la retraite, lorsque la TMI est plus basse.
+        </p>
+        <p>
+          <strong class="text-navy">Cas de déblocage anticipé</strong> : l'épargne est en principe bloquée jusqu'à la retraite, mais six cas permettent un déblocage anticipé — acquisition de la résidence principale (le plus courant), invalidité du titulaire ou de son conjoint, décès du conjoint, expiration des droits au chômage, surendettement, et cessation d'activité non salariée suite à liquidation judiciaire. Le déblocage pour achat de la résidence principale est particulièrement intéressant pour les jeunes actifs qui souhaitent constituer un apport tout en bénéficiant d'une déduction fiscale annuelle.
         </p>
       </div>
     </section>
 
-    <!-- Girardin -->
+    <!-- Malraux / Monuments historiques -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Le Girardin industriel : un rendement fiscal exceptionnel</h2>
+      <h2 class="text-h2 text-navy mb-6">Malraux et Monuments historiques : défiscaliser par le patrimoine</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
+        <p>
+          Le <strong class="text-navy">dispositif Malraux</strong> offre une réduction d'impôt de 22 % ou 30 % du montant des travaux de restauration réalisés sur des immeubles situés en Site Patrimonial Remarquable (SPR), selon que le bien se trouve dans un secteur avec PVAP (Plan de Valorisation de l'Architecture et du Patrimoine) ou avec PSMV (Plan de Sauvegarde et de Mise en Valeur). Le plafond de travaux éligibles est de 400 000 euros sur 4 ans, soit une réduction maximale de 120 000 euros. Avantage majeur : la réduction Malraux n'est pas soumise au plafonnement des niches fiscales de 10 000 euros. L'engagement de location est de 9 ans minimum.
+        </p>
+        <p>
+          L'investissement en <strong class="text-navy">Monuments historiques</strong> permet de déduire 100 % des travaux de restauration du revenu global, sans plafond. C'est le seul dispositif offrant une déduction intégrale et illimitée, ce qui en fait le mécanisme le plus puissant pour les très hauts revenus. Le bien doit être classé ou inscrit au titre des monuments historiques et les travaux doivent être supervisés par un Architecte des Bâtiments de France. En contrepartie, le bien doit être conservé au moins 15 ans et ouvert au public si le propriétaire souhaite déduire les charges foncières. Ces dispositifs s'adressent à des investisseurs avertis disposant d'un patrimoine élevé et d'une TMI de 41 % ou 45 %.
+        </p>
+      </div>
+    </section>
+
+    <!-- Girardin industriel -->
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Girardin industriel : un rendement fiscal exceptionnel</h2>
       <div class="prose max-w-none text-gray-500 space-y-4">
         <p>
           Le Girardin industriel est un dispositif unique en son genre puisqu'il offre une réduction d'impôt supérieure à l'investissement réalisé. Concrètement, pour un apport de 10 000 euros, vous pouvez obtenir une réduction d'impôt de 11 000 à 12 000 euros dès l'année suivante, soit un rendement fiscal de 10 à 20 %.
@@ -110,26 +146,104 @@ const faqItems = [
           Le mécanisme repose sur le financement de matériel productif (équipements industriels, véhicules, installations photovoltaïques) mis à disposition d'entreprises ultramarines. L'investisseur souscrit des parts dans une société de portage qui acquiert le matériel et le loue à l'exploitant local. Au terme de la période de location (5 ans), le matériel est cédé à l'exploitant pour un euro symbolique.
         </p>
         <p>
-          Ce dispositif est particulièrement adapté aux <strong class="text-navy">contribuables fortement imposés</strong> (TMI à 41 % ou 45 %) qui souhaitent réduire significativement leur impôt en une seule opération. Le plafonnement est relevé à 18 000 euros pour les investissements Outre-mer. Le principal risque est la requalification fiscale par l'administration en cas de non-respect des conditions d'exploitation. Pour le minimiser, choisissez un opérateur disposant d'un agrément fiscal et offrant une garantie de bonne fin fiscale.
+          Ce dispositif est particulièrement adapté aux <strong class="text-navy">contribuables fortement imposés</strong> (TMI à 41 % ou 45 %) qui souhaitent réduire significativement leur impôt en une seule opération. Le plafonnement est relevé à 18 000 euros pour les investissements Outre-mer. Le principal risque est la requalification fiscale par l'administration en cas de non-respect des conditions d'exploitation. Pour le minimiser, choisissez un opérateur disposant d'un agrément fiscal et offrant une garantie de bonne fin fiscale. Vérifiez également que l'opérateur dispose d'un track record de plusieurs années sans incident de requalification.
         </p>
       </div>
     </section>
 
+    <!-- Tableau comparatif -->
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Tableau comparatif des dispositifs de défiscalisation</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-gray-200">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-4 py-4 text-left text-sm font-semibold">Critère</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">LMNP</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">PER</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">Girardin</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">Denormandie</th>
+              <th class="px-4 py-4 text-left text-sm font-semibold">Déficit foncier</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-navy font-medium">Mécanisme</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Amortissement comptable du bien et déduction des charges</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Déduction des versements du revenu imposable</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Réduction d'impôt via investissement productif outre-mer</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Réduction d'impôt pour rénovation de logements anciens</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Imputation des charges et travaux sur le revenu global</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-navy font-medium">Avantage fiscal</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Revenus locatifs non imposés (amortissement)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Économie = versement &times; TMI (30 à 45 %)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Réduction de 110 à 120 % de la mise</td>
+              <td class="px-4 py-4 text-sm text-gray-500">12 %, 18 % ou 21 % du prix selon la durée</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Jusqu'à 10 700 &euro;/an imputables sur le revenu global</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-navy font-medium">Plafond niches fiscales</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Non concerné (pas de réduction d'impôt)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Non concerné (déduction du revenu)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">18 000 &euro; (plafond majoré outre-mer)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">10 000 &euro; (plafond de droit commun)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Non concerné (imputation sur revenu)</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-navy font-medium">Durée d'engagement</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Aucune durée minimale légale</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Jusqu'à la retraite (sauf déblocage anticipé)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">5 ans (durée d'exploitation)</td>
+              <td class="px-4 py-4 text-sm text-gray-500">6, 9 ou 12 ans</td>
+              <td class="px-4 py-4 text-sm text-gray-500">3 ans minimum de location après imputation</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-navy font-medium">Risque principal</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Vacance locative, plus-value imposable à la revente</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Épargne bloquée, imposition à la sortie</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Requalification fiscale si conditions non respectées</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Dépassement du budget travaux, vacance locative</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Coût des travaux, obligation de location 3 ans</td>
+            </tr>
+            <tr class="hover:bg-surface transition-colors">
+              <td class="px-4 py-4 text-sm text-navy font-medium">Idéal pour</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Investisseur locatif toutes TMI</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Salarié / indépendant TMI &ge; 30 %</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Contribuable TMI 41-45 %, réduction immédiate</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Investisseur immobilier ancien, TMI &ge; 30 %</td>
+              <td class="px-4 py-4 text-sm text-gray-500">Propriétaire bailleur avec travaux, TMI &ge; 30 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 italic">Données indicatives 2026. Les conditions précises dépendent de votre situation personnelle. Sources : impots.gouv.fr, service-public.fr.</p>
+    </section>
+
     <!-- Comment choisir -->
     <section class="mb-16 reveal">
-      <h2 class="text-h2 text-navy mb-6">Comment choisir son dispositif de défiscalisation ?</h2>
+      <h2 class="text-h2 text-navy mb-6">Comment choisir son dispositif selon sa tranche d'imposition ?</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4 mb-8">
+        <p>
+          Le choix du dispositif de défiscalisation dépend avant tout de votre tranche marginale d'imposition (TMI), de vos objectifs patrimoniaux et de votre horizon de placement. Voici une stratégie adaptée à chaque profil fiscal.
+        </p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
-          <h3 class="text-lg font-bold text-navy mb-3">TMI 11 %</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">À ce niveau d'imposition, les dispositifs de défiscalisation ne sont pas prioritaires. Concentrez-vous sur l'épargne classique (Livret A, assurance-vie) et le LMNP en micro-BIC si vous souhaitez investir dans l'immobilier locatif meublé.</p>
+          <h3 class="text-lg font-bold text-navy mb-3">TMI 11 % — Optimisation légère</h3>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">À ce niveau d'imposition, l'avantage fiscal des dispositifs de défiscalisation est limité. Un versement de 5 000 euros sur un PER ne génère que 550 euros d'économie, ce qui ne justifie pas toujours le blocage de l'épargne. Concentrez-vous sur l'épargne classique : Livret A (3 % net en 2026), LDDS, assurance-vie en fonds euros.</p>
+          <p class="text-sm text-gray-500 leading-relaxed"><strong class="text-navy">Dispositifs recommandés :</strong> LMNP en micro-BIC pour un investissement locatif simple, assurance-vie pour la transmission. Le LMNP reste avantageux car il annule l'imposition sur les loyers indépendamment de la TMI.</p>
         </div>
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
-          <h3 class="text-lg font-bold text-navy mb-3">TMI 30 %</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Le PER devient pertinent avec 30 % d'économie sur chaque euro versé. Le LMNP en régime réel est très avantageux pour l'investissement locatif. Le déficit foncier peut être intéressant si vous rénovez un bien ancien.</p>
+          <h3 class="text-lg font-bold text-navy mb-3">TMI 30 % — Le point d'inflexion</h3>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">C'est à partir de cette tranche que la défiscalisation devient réellement efficace. Un versement PER de 10 000 euros réduit votre impôt de 3 000 euros. Le LMNP en régime réel permet de percevoir des loyers sans imposition. Le déficit foncier offre une imputation de 10 700 euros sur le revenu global, soit 3 210 euros d'économie d'impôt.</p>
+          <p class="text-sm text-gray-500 leading-relaxed"><strong class="text-navy">Stratégie recommandée :</strong> PER à hauteur de votre capacité d'épargne + LMNP régime réel si projet immobilier locatif. Envisagez le Denormandie si vous ciblez la rénovation dans l'ancien.</p>
         </div>
         <div class="bg-surface rounded-2xl p-6 border border-gray-200">
-          <h3 class="text-lg font-bold text-navy mb-3">TMI 41-45 %</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Tous les dispositifs sont très efficaces. Combinez PER (déduction maximale), Girardin industriel (réduction supérieure à la mise), LMNP réel et éventuellement FCPI/FIP pour une stratégie d'optimisation globale.</p>
+          <h3 class="text-lg font-bold text-navy mb-3">TMI 41-45 % — Optimisation maximale</h3>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Tous les dispositifs déploient leur plein potentiel. Un versement PER au plafond de 35 194 euros génère jusqu'à 15 837 euros d'économie d'impôt. Le Girardin industriel offre un rendement fiscal immédiat de 10 à 20 %. Le déficit foncier et le Malraux permettent des déductions massives hors plafond des niches fiscales.</p>
+          <p class="text-sm text-gray-500 leading-relaxed"><strong class="text-navy">Stratégie recommandée :</strong> PER au maximum + Girardin industriel (18 000 euros de réduction) + LMNP régime réel + déficit foncier ou Malraux. Un bilan patrimonial complet est indispensable pour articuler ces dispositifs.</p>
         </div>
       </div>
     </section>
@@ -137,6 +251,18 @@ const faqItems = [
     <!-- CTA LeadGenForm -->
     <section class="mb-16 reveal">
       <LeadGenForm source="defiscalisation" formTitle="Bilan fiscal gratuit" />
+    </section>
+
+    <!-- Sources -->
+    <section class="mb-16 reveal">
+      <h2 class="text-h2 text-navy mb-6">Sources et références officielles</h2>
+      <div class="prose max-w-none text-gray-500 space-y-4">
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong class="text-navy">impots.gouv.fr</strong> — Barème de l'impôt sur le revenu, plafonnement des niches fiscales, conditions des dispositifs de réduction et déduction d'impôt.</li>
+          <li><strong class="text-navy">service-public.fr</strong> — Fiches pratiques sur le PER, le LMNP, le Denormandie, le déficit foncier et les dispositifs Malraux et Monuments historiques.</li>
+          <li><strong class="text-navy">legifrance.gouv.fr</strong> — Textes de loi de finances 2025 relatifs à la modification du régime LMNP (réintégration des amortissements dans la plus-value).</li>
+        </ul>
+      </div>
     </section>
 
     <!-- FAQ -->
