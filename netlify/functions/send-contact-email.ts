@@ -1,12 +1,13 @@
-import type { Config, Context } from "@netlify/functions";
-
-interface ContactFormBody {
+interface FormData {
+  type: 'credit-immobilier' | 'defiscalisation' | 'rachat-credit' | 'contact';
   nom: string;
   email: string;
-  telephone: string;
-  message: string;
-  source: string;
-  sujet: string;
+  telephone?: string;
+  message?: string;
+  montant?: string;
+  duree?: string;
+  sujet?: string;
+  _honeypot?: string;
 }
 
 interface BrevoEmailPayload {
@@ -16,169 +17,216 @@ interface BrevoEmailPayload {
   htmlContent: string;
 }
 
-const SENDER = { name: "Finaneo", email: "contact@finaneo.fr" };
-const NOTIFICATION_RECIPIENT = "jeffrey.aldebert@gmail.com";
-const BREVO_API_URL = "https://api.brevo.com/v3/smtp/email";
+const SENDER = { name: 'Finaneo', email: 'contact@finaneo.fr' };
+const RECIPIENT = 'jeffrey.aldebert@gmail.com';
+const BREVO_URL = 'https://api.brevo.com/v3/smtp/email';
 
 const corsHeaders: Record<string, string> = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "Content-Type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
 };
 
-function jsonResponse(body: Record<string, unknown>, status: number): Response {
+function json(body: Record<string, unknown>, status: number): Response {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { "Content-Type": "application/json", ...corsHeaders },
+    headers: { 'Content-Type': 'application/json', ...corsHeaders },
   });
 }
 
-async function sendBrevoEmail(payload: BrevoEmailPayload): Promise<Response> {
+async function sendBrevo(payload: BrevoEmailPayload): Promise<Response> {
   const apiKey = process.env.BREVO_API_KEY;
-  if (!apiKey) {
-    throw new Error("BREVO_API_KEY environment variable is not set");
-  }
+  if (!apiKey) throw new Error('BREVO_API_KEY is not set');
 
-  return fetch(BREVO_API_URL, {
-    method: "POST",
+  return fetch(BREVO_URL, {
+    method: 'POST',
     headers: {
-      "accept": "application/json",
-      "content-type": "application/json",
-      "api-key": apiKey,
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'api-key': apiKey,
     },
     body: JSON.stringify(payload),
   });
 }
 
-function buildNotificationEmail(data: ContactFormBody): BrevoEmailPayload {
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function getSubject(data: FormData): string {
+  const nom = escapeHtml(data.nom);
+  switch (data.type) {
+    case 'credit-immobilier':
+      return `[Finaneo] Lead crédit immo - ${nom}`;
+    case 'defiscalisation':
+      return `[Finaneo] Lead défiscalisation - ${nom}`;
+    case 'rachat-credit':
+      return `[Finaneo] Lead rachat crédit - ${nom}`;
+    case 'contact':
+    default:
+      return `[Finaneo] Contact - ${nom}`;
+  }
+}
+
+function getTypeLabel(type: string): string {
+  switch (type) {
+    case 'credit-immobilier': return 'Crédit immobilier';
+    case 'defiscalisation': return 'Défiscalisation';
+    case 'rachat-credit': return 'Rachat de crédit';
+    case 'contact': return 'Contact général';
+    default: return type;
+  }
+}
+
+function buildRow(label: string, value: string | undefined): string {
+  if (!value?.trim()) return '';
+  return `
+    <tr>
+      <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;width:160px;">${escapeHtml(label)}</td>
+      <td style="padding:8px 12px;border:1px solid #ddd;">${escapeHtml(value)}</td>
+    </tr>`;
+}
+
+function buildNotificationEmail(data: FormData): BrevoEmailPayload {
+  const rows = [
+    buildRow('Type', getTypeLabel(data.type)),
+    buildRow('Nom', data.nom),
+    buildRow('Email', data.email),
+    buildRow('Téléphone', data.telephone),
+    buildRow('Sujet', data.sujet),
+    buildRow('Montant', data.montant ? `${data.montant} €` : undefined),
+    buildRow('Durée', data.duree ? `${data.duree} ans` : undefined),
+    buildRow('Message', data.message),
+  ].filter(Boolean).join('');
+
   return {
     sender: SENDER,
-    to: [{ email: NOTIFICATION_RECIPIENT, name: "Jeffrey Aldebert" }],
-    subject: `Nouveau message de contact - ${data.sujet}`,
+    to: [{ email: RECIPIENT, name: 'Jeffrey Aldebert' }],
+    subject: getSubject(data),
     htmlContent: `
-      <h2>Nouveau message depuis le formulaire de contact</h2>
-      <table style="border-collapse:collapse;width:100%;max-width:600px;font-family:Arial,sans-serif;">
-        <tr>
-          <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;">Nom</td>
-          <td style="padding:8px 12px;border:1px solid #ddd;">${data.nom}</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;">Email</td>
-          <td style="padding:8px 12px;border:1px solid #ddd;">${data.email}</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;">Telephone</td>
-          <td style="padding:8px 12px;border:1px solid #ddd;">${data.telephone}</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;">Sujet</td>
-          <td style="padding:8px 12px;border:1px solid #ddd;">${data.sujet}</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;">Source</td>
-          <td style="padding:8px 12px;border:1px solid #ddd;">${data.source}</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f5f5f5;">Message</td>
-          <td style="padding:8px 12px;border:1px solid #ddd;">${data.message}</td>
-        </tr>
-      </table>
-    `,
+      <div style="font-family:Arial,sans-serif;max-width:600px;">
+        <h2 style="color:#0A2540;">Nouveau lead — ${getTypeLabel(data.type)}</h2>
+        <table style="border-collapse:collapse;width:100%;">
+          ${rows}
+        </table>
+        <p style="color:#999;font-size:12px;margin-top:16px;">Envoyé depuis finaneo.fr</p>
+      </div>`,
   };
 }
 
-function buildConfirmationEmail(data: ContactFormBody): BrevoEmailPayload {
+function getConfirmationBody(data: FormData): string {
+  const nom = escapeHtml(data.nom);
+
+  switch (data.type) {
+    case 'credit-immobilier':
+      return `
+        <h2 style="color:#0A2540;">Merci ${nom}, votre demande de simulation crédit est bien reçue !</h2>
+        <p>Nous avons enregistré votre demande de simulation de crédit immobilier${data.montant ? ` pour un montant de <strong>${escapeHtml(data.montant)} €</strong>` : ''}${data.duree ? ` sur <strong>${escapeHtml(data.duree)} ans</strong>` : ''}.</p>
+        <p>Un conseiller vous recontactera sous 24h pour affiner votre projet et vous proposer les meilleures conditions du marché.</p>`;
+    case 'defiscalisation':
+      return `
+        <h2 style="color:#0A2540;">Merci ${nom}, votre demande de bilan fiscal est bien reçue !</h2>
+        <p>Nous avons bien pris en compte votre demande concernant la défiscalisation.</p>
+        <p>Un conseiller en gestion de patrimoine vous recontactera sous 24h pour réaliser votre bilan fiscal personnalisé.</p>`;
+    case 'rachat-credit':
+      return `
+        <h2 style="color:#0A2540;">Merci ${nom}, votre demande d'étude de rachat est bien reçue !</h2>
+        <p>Nous avons enregistré votre demande de rachat de crédit${data.montant ? ` pour un montant de <strong>${escapeHtml(data.montant)} €</strong>` : ''}.</p>
+        <p>Un conseiller spécialisé vous recontactera sous 24h pour étudier votre dossier et vous proposer la meilleure solution.</p>`;
+    case 'contact':
+    default:
+      return `
+        <h2 style="color:#0A2540;">Merci ${nom}, votre message est bien reçu !</h2>
+        <p>Nous avons bien reçu votre message${data.sujet ? ` concernant <strong>${escapeHtml(data.sujet)}</strong>` : ''}.</p>
+        <p>Notre équipe vous répondra dans les meilleurs délais.</p>`;
+  }
+}
+
+function buildConfirmationEmail(data: FormData): BrevoEmailPayload {
   return {
     sender: SENDER,
     to: [{ email: data.email, name: data.nom }],
-    subject: "Finaneo - Nous avons bien recu votre message",
+    subject: 'Finaneo — Nous avons bien reçu votre demande',
     htmlContent: `
       <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-        <h2 style="color:#1a1a2e;">Merci pour votre message, ${data.nom} !</h2>
-        <p>Nous avons bien recu votre demande concernant <strong>${data.sujet}</strong>.</p>
-        <p>Notre equipe vous repondra dans les meilleurs delais.</p>
+        ${getConfirmationBody(data)}
         <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
         <p style="color:#666;font-size:13px;">
-          Ceci est un email automatique, merci de ne pas y repondre directement.<br/>
-          Pour toute question, contactez-nous a <a href="mailto:contact@finaneo.fr">contact@finaneo.fr</a>.
+          Ceci est un email automatique envoyé par Finaneo.<br/>
+          Pour toute question, contactez-nous à <a href="mailto:contact@finaneo.fr">contact@finaneo.fr</a>.
         </p>
-      </div>
-    `,
+      </div>`,
   };
 }
 
-export default async function handler(
-  req: Request,
-  _context: Context
-): Promise<Response> {
-  // Handle CORS preflight
-  if (req.method === "OPTIONS") {
+export default async function handler(req: Request): Promise<Response> {
+  if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
 
-  if (req.method !== "POST") {
-    return jsonResponse({ error: "Method not allowed" }, 405);
+  if (req.method !== 'POST') {
+    return json({ error: 'Method not allowed' }, 405);
   }
 
-  let data: ContactFormBody;
-
+  let data: FormData;
   try {
-    data = (await req.json()) as ContactFormBody;
+    data = (await req.json()) as FormData;
   } catch {
-    return jsonResponse({ error: "Invalid JSON body" }, 400);
+    return json({ error: 'Invalid JSON body' }, 400);
+  }
+
+  // Honeypot anti-spam
+  if (data._honeypot) {
+    // Silently accept but don't send email
+    return json({ success: true }, 200);
   }
 
   // Validate required fields
-  const requiredFields: (keyof ContactFormBody)[] = [
-    "nom",
-    "email",
-    "message",
-    "sujet",
-  ];
-  const missingFields = requiredFields.filter((field) => !data[field]?.trim());
+  if (!data.nom?.trim() || !data.email?.trim()) {
+    return json({ error: 'Les champs nom et email sont requis.' }, 400);
+  }
 
-  if (missingFields.length > 0) {
-    return jsonResponse(
-      { error: `Missing required fields: ${missingFields.join(", ")}` },
-      400
-    );
+  if (!data.type) {
+    data.type = 'contact';
+  }
+
+  // Validate type
+  const validTypes = ['credit-immobilier', 'defiscalisation', 'rachat-credit', 'contact'];
+  if (!validTypes.includes(data.type)) {
+    return json({ error: 'Type de formulaire invalide.' }, 400);
   }
 
   try {
-    // Send both emails in parallel
-    const [notificationRes, confirmationRes] = await Promise.all([
-      sendBrevoEmail(buildNotificationEmail(data)),
-      sendBrevoEmail(buildConfirmationEmail(data)),
+    const [notifRes, confirmRes] = await Promise.all([
+      sendBrevo(buildNotificationEmail(data)),
+      sendBrevo(buildConfirmationEmail(data)),
     ]);
 
-    if (!notificationRes.ok) {
-      const errorBody = await notificationRes.text();
-      console.error("Brevo notification email error:", errorBody);
-      return jsonResponse(
-        { error: "Failed to send notification email" },
-        502
-      );
+    if (!notifRes.ok) {
+      const err = await notifRes.text();
+      console.error('Brevo notification error:', err);
+      return json({ error: 'Erreur lors de l\'envoi de la notification.' }, 502);
     }
 
-    if (!confirmationRes.ok) {
-      const errorBody = await confirmationRes.text();
-      console.error("Brevo confirmation email error:", errorBody);
-      return jsonResponse(
-        { error: "Failed to send confirmation email" },
-        502
-      );
+    if (!confirmRes.ok) {
+      const err = await confirmRes.text();
+      console.error('Brevo confirmation error:', err);
+      // Don't fail if confirmation fails — the lead is already captured
     }
 
-    return jsonResponse({ success: true, message: "Emails sent successfully" }, 200);
+    return json({ success: true, message: 'Votre demande a bien été envoyée.' }, 200);
   } catch (err) {
-    const errorMessage =
-      err instanceof Error ? err.message : "Unknown error occurred";
-    console.error("send-contact-email error:", errorMessage);
-    return jsonResponse({ error: errorMessage }, 500);
+    const msg = err instanceof Error ? err.message : 'Erreur inconnue';
+    console.error('send-contact-email error:', msg);
+    return json({ error: msg }, 500);
   }
 }
 
-export const config: Config = {
-  path: "/api/send-contact-email",
+export const config = {
+  path: '/.netlify/functions/send-contact-email',
   preferStatic: true,
 };

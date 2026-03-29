@@ -19,14 +19,12 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           Une question sur nos guides, nos simulateurs ou un sujet financier ? Remplissez le formulaire ci-dessous, notre équipe vous répond sous 24 heures.
         </p>
 
-        <form
-          name="contact"
-          method="POST"
-          action="/contact-merci/"
-          data-netlify="true"
-          class="space-y-6"
-        >
-          <input type="hidden" name="form-name" value="contact" />
+        <form id="form-contact" class="space-y-6" novalidate>
+          <input type="hidden" name="type" value="contact" />
+          {/* Honeypot */}
+          <div class="hidden" aria-hidden="true">
+            <input type="text" name="_honeypot" tabindex="-1" autocomplete="off" />
+          </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
@@ -99,6 +97,13 @@ import Breadcrumb from '../components/Breadcrumb.astro';
             Envoyer mon message
           </button>
 
+          <div id="contact-success" class="hidden bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 text-sm text-center">
+            Votre message a bien été envoyé. Nous vous répondrons sous 24h.
+          </div>
+          <div id="contact-error" class="hidden bg-red-50 border border-red-200 text-red-800 rounded-lg p-4 text-sm text-center">
+            Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@finaneo.fr.
+          </div>
+
           <p class="text-xs text-gray-400 text-center">
             En soumettant ce formulaire, vous acceptez notre <a href="/politique-confidentialite/" class="underline hover:text-gold">politique de confidentialité</a>.
           </p>
@@ -107,3 +112,45 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const form = document.getElementById('form-contact');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formEl = e.target as HTMLFormElement;
+    const btn = formEl.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const successEl = document.getElementById('contact-success');
+    const errorEl = document.getElementById('contact-error');
+
+    successEl?.classList.add('hidden');
+    errorEl?.classList.add('hidden');
+
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours...';
+
+    const fd = new FormData(formEl);
+    const body = Object.fromEntries(fd.entries());
+
+    try {
+      const res = await fetch('/.netlify/functions/send-contact-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+      if (res.ok) {
+        successEl?.classList.remove('hidden');
+        formEl.reset();
+      } else {
+        errorEl?.classList.remove('hidden');
+      }
+    } catch {
+      errorEl?.classList.remove('hidden');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }
+  });
+</script>
